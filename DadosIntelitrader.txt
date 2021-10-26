@@ -1,0 +1,110 @@
+Valores da empresa
+
+N/D
+
+Historia e Perfil
+
+Ok
+
+Localização
+
+	-R. Maj. Quedinho, 111 - 2610 - Centro Histórico de São Paulo, São Paulo - SP, 01050-030
+
+
+Dono da Empresa
+
+- Rodrigo Strauss
+- Sócio-programador da Intelitrader Tecnologia. Escovador de bits C++, server side e alta performance.
+- https://www.linkedin.com/in/rodrigostrauss/
+- Faço software desde 1992 (comecei no GW-BASIC com 12 anos de idade) e trabalho com software para o mercado financeiro desde 2003. Passei por várias empresas de software, pela BM&F, BM&FBOVESPA e pela Link Corretora.
+
+Em 2011 fundei a Intelitrader com o propósito de fazer software de alta performance para o mercado financeiro. Hoje fico feliz em poder atender as corretoras da forma que eu gostaria de ter sido atendido quando estava do outro lado do balcão.
+
+Também fui Microsoft MVP em Visual C++ por dois anos e sou um dos fundadores do grupo C e C++ Brasil.
+
+
+Presidente, Executivo, Mentor
+
+- Philipe de Liz Pereira
+- CTO / Partner at Intelitrader
+- Graduado na Universidade Cruzeiro do Sul
+	Ciência da Computação 2006-2009
+- https://www.linkedin.com/in/philipe-de-liz-pereira-8a79204a/
+
+Concorrentes
+
+
+Imagem da Empresa
+
+Ok
+
+
+Campanhas de Marketing
+
+
+
+
+Perfis e redes sociais e Públicos
+
+https://www.linkedin.com/company/intelitrader/posts/?feedView=images
+
+
+DESCOBRIR:
+
+	Produtos e Serviços
+
+	- Order Management System (OMS),
+		Sistema de Gerenciamento de Ordens, é uma solução baseada em software que permite a conexão entre participantes do mercado financeiro, sobretudo utilizando o protocolo FIX para a troca de mensagens para execução de ordens de ações, futuros, derivativos, câmbio e outros valores mobiliários.
+		
+		Uma solução de OMS tem como objetivo facilitar o controle e o gerenciamento das ordens de negociação eletrônica enviadas ou recebidas. As soluções de OMS podem ser utilizadas tanto por uma corretora (sell-side), quanto por algum participante do mercado (buy-side), dentre eles clientes finais, gestores, tesourarias e fundos.
+	
+	- Market Data;
+		Em finanças , os dados de mercado são preços e outros dados relacionados para um instrumento financeiro relatado por uma plataforma de negociação , como uma bolsa de valores . Os dados de mercado permitem que negociantes e investidores conheçam os preços mais recentes e vejam as tendências históricas de instrumentos como ações , produtos de renda fixa , derivativos e moedas .
+	- Solução para mercado financeiro; 
+	- Risco Pré/Pós Trading;
+		risco pós-trading (monitorando as ofertas e negócios já realizados) e também pré/pós-trading simultaneamente, validando as ofertas antes de enviá-las ao mercado e monitorando todas as operações dos clientes em tempo real.
+
+	- Gestão de Back Office; 	
+		Tudo que é adquirido por um consumidor, seja um produto ou um serviço, passa por diversas etapas até sua finalização. Os setores de retaguarda administrativa procuram garantir o perfeito funcionamento dos processos antes, durante e depois do relacionamento com o cliente. 
+
+Esse é o caso do backoffice financeiro, designado para controlar lucros, despesas e investimentos do negócio.
+
+	- AlgoTrading;
+	
+		- O algotrading é uma sigla proveniente do inglês “Algorithmic Trading” que significa negociação de ativos financeiros por meio dos algoritmos. É considerada uma das principais tendências para o futuro do mercado financeiro.
+		- Um algoritmo é uma sequência de instruções objetivas que são escritas em linguagem de programação, permitindo assim execuções de ordens de forma automatizada.
+		- Com a automatização é possível aliar a alta velocidade dos processos computacionais com as estratégias de alocação dos investimentos em busca de otimização dos resultados.
+
+		- Optar por um robô trader é a alternativa acessível para uma performance tecnológica e inovadora ao day trade, que se utiliza de soluções algorítmicas já testadas e comprovadas. 
+
+		- Algotrading (ou Algo Trading) pode ser definido como uma ferramenta que negocia ativos financeiros de forma automatizada. Baseado em algoritmos, é um sistema “inteligente” que replica as operações com mínimas chances de erros e com execução em tempo real.		
+
+	- Gestão de Carteira Administrada;
+		- A carteira administrada é uma modalidade de investimentos na qual as decisões são delegadas a um gestor profissional. Isto é, o investidor terceiriza a tomada de decisão sobre os investimentos nos ativos.
+
+	- Mobile Market Data Application;
+		- Mobile marketing é um termo que se refere ao uso de dispositivos móveis em ações de marketing.
+		- Data application se trata de consumir ou enviar dados por um aplicativo, nesse caso de celular.
+
+	- Home Broker White Label;
+		- Home Brokers são plataformas eletrônicas que permitem que os usuários realizem investimentos por meio de um sistema digital, geralmente via browser ou mobile.
+
+		Os clientes acessam o site ou aplicativo de determinado banco ou corretora e podem comprar e vender ações, e ainda realizar outros investimentos como títulos públicos, fundos de investimentos e muito mais.
+
+		- Na prática, significa que um item ou plataforma foi desenvolvido por uma empresa, mas recebeu a marca de uma parceira que o revende para seus clientes.
+
+	Curiosidades
+		
+		
+
+
+	Postura Comunicacional
+
+		- Ambiente formalizado composto por desenvolvedores de software, Devops, etc.
+		- Aparenta ser um ambiente com conversas em grupo por conta de haver muitas salas de reuniões, ambientes de conversa, sempre salas em grupo.
+
+
+	Ambiente de Trabalho
+
+		OK
+

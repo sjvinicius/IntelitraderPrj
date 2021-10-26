@@ -1,0 +1,43 @@
+Primeira Reunião Priscila Paulo 20/10/2021
+
+Qual é o diferencial da plataforma web?
+
+Oferecer ao candidato uma experência de realizar não só um teste técnico, mas um teste de autoconhecimento onde ele pode reconhecer suas características interpessoais e pontos de melhoria se preparando assim ainda melhor essas e outras oportunidades de processos de seleção
+
+Quais são os critérios de contratação da intelitrader?
+
+Direcionar pergunta ao Rodrigo Campos (Intelitrader)
+
+Pessoas que fizeram o processo seletivo ?
+
+Priscila responsável por encaminhar o contato do indivíduo que participou do processo antigo da intelitrader
+
+Como é processo seletivo quando o candidato encontra a vaga?
+
+1. Triagem
+1.1 Desafio de Programação
+
+2. Conversa e Meeting
+2.1 Entender o Conhecimento
+2.2 Pair Programming
+
+3. Experiência
+3.1 Apresentar resultados do candidato no seu período de experiência
+
+O que voce procura em um profissional?
+Cargos e funções?
+Para a intelitrader é mais importante softskills ou hard?
+É interessante automatizar o processo seletivo na prórpria plataforma web?
+
+
+Boa tarde Rodrigo, estávamos conversando e tivemos alguns insights, com isso fizemos alguns levantamentos e dúvidas, se possível separar um tempinho para responder essas questões para que assim seja possível seguir com a solução da melhor forma possível
+
+1. Quais os critérios de avaliação de um candidato para que um candidato seja aprovado ou reprovado em um processo de seleção? No momento da chegada do documento de apresentação do candidato quais critérios são vistos e ao que são comparados para dizer se o candidato é apto ou não apto para a vaga
+
+2. A plataforma irá oferecer múltiplas vagas para diversos públicos, essas vagas serão publicadas a que nível (ex: Junior, Senior, Pleno, Todos), serão vagas homme office e presencialmente, há alguma exigencia de exibição na vaga 
+
+3. Sabendo que os candidatos serão exclusivos da plataforma como a intelitrader diferencia os níveis dos candidatos, há algum detalhamento no currículo onde o profissional é identificado como júnior, pleno, sênior, etc.
+
+4. Nos processos de contratação da intelitrader hoje é prioritário o conhecimento técnico ou as habilidades não técnicas
+
+5. A caráter de avaliação dos candidatos para as vagas, conforme informado na primeira reunião os processos incluem uma etapa de avaliação dos candidatos por meio de uma prova, como era feita a avaliação dessa prova? se feita de maneira manual quem é responsável pela correção desses processos nas etapas? como é feita essa avaliação ?

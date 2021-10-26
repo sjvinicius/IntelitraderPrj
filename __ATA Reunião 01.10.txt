@@ -1,0 +1,74 @@
+intelitrader- fabrica de software, especialista em mercado financeiro
+
+bancos corretoras
+
+--------------------------------------------
+
+Edson Soares
+
+Desenvolvedor BackEnd
+
+O PROJETO
+
+O funil, 
+
+Ínicio do Processo
+
+Onde Procurar de desenvolvedores
+SENAI FATEC LINKEDIN
+
+Etapas do Processo
+
+1. Triagem
+1.1 Desafio de Programação
+
+2. Conversa e Meeting
+2.1 Entender o Conhecimento
+2.2 Pair Programming
+
+3. Experiência
+3.1 Apresentar resultados do candidato no seu período de experiência
+
+QUEM FAZ ? 
+
+3 MOMENTOS
+
+1 - RH busca tem acesso ao linkedin da empresa 
+2 - TechLeads também faz a requisição
+3 - Controle de feedback é por parte do RH
+4 - Acompanha a experiência do usuário
+
+Fatores Humanos 
+
+1. Fatores de seleção deixa o processo falho
+2. Análise não fria e lógica 
+3. 	
+4. Linha do tempo para análisar o candidato
+
+
+----------------------------------------------
+
+Fontes Onde a Empresa Procura os Candidatos ?
+
+** Eficiência ?
+Porcentagem de Contratação ?
+
+----------------------------------------------
+
+Acordado com o cliente a utilização de um site individual com hospedagem em nuvem
+
+BackEnd
+FrontEnd
+Banco de Dados
+
+Disponibilidade - Serviço da AWS em Instâncias EC2
+
+Definir SCRUM MASTER - Informar o Stackeholder
+Definir Protocolo WEB - HTTP/HTTPS
+
+Bateria de QA
+
+Organziação de Repositório
+
+
+ 
