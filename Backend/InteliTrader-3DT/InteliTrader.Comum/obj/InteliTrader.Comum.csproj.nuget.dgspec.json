@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj": {}
+    "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj": {
+    "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
+        "projectUniqueName": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
         "projectName": "InteliTrader.Comum",
-        "projectPath": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
-        "packagesPath": "C:\\Users\\moniq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Comum\\obj\\",
+        "projectPath": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
+        "packagesPath": "C:\\Users\\48784309822\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\moniq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\48784309822\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

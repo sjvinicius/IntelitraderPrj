@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ipNKfyVP5uPwPPpLJVL6BXWXTJpf0e+MUx4AgXi4hC1pNGvNF5cJ0PWruoiCcCY/elM07BY8J/A4bZDJaJvODg==",
+  "dgSpecHash": "aiBgu/OrJ6I3ew4Qyxz5IlI8DVvzePf7gahJ/wAroW2NaIvArB6dRbmY+tj7QiBm2yLUg1QgeMLKvbDZDwT9qg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\moniq\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
+    "C:\\Users\\48784309822\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
   ],
   "logs": []
 }
