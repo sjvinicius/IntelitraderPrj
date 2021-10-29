@@ -1,0 +1,122 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Flunt/2.0.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Flunt.dll": {}
+        }
+      },
+      "InteliTrader.Comum/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Flunt": "2.0.5"
+        },
+        "compile": {
+          "bin/placeholder/InteliTrader.Comum.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InteliTrader.Comum.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Flunt/2.0.5": {
+      "sha512": "CMgq8FUYjkHzyZT3PhkUwZyy79mudON+EL4b0SAT7BfIOJ2CNypwnbdA0cPHAM2CYQfO2L8ubNJCiBHQOIv2pA==",
+      "type": "package",
+      "path": "flunt/2.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "flunt.2.0.5.nupkg.sha512",
+        "flunt.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Flunt.dll"
+      ]
+    },
+    "InteliTrader.Comum/1.0.0": {
+      "type": "project",
+      "path": "../InteliTrader.Comum/InteliTrader.Comum.csproj",
+      "msbuildProject": "../InteliTrader.Comum/InteliTrader.Comum.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Flunt >= 2.0.5",
+      "InteliTrader.Comum >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\moniq\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj",
+      "projectName": "InteliTrader.Dominio",
+      "projectPath": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj",
+      "packagesPath": "C:\\Users\\moniq\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Dominio\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\moniq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj": {
+              "projectPath": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "Flunt": {
+            "target": "Package",
+            "version": "[2.0.5, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

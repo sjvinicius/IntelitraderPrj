@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QG4tP7FlA/LG2jhEbMDe3NCTzJzofPaQOA6vI8dfRQDdv/MV5oyaF8fDQ4+MVPYzzLlf/oCC1IBbcgpmHtFQHA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\moniq\\source\\repos\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\moniq\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
