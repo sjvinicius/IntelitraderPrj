@@ -1,13 +1,37 @@
+//Libs
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {Switch, Route, BrowserRouter} from 'react-router-dom'
+
+//Services
 import reportWebVitals from './reportWebVitals';
 
+//Styles
+import Login from './pages/Login'
+import CandidatoListar from './pages/CandidatoListar'
+import Modal from './pages/CandidatoListar'
+import './index.css';
+
+const route =(
+
+  <>
+    <BrowserRouter initialRouteName='Login'>
+      <Switch>
+        <Route exact path='/' name='Raiz' component={Login} />
+        <Route path='/Login' name='Login' component={Login} />
+        <Route path='/Listar' name='Candidato' component={CandidatoListar} />
+        
+        {/* <Route path='/ListarRH' name='RH' component={RHListar} /> */}
+        {/* <Route/> */}
+        {/* <Route/> */}
+      </Switch>
+    </BrowserRouter>
+  </>
+
+)
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  route,
   document.getElementById('root')
 );
 
