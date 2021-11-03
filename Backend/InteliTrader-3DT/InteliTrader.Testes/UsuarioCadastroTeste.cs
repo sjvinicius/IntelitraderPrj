@@ -26,6 +26,9 @@ namespace InteliTrader.Testes
                 "Técnico de Desenvolvimento de Sistemas",
                 "Escola SENAI de Informática",
                 "01/2019 - 01/2020",
+                "Jovem Aprendiz",
+                "Lorenzetti S/A Indústrias Metralúrgicas",
+                "01/2021 - 03/2022",
                 EnTipoUsuario.Candidato
                 );
 
@@ -47,6 +50,9 @@ namespace InteliTrader.Testes
                 "Técnico de Desenvolvimento de Sistemas",
                 "Escola SENAI de Informática",
                 "01/2019 - 01/2020",
+                "Jovem Aprendiz",
+                "Lorenzetti S/A Indústrias Metralúrgicas",
+                "01/2021 - 03/2022",
                 EnTipoUsuario.Candidato
                 );
             Assert.False(usuario.IsValid, "Usuário é Inválido");
