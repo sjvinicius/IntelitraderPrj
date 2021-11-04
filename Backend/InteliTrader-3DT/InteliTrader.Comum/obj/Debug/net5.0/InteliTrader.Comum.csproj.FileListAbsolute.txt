@@ -9,3 +9,15 @@ C:\Users\moniq\source\repos\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0
 C:\Users\moniq\source\repos\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.dll
 C:\Users\moniq\source\repos\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\ref\InteliTrader.Comum.dll
 C:\Users\moniq\source\repos\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.pdb
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\bin\Debug\net5.0\InteliTrader.Comum.deps.json
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\bin\Debug\net5.0\InteliTrader.Comum.dll
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\bin\Debug\net5.0\ref\InteliTrader.Comum.dll
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\bin\Debug\net5.0\InteliTrader.Comum.pdb
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.csproj.AssemblyReference.cache
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.AssemblyInfoInputs.cache
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.AssemblyInfo.cs
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.csproj.CoreCompileInputs.cache
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.dll
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\ref\InteliTrader.Comum.dll
+C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Comum.pdb
