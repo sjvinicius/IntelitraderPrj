@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sYkrNnUj3rKL+omNppzZlxS0hFYrSqhwlR5UwJgRubL1feWe2wR7gdBY7mS2QR00W+ojrqpDTSwir9WY5x0wRA==",
+  "dgSpecHash": "kxpsyMJ0w25KllEkEHQrjW7Pi+108fWsjsycLYuNSxcB2dtCM8NGx7byMIQQcGRKJTaE8967ip+MznWpOlo2BA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-Marcos\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\InteliTrader.Testes.csproj",
+  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\InteliTrader.Testes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46732305824\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\46732305824\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",

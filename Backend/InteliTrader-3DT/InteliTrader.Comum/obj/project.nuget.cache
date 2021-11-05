@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "00YD508LoWayEnjt+UT5qFXOm/8MuvYhUBBCZvVML3NLYVzBYzHYR5u59lU3UlGGo7kBwW0+p5dP7PDxdaVRiQ==",
+  "dgSpecHash": "ylDPenuTphIxwgKskP0me4NOjFaS5iK13zsDLf0GZKVbDoxewC+tZO64DnfpZWGUasRVz4WFflc+hydbP2Oyvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-Marcos\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
+  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46732305824\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
   ],

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "51kxkynBvYp1Oh79CpeCZxeUle5FOt48fZxSJECpv1pN0RKSml8C5G11ajzfvQfiBnuEMW+t3CgcezXss5x3Tw==",
+  "dgSpecHash": "Vn1to6xRY5ymPUwgbi6p2YKS8DN/2ec/lXKSmImx2i6WNDi/3Ur8367A4m+avYnTr7R5x+Op7DLTe3PzrijiHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-Marcos\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj",
+  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46732305824\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
   ],

@@ -16,7 +16,7 @@ namespace InteliTrader.Testes.Commands
             //    "Lucas",
             //    "LucasLindão@gmail.com",
             //    "243198569",
-            //    InteliTrader.Comum.Enum.EnTipoUsuario.Candidato
+            //   InteliTrader.Comum.Enum.EnTipoUsuario.Candidato
             //    );
             //Assert.True(command.IsValid, "O Cadastro Está Completo");
         }

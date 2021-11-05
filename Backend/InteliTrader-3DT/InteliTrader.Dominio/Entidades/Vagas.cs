@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InteliTrader.Comum.Commands
+namespace InteliTrader.Dominio.Entidades
 {
-   public class ICommandResult
+   public class Vagas
     {
-
     }
 }

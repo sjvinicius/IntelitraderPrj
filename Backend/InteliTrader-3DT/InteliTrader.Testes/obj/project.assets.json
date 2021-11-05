@@ -5689,11 +5689,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-Marcos\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\InteliTrader.Testes.csproj",
+      "projectUniqueName": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\InteliTrader.Testes.csproj",
       "projectName": "InteliTrader.Testes",
-      "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-Marcos\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\InteliTrader.Testes.csproj",
+      "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\InteliTrader.Testes.csproj",
       "packagesPath": "C:\\Users\\46732305824\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-Marcos\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\obj\\",
+      "outputPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5713,8 +5713,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-Marcos\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj": {
-              "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-Marcos\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj"
+            "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj": {
+              "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj"
             }
           }
         }
