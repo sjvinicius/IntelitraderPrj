@@ -1,4 +1,5 @@
 ﻿using Flunt.Notifications;
+using Flunt.Validations;
 using InteliTrader.Comum.Commands;
 using InteliTrader.Comum.Enum;
 using System;
@@ -48,11 +49,26 @@ namespace InteliTrader.Dominio.Commands.Usuario
         public DateTime DataTrabalho { get; private set; }
         public DateTime DataCurso { get; private set; }
         public EnTipoUsuario TiposUsuario { get; private set; }
-      
+
 
         public void Validar()
         {
-            throw new NotImplementedException();
+            AddNotifications(
+            new Contract<Notification>()
+                .Requires()
+                .IsNotEmpty(Nome, "Nome", "O campo nome não pode ser vazio")
+                .IsNotEmpty(Sobrenome, "Sobrenome", "O campo nome não pode ser vazio")
+                .IsEmail(Email, "Email", "formato incorreto de email")
+                .IsGreaterThan(Senha, 8, "Senha", "A senha deve ter 8 caracteres ou mais")
+                .IsGreaterOrEqualsThan(Telefone, 11, "Telefone", "O Telefone para contato deve ter 11 caracteres")
+                .IsGreaterOrEqualsThan(RG, 10, "RG", "O RG deve ter 10 caracteres")
+                .IsGreaterOrEqualsThan(CPF, 11, "CPF", "O CPF deve ter 11 caracteres")
+                .IsNotEmpty(Cursando, "Cursando", "Não é Obrigatório")
+                .IsNotEmpty(Instituicao, "Instituição", "Não é Obrigatório")
+                .IsNotEmpty(Trabalho, "Trabalho", "Não é Obrigatório")
+                .IsNotEmpty(OndeTrabalha, "Local de Trabalho", "Não é Obrigatório")
+
+            );
         }
     }
 }
