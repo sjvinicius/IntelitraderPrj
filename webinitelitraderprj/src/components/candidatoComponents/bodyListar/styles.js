@@ -1,5 +1,9 @@
+//Libs
 import styled from 'styled-components';
+import { Redirect } from 'react-router-dom'
 
+
+//Icons
 import { BriefcaseAlt } from '@styled-icons/boxicons-regular/BriefcaseAlt'
 import { TargetArrow } from '@styled-icons/fluentui-system-regular/TargetArrow'
 import { BookmarkCheck } from '@styled-icons/bootstrap/BookmarkCheck'
@@ -80,7 +84,7 @@ export const IconStatusJob = styled(BookmarkCheck)`
   margin-right: 1rem;
 `;
 
-export const TittleNav = styled.h3`
+export const TittleNav = styled(Redirect)`
   font-size: 1rem;
   font-weight: normal;
   text-transform: capitalize;

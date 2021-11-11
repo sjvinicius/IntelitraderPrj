@@ -7,8 +7,8 @@ import {Grooveshark} from '@styled-icons/entypo-social/Grooveshark'
 import {Wolframlanguage} from '@styled-icons/simple-icons/Wolframlanguage'
 
 export const ContainerModal = styled.div`
-  display: none;
   position: relative;
+  display: none;
   background: #00000099;
   position: absolute;
   margin: 0;
@@ -80,18 +80,31 @@ export const SubTittleJobModal = styled.h3`
 
 export const WrapperDesc = styled.div`
   /* background-color: lightblue; */
+  width: 28rem;
+  height: 11rem;
   border: 1px solid #FFF;
   border-right: transparent;
   border-radius: 5px;
-  overflow: auto;
-  height: 11rem;
-  padding: 0 1rem;
+  overflow: none;
   margin: 1rem 0;
   color: #FFF;
 `;
 
+export const TextDesc = styled.textarea`
+  width: 26rem;
+  height: 9rem;
+  color: #FFF;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 1rem;
+`;
+
 export const Text = styled.p`
   color: #FFF;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const Section = styled.div`

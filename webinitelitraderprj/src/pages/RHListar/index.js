@@ -1,11 +1,15 @@
+//Libs
 import React from 'react'
 
-export function RHListar() {
+//Styles
+import BodyListarRH from '../../components/rhComponents/BodyListarRH/' 
+
+export default function RHListar() {
     
     return(
 
         <>
-            <BodyLisarRH/>
+            <BodyListarRH/>
         </>
 
     )

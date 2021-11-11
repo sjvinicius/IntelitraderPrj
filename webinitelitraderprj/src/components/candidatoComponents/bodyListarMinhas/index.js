@@ -1,13 +1,13 @@
 //  Libs
-import React, { useEffect, useState } from 'react'
+import React, { /*useEffect*/ useState } from 'react'
 import {useHistory} from 'react-router-dom'
 
 // Styles 
-import { ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, IconStatusJob, TittleNav, Line, /* Fim Aside */ Container, WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from './styles'
+import {TittleNavNow} from './styles'
 
-import { ContainerModal, WrapperModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from './stylesModal'
+import { ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, IconStatusJob, TittleNav, Line, /* Fim Aside */ Container, WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from '../bodyListar/styles'
 
-import { TittleNavNow } from '../bodyListarMinhas/styles'
+import { ContainerModal, WrapperModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../bodyListar/stylesModal'
 
 import { Button } from '../../generic/button/styles'
 
@@ -20,6 +20,11 @@ import bec from '../../../img/backendcard.png'
 import { ButtonSmall } from '../../generic/button/styles'
 
 
+function OpenModal() {
+    
+    document.getElementById('Modal').style.display = 'flex';
+    
+}
 
 function CloseModal() {
     
@@ -27,17 +32,12 @@ function CloseModal() {
     
 }
 
-function OpenModal() {
-
-    document.getElementById('Modal').style.display = 'flex';
-
-}
 
 
 export function Modal() {
     
-    const [a, setTittle] = useState(``)
-    const [b, setSubTittle] = useState(``)
+    const [a ] = useState(``)
+    const [b ] = useState(``)
     const [descricao] = useState(`Esta destinada a voce candidato(a) que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
 
     Requisitos
@@ -50,18 +50,17 @@ export function Modal() {
     Azure Devops
     Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos`)
     
-    function BuscarVaga() {
+    // async function BuscarVaga() {
         
-        setTittle('ASDASDASDASD')
-        setSubTittle('ASDASDASDASD')
-    
-    }
+    //     api.get('/buscarvagasminhas',{
 
-    useEffect( () => {
-        
-        BuscarVaga()
-        
-    },[])
+    //         perfil1: tokenDecode(localStorage.getItem('tokenusrup')).perfil1,
+    //         perfil2: tokenDecode(localStorage.getItem('tokenusrup')).perfil2
+
+    //     })
+    
+    // }
+
     
 
     return(
@@ -114,17 +113,17 @@ function AsideMenu() {
             
             <ImgUser src={foto} />
             <NameUser>Vinicius</NameUser>
-            <TypeUser>Candidato</TypeUser>
+            <TypeUser>Líder</TypeUser>
             <Exit>Sair</Exit>
 
             <WrapperNav>
                 <IconAllJob/>
-                <TittleNavNow onClick={ () => { history.push('/Listar') } }>Todas as Vagas</TittleNavNow>
+                <TittleNav onClick={ () => { history.push('/Listar') } }>Todas as Vagas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
                 <IconMyJobs/>
-                <TittleNav onclick = { () => { history.push('/ListarMinhas') } }>Minhas vagas</TittleNav>
+                <TittleNavNow onclick = { () => {history.push('/ListarMinhas')}}>Minhas vagas</TittleNavNow>
             </WrapperNav>
             <Line/>
             <WrapperNav>
@@ -138,9 +137,15 @@ function AsideMenu() {
 
 }
 
-export default function BodyListar () {
+export default function BodyListarMinhas() {
 
-    return (
+    // useEffect( () => {
+        
+    //     // BuscarVaga()
+        
+    // },[])
+
+    return(
 
         <Container>
             <AsideMenu/>
@@ -163,7 +168,6 @@ export default function BodyListar () {
 
             </WrapperContent>
             <Modal/>
-            
 
         </Container>
 

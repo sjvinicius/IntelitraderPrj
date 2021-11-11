@@ -1,31 +1,19 @@
-//  Libs
-import React, { useEffect, useState } from 'react'
-import {useHistory} from 'react-router-dom'
 
-// Styles 
-import { ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, IconStatusJob, TittleNav, Line, /* Fim Aside */ Container, WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from './styles'
+// Libs
+import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 
-import { ContainerModal, WrapperModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from './stylesModal'
+//Styles
+import { Container, ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, IconStatusJob, TittleNav, Line, /* Fim Aside*/ WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from '../../candidatoComponents/bodyListar/styles'
+import { ContainerModal, WrapperModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../../candidatoComponents/bodyListar/stylesModal'
 
-import { TittleNavNow } from '../bodyListarMinhas/styles'
-
-import { Button } from '../../generic/button/styles'
-
-//Img
+//Imgs
 import foto from '../../../img/Foto.jpg'
 import logo from '../../../img/IntelitraderLogo.svg'
 import bec from '../../../img/backendcard.png'
 
-// Components
-import { ButtonSmall } from '../../generic/button/styles'
-
-
-
-function CloseModal() {
-    
-    document.getElementById('Modal').style.display = 'none';
-    
-}
+//Components
+import { ButtonSmall, Button } from '../../generic/button/styles'
 
 function OpenModal() {
 
@@ -33,11 +21,16 @@ function OpenModal() {
 
 }
 
+function CloseModal() {
+
+    document.getElementById('Modal').style.display = 'none';
+
+}
 
 export function Modal() {
     
-    const [a, setTittle] = useState(``)
-    const [b, setSubTittle] = useState(``)
+    const [a, setTittle] = useState('')
+    const [b, setSubTittle] = useState('')
     const [descricao] = useState(`Esta destinada a voce candidato(a) que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
 
     Requisitos
@@ -76,10 +69,11 @@ export function Modal() {
                         <TittleJobModal>{a}</TittleJobModal>
                         <SubTittleJobModal>{b}</SubTittleJobModal>
                         <WrapperDesc>
-                            <TextDesc
-                                value={descricao}
-                                readOnly
-                                disable
+                            <TextDesc 
+                            value = {descricao}
+                            
+                            readOnly
+                            disable
                             />
                         </WrapperDesc>
                         <Text>R$a Salario</Text>
@@ -114,17 +108,17 @@ function AsideMenu() {
             
             <ImgUser src={foto} />
             <NameUser>Vinicius</NameUser>
-            <TypeUser>Candidato</TypeUser>
+            <TypeUser>Líder</TypeUser>
             <Exit>Sair</Exit>
 
             <WrapperNav>
                 <IconAllJob/>
-                <TittleNavNow onClick={ () => { history.push('/Listar') } }>Todas as Vagas</TittleNavNow>
+                <TittleNav onClick={ () => { history.push('/Listar') } }>Todas as Vagas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
                 <IconMyJobs/>
-                <TittleNav onclick = { () => { history.push('/ListarMinhas') } }>Minhas vagas</TittleNav>
+                <TittleNav>Minhas vagas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
@@ -138,13 +132,14 @@ function AsideMenu() {
 
 }
 
-export default function BodyListar () {
 
-    return (
 
+export default function BodyListarLider() {
+    
+    return(
         <Container>
-            <AsideMenu/>
-            <WrapperContent>
+        <AsideMenu/>
+        <WrapperContent>
                 <Logo src={logo}/>
 
                 <ListJob>
@@ -163,10 +158,7 @@ export default function BodyListar () {
 
             </WrapperContent>
             <Modal/>
-            
-
         </Container>
-
     )
 
 }
