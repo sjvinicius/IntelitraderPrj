@@ -16,7 +16,7 @@ import './index.css';
 
 const PermCand = () => {
   
-  var varteste = '1';
+  var varteste = '2';
 
   return(
 
