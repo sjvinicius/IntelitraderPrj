@@ -11,7 +11,10 @@ namespace InteliTrader.Dominio.Commands.Autenticação
 {
     public class LogarCommand : Notifiable<Notification>, ICommand
     {
-
+        public LogarCommand()
+        {
+                
+        }
         public LogarCommand(string email, string senha)
         {
             Email = email;

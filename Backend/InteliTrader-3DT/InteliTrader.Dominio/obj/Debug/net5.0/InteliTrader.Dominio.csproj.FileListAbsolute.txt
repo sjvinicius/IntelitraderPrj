@@ -13,17 +13,3 @@ C:\Users\moniq\source\repos\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5
 C:\Users\moniq\source\repos\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.dll
 C:\Users\moniq\source\repos\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\ref\InteliTrader.Dominio.dll
 C:\Users\moniq\source\repos\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.pdb
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Dominio.deps.json
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Dominio.dll
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\ref\InteliTrader.Dominio.dll
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Dominio.pdb
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Comum.dll
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Comum.pdb
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.csproj.AssemblyReference.cache
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.AssemblyInfoInputs.cache
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.AssemblyInfo.cs
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.csproj.CoreCompileInputs.cache
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.dll
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\ref\InteliTrader.Dominio.dll
-C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.pdb

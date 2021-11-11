@@ -13,25 +13,13 @@ namespace InteliTrader.Testes.Commands
         [Fact]
         public void DeveRetornarErroSeDadosForemValido()
         {
-            var command = new CriarContaCommand(
+            var command = new CriarUsuarioCommand(
                 "Lucas",
-                "Nogueira",
                 "LucasLindão@gmail.com",
-                "pastel231",
-                "11934764897",
-                "534625861",
-                "46732305824",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                InteliTrader.Comum.Enum.EnTipoUsuario.Candidato
+               "243198569",
+               InteliTrader.Comum.Enum.EnTipoUsuario.Candidato
                 );
-            command.Validar();
-                Assert.True(command.IsValid, "O Cadastro Está Completo");
+            Assert.True(command.IsValid, "O Cadastro Está Completo");
         }
     }
 }
