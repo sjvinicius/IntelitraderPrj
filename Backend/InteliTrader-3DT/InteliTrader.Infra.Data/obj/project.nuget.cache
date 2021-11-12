@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wTqiWQQH6Tmiul+UOzmLtpvrcKwdm/5ZW6drT/zan31IDF5XCGLepSleVDq3aXucu3/6j9vSQ4Ch+TISHqnS8g==",
+  "dgSpecHash": "UYPrf7fbwy2hLl7XWtVYJlttrhQbnPBX6JBfyKCre7jUqoAas4O1a6DqCTqfhqYQiWwpLL6lbMv4TyGk3aOUnQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj-RuanBack\\Backend\\InteliTrader-3DT\\InteliTrader.Infra.Data\\InteliTrader.Infra.Data.csproj",
+  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Infra.Data\\InteliTrader.Infra.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46732305824\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\46732305824\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

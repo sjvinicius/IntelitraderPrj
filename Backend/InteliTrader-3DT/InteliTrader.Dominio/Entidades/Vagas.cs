@@ -30,5 +30,8 @@ namespace InteliTrader.Dominio.Entidades
         public string Descricao { get; private set; }
         public EnVagaSituacao SituacaoVaga { get; private set; }
         public int PorcentagemSucesso { get; private set; }
+
+        //Composições
+        public IReadOnlyCollection<Candidato> Candidatos { get; private set; }
     }
 }

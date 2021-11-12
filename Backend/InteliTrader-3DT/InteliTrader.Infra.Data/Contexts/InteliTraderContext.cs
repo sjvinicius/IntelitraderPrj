@@ -18,7 +18,7 @@ namespace InteliTrader.Infra.Data.Contexts
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Candidato> Candidatos { get; set; }
-        public DbSet<Vaga> Vagas { get; set; }
+        public DbSet<Vagas> Vagas { get; set; }
         public DbSet<TesteTecnico> TesteTecnicos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -100,7 +100,7 @@ namespace InteliTrader.Infra.Data.Contexts
 
             //Id Chave estrangeira Vaga
             modelBuilder.Entity<Candidato>()
-                .HasOne<Vaga>(x => x.Vagas)
+                .HasOne<Vagas>(x => x.Vaga)
                 .WithMany(x => x.Candidatos)
                 .HasForeignKey(x => x.IdVaga);
 
@@ -121,6 +121,30 @@ namespace InteliTrader.Infra.Data.Contexts
             modelBuilder.Entity<Candidato>().Property(x => x.Funcao).HasColumnType("VARCHAR(200)");
             modelBuilder.Entity<Candidato>().Property(x => x.Funcao).HasMaxLength(200);
             modelBuilder.Entity<Candidato>().Property(x => x.Funcao).IsRequired();
+            #endregion
+
+            #region Tabela Vagas
+            //Nome Tabela
+            modelBuilder.Entity<Vagas>().ToTable("Vagas");
+
+            //ID Chave Primária
+            modelBuilder.Entity<Vagas>().Property(x => x.Id);
+
+            //Nome Curso
+            modelBuilder.Entity<Vagas>().Property(x => x.NomeVaga).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<Vagas>().Property(x => x.NomeVaga).HasMaxLength(200);
+            modelBuilder.Entity<Vagas>().Property(x => x.NomeVaga).IsRequired();
+            modelBuilder.Entity<Vagas>().HasIndex(x => x.NomeVaga).IsUnique();
+
+            //Data Criação
+            modelBuilder.Entity<Vagas>().Property(x => x.DataCriacao).HasDefaultValueSql("GETDATE()");
+
+            // DML - dados padrões
+            modelBuilder.Entity<Vagas>().HasData(
+                new Vagas("Vaga Estágio Back-End","",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,35),
+                new Vagas("Vaga Dev Junior Front End", "", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, 28),
+                new Vagas("Vaga Dev Sênior Back End", "", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, 42)
+                ); 
             #endregion
         }
     }
