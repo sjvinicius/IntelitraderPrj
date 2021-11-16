@@ -14,12 +14,44 @@ namespace InteliTrader.Testes.Commands
         public void DeveRetornarErroSeDadosForemValido()
         {
             var command = new CriarUsuarioCommand(
-                "Lucas",
-                "LucasLindão@gmail.com",
-               "243198569",
+                "Ruan",
+                "Gustavo",
+                "RuanGostoso@gmail.com",
+                "caldodecana24",
+                "11940759338",
+                "24.536.578-2",
+                "243.524.789-13",
+                "Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
+                "Técnico de Desenvolvimento de Sistemas",
+                "Escola SENAI de Informática",
+                "01/2019 - 01/2020",
+                "Lorenzetti -Jovem Aprendiz",
                InteliTrader.Comum.Enum.EnTipoUsuario.Candidato
                 );
             Assert.True(command.IsValid, "O Cadastro Está Completo");
+        }
+
+        [Fact]
+        public void DeveRetornarErroSeDadosForemPreenchidos()
+        {
+            var command = new CriarContaCommand(
+                "Ruan",
+                "Gustavo",
+                "RuanGostoso@gmail.com",
+                "caldodecana24",
+                "11940759338",
+                "24.536.578-2",
+                "243.524.789-13",
+                "Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
+                "Técnico de Desenvolvimento de Sistemas",
+                "Escola SENAI de Informática",
+                "01/2019 - 01/2020",
+                "Lorenzetti S/A Indústrias Metralúrgicas - Jovem Aprendiz",
+               InteliTrader.Comum.Enum.EnTipoUsuario.Candidato
+                );
+            command.Validar();
+
+            Assert.True(command.IsValid, "Os dados esttão preenchidos corretamente");
         }
     }
 }

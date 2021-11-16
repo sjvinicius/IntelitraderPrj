@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.Comum", "Intel
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.Testes", "InteliTrader.Testes\InteliTrader.Testes.csproj", "{F249693B-51A1-40B3-98CA-8E1DDF681367}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteliTrader.Infra.Data", "InteliTrader.Infra.Data\InteliTrader.Infra.Data.csproj", "{31EB35D4-2919-4A5A-859D-B51D45E667A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.Infra.Data", "InteliTrader.Infra.Data\InteliTrader.Infra.Data.csproj", "{31EB35D4-2919-4A5A-859D-B51D45E667A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteliTrader.API", "InteliTrader.API\InteliTrader.API.csproj", "{F9883A05-630E-4954-BADB-E283C9A6E6FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{31EB35D4-2919-4A5A-859D-B51D45E667A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31EB35D4-2919-4A5A-859D-B51D45E667A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31EB35D4-2919-4A5A-859D-B51D45E667A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9883A05-630E-4954-BADB-E283C9A6E6FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9883A05-630E-4954-BADB-E283C9A6E6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9883A05-630E-4954-BADB-E283C9A6E6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9883A05-630E-4954-BADB-E283C9A6E6FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

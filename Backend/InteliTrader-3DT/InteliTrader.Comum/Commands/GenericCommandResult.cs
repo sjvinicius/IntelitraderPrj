@@ -8,15 +8,13 @@ namespace InteliTrader.Comum.Commands
 {
     public class GenericCommandResult : ICommandResult
     {
-        public GenericCommandResult(bool sucesso, string mensagem, DateTime data)
+        public GenericCommandResult(bool sucesso, string mensagem)
         {
             Sucesso = sucesso;
             Mensagem = mensagem;
-            Data = data;
         }
 
         public bool Sucesso { get; private set; }
         public string Mensagem { get; private set; }
-        public DateTime Data { get; private set; }
     }
 }

@@ -15,11 +15,18 @@ namespace InteliTrader.Testes
         public void DeveRetornarSeUsuarioForValido()
         {
             var usuario = new Usuario(
-                "Ruan",
+               "Ruan",
+                "Gustavo",
                 "RuanGostoso@gmail.com",
                 "caldodecana24",
-                "24.536.578-2",
                 "243.524.789-13",
+                "24.536.578-2",
+                "11940759338",
+                "Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
+                "Técnico de Desenvolvimento de Sistemas",
+                "Escola SENAI de Informática",
+                "01/2019 - 01/2020",
+                "Lorenzetti S/A Indústrias Metralúrgicas-Jovem Aprendiz",
                 EnTipoUsuario.Candidato
                 );
 
@@ -31,10 +38,17 @@ namespace InteliTrader.Testes
         {
             var usuario = new Usuario(
                 "Ruan",
-                "Ruangustavo@gmail.com",
                 "",
+                "RuanGostoso@gmail.com",
+                "caldodecana24",
+                "243.524.789-13",
                 "24.536.578-2",
-                "243.542.789-13",
+                "11940759338",
+                "Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
+                "Técnico de Desenvolvimento de Sistemas",
+                "Escola SENAI de Informática",
+                "01/2019 - 01/2020",
+                "Lorenzetti S/A Indústrias Metralúrgicas-Jovem Aprendiz",
                 EnTipoUsuario.Candidato
                 );
             Assert.False(usuario.IsValid, "Usuário é Inválido");
