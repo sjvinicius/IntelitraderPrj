@@ -54,14 +54,16 @@ namespace InteliTrader.Infra.Data.Contexts
             modelBuilder.Entity<Usuario>().Property(x => x.Senha).IsRequired();
 
             //RG
-            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasColumnType("INT");
+            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasMaxLength(16);
+            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasColumnType("VARCHAR(16)");
             modelBuilder.Entity<Usuario>().Property(x => x.RG).IsRequired();
             //CPF
-            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasColumnType("INT");
+            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasMaxLength(16);
+            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasColumnType("VARCHAR(16)");
             modelBuilder.Entity<Usuario>().Property(x => x.CPF).IsRequired();
             //Telefone
             modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasMaxLength(15);
-            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasColumnType("varchar(15)");
+            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasColumnType("VARCHAR(16)");
             modelBuilder.Entity<Usuario>().Property(x => x.Telefone).IsRequired();
             //Descrição
             modelBuilder.Entity<Usuario>().Property(x => x.Descricao).HasMaxLength(80);
@@ -141,11 +143,13 @@ namespace InteliTrader.Infra.Data.Contexts
 
             // DML - dados padrões
             modelBuilder.Entity<Vagas>().HasData(
-                new Vagas("Vaga Estágio Back-End","Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,35),
-                new Vagas("Vaga Dev Junior Front End", "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, 28),
-                new Vagas("Vaga Dev Sênior Back End", "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, 42)
-                ); 
+                new Vagas("Vaga Estágio Back-End","Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,"35%"),
+                new Vagas("Vaga Dev Junior Front End", "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, "28%"),
+                new Vagas("Vaga Dev Sênior Back End", "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, "42%")
+                );
             #endregion
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 
 namespace InteliTrader.Dominio.Commands.Usuario
 {
-    public class CriarContaCommand : Notifiable<Notification>, ICommand
+    public class CriarUsuarioCommand : Notifiable<Notification>, ICommand
     {
-        public CriarContaCommand()
+        public CriarUsuarioCommand()
         {
         }
-        public CriarContaCommand(string nome, string sobrenome, string email, string senha, string telefone, string rg, string cpf, string descricao, string cursando, string instituicao, string trabalho, string ondeTrabalha,EnTipoUsuario tipoUsuario)
+
+        public CriarUsuarioCommand(string nome, string sobrenome, string email, string senha, string telefone, string rg, string cpf, string descricao, string cursando, string instituicao, string trabalho, string ondeTrabalha, EnTipoUsuario tiposUsuario)
         {
             Nome = nome;
             Sobrenome = sobrenome;
@@ -29,9 +30,9 @@ namespace InteliTrader.Dominio.Commands.Usuario
             Instituicao = instituicao;
             Trabalho = trabalho;
             OndeTrabalha = ondeTrabalha;
+            TiposUsuario = tiposUsuario;
         }
 
-        
         public string Nome { get; set; }
         public string Sobrenome { get;  set; }
         public string Email { get;  set; }
@@ -56,9 +57,9 @@ namespace InteliTrader.Dominio.Commands.Usuario
                 .IsNotEmpty(Sobrenome, "Sobrenome", "O campo nome não pode ser vazio")
                 .IsEmail(Email, "Email", "formato incorreto de email")
                 .IsGreaterThan(Senha, 8, "Senha", "A senha deve ter 8 caracteres ou mais")
-                .IsGreaterOrEqualsThan(Telefone, 11, "Telefone", "O Telefone para contato deve ter 11 caracteres")
-                .IsGreaterOrEqualsThan(RG, 10, "RG", "O RG deve ter 10 caracteres")
-                .IsGreaterOrEqualsThan(CPF, 11, "CPF", "O CPF deve ter 11 caracteres")
+                .IsGreaterOrEqualsThan(Telefone, 16, "Telefone", "O Telefone para contato deve ter 11 caracteres")
+                .IsGreaterOrEqualsThan(RG, 16, "RG", "O RG deve ter 10 caracteres")
+                .IsGreaterOrEqualsThan(CPF, 16, "CPF", "O CPF deve ter 11 caracteres")
                 .IsNotEmpty(Cursando, "Cursando", "Não é Obrigatório")
                 .IsNotEmpty(Instituicao, "Instituição", "Não é Obrigatório")
                 .IsNotEmpty(Trabalho, "Trabalho", "Não é Obrigatório")

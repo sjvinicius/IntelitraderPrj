@@ -27,8 +27,8 @@ namespace InteliTrader.Testes.Repositorios
                 "Roberto",
                 "email@email.com",
                 "pastel23456",
-                "223.624.289-15",
-                "37.437.268-1",
+                "22362428915",
+                "374372681",
                 "1194728356",
                 "Tenho 25 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
                 "Técnico de Desenvolvimento de Sistemas",
@@ -54,7 +54,7 @@ namespace InteliTrader.Testes.Repositorios
         {
             return new List<Usuario>()
             {
-                new Usuario("Ruan","Gustavo","RuanGostoso@gmail.com","caldodecana24","243.524.789-13","11940759338","Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
+                new Usuario("Ruan","Gustavo","RuanGostoso@gmail.com","caldodecana24","24352478913","11940759338","Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
                 "24.536.578-2",
                 "Técnico de Desenvolvimento de Sistemas",
                 "Escola SENAI de Informática",
@@ -66,8 +66,8 @@ namespace InteliTrader.Testes.Repositorios
                 "Roberto",
                 "RobertoMarcos@gmail.com",
                 "pastel23456",
-                "223.624.289-15",
-                "37.437.268-1",
+                "22362428915",
+                "374372681",
                 "1194728356",
                 "Tenho 25 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
                 "Técnico de Desenvolvimento de Sistemas",

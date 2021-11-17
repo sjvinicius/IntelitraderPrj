@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace InteliTrader.Dominio.Handlers.Usuarios
 {
-    public class CriarUsuarioHandler : Notifiable<Notification>, IHandler<CriarContaCommand>
+    public class CriarUsuarioHandler : Notifiable<Notification>, IHandler<CriarUsuarioCommand>
     {
         //Injeção de Dependêcia
         private readonly IUsuarioRepository _usuarioRepository;
@@ -21,7 +21,7 @@ namespace InteliTrader.Dominio.Handlers.Usuarios
         {
             _usuarioRepository = usuarioRepository;
         }
-        public ICommandResult Handler(CriarContaCommand command)
+        public ICommandResult Handler(CriarUsuarioCommand command)
         {
             //verificando se o command é valido
             command.Validar();

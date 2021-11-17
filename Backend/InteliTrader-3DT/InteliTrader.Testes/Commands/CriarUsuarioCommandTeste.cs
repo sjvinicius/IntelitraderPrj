@@ -19,8 +19,8 @@ namespace InteliTrader.Testes.Commands
                 "RuanGostoso@gmail.com",
                 "caldodecana24",
                 "11940759338",
-                "24.536.578-2",
-                "243.524.789-13",
+                "245365782",
+                "24352478913",
                 "Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
                 "Técnico de Desenvolvimento de Sistemas",
                 "Escola SENAI de Informática",
@@ -34,14 +34,14 @@ namespace InteliTrader.Testes.Commands
         [Fact]
         public void DeveRetornarErroSeDadosForemPreenchidos()
         {
-            var command = new CriarContaCommand(
+            var command = new CriarUsuarioCommand(
                 "Ruan",
                 "Gustavo",
                 "RuanGostoso@gmail.com",
                 "caldodecana24",
                 "11940759338",
-                "24.536.578-2",
-                "243.524.789-13",
+                "245365782",
+                "24352478913",
                 "Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.",
                 "Técnico de Desenvolvimento de Sistemas",
                 "Escola SENAI de Informática",

@@ -17,14 +17,14 @@ namespace InteliTrader.Testes.Handler
         public void DeveRetornarCasoOsDadosDoHandleSejamValido()
         {
             // Criar um command
-            var command = new CriarContaCommand();
+            var command = new CriarUsuarioCommand();
             command.Nome = "Paulo";
             command.Sobrenome = "Brandão";
             command.Email = "paulobrandaoofficial@email.com";
             command.Senha = "6548974564";
-            command.Telefone ="11970520234";
-            command.RG = "53.462.586-1";
-            command.CPF = "467.323.058.24";
+            command.Telefone = "11970520234";
+            command.RG =  "534625861";
+            command.CPF = "46732305824";
             command.Cursando = "Desenvolvimento de Sistemas";
             command.Instituicao = "Senai Diadema";
             command.Trabalho = "";
