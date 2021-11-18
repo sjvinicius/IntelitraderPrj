@@ -1,4 +1,8 @@
+using InteliTrader.Dominio.Handlers.Autenticação;
+using InteliTrader.Dominio.Handlers.Usuarios;
+using InteliTrader.Dominio.Interfaces;
 using InteliTrader.Infra.Data.Contexts;
+using InteliTrader.Infra.Data.Repositorio;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -75,6 +79,11 @@ namespace InteliTrader.API
             });
 
             //Injeções de dependência
+            #region Injeção de Dependência Usuario
+            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+            services.AddTransient<CriarUsuarioHandler, CriarUsuarioHandler>();
+            services.AddTransient<LogarHandle, LogarHandle>();
+            #endregion
 
         }
 

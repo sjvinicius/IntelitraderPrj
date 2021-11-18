@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Vn1to6xRY5ymPUwgbi6p2YKS8DN/2ec/lXKSmImx2i6WNDi/3Ur8367A4m+avYnTr7R5x+Op7DLTe3PzrijiHA==",
+  "dgSpecHash": "lxUBdqcUkpaETDtqcIG0GW/pATBtmDQ12BF3QsoRwTcddDiV7Iqx0hJIgtfYEWnulKP1QcQFyXuINsKqTbLe4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\46732305824\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\46732305824\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
   ],
   "logs": []

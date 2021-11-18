@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kxpsyMJ0w25KllEkEHQrjW7Pi+108fWsjsycLYuNSxcB2dtCM8NGx7byMIQQcGRKJTaE8967ip+MznWpOlo2BA==",
+  "dgSpecHash": "2ctF+o7wFStsDeepE6233jN5ukbd8joZ+LE5No5unOaavX/AhhnQz7O7PmKXHHIrsUbf1vb3GeD55qejRgUQNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Testes\\InteliTrader.Testes.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\46732305824\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\46732305824\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\46732305824\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\46732305824\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",

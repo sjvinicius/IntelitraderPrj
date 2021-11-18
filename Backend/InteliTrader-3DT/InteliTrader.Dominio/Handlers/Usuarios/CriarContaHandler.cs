@@ -8,5 +8,6 @@ namespace InteliTrader.Dominio.Handlers.Usuarios
 {
     public class CriarContaHandler
     {
-    }
+
+    }  
 }

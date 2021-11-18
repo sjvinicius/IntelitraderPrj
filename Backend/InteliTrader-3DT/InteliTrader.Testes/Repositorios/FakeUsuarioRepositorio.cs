@@ -77,5 +77,10 @@ namespace InteliTrader.Testes.Repositorios
                 InteliTrader.Comum.Enum.EnTipoUsuario.Candidato)
             };
         }
+
+        public ICollection<Usuario> Listar(bool? ativo = null)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

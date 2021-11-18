@@ -14,7 +14,7 @@ namespace InteliTrader.Dominio.Interfaces
         void Deletar(Guid id);
         void Alterar(Usuario usuario);
         //Queries
-        ICollection<Usuario> Listar();
+        ICollection<Usuario> Listar(bool? ativo = null);
 
         Usuario BuscarPorId(Guid id);
         Usuario BuscarPorEmail(string email);
