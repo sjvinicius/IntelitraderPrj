@@ -44,11 +44,11 @@ Objetivo: Juntar todas informações sobre o problema e planejar o projeto em um
 
 ## Objetivo
 
-asdasdsad
+Planejamento e conhecimento do ambiente, empresa e projeto, estruturando a estratégia a ser utilizada para desenvolver uma solução em que os problemas fossem sanados com profissionalismo
 
 ## Entrega
 
-asjdansdasd
+Solução desenvolvida e pensada pela equipe visando a interpretação do escopo estando sujeita a mudanças pensando na viabilidade do desenvolvimento e outros qualidades do QoS
 
 
 # Sprint 2
@@ -63,7 +63,7 @@ Infraestrutura mínima em nuvem pronta.
 
 ## Entrega
 
-asjdansdasd
+Desenvolvimento visual do site para o funcionamento mínimo pronto com infraestrutura em nuvem pronta, geração do banco de dados e migração do banco para nuvem ativa deixando pendente o desenvolvimento da API resposável pelas ações do usuário no site.
 
 
 # Sprint 3
@@ -72,14 +72,9 @@ asjdansdasd
 
 ## Objetivo
 
-asdasdsad
+Otimização e teste das funcionalidades e navegações do site, otimização de custos na AWS 
 
 ## Entrega
-
-Preparação e dedicação para progredir o backend.
-Migração completa para AWS.
-Funcionalidades mínimas.
-Geração do banco de dados.
 
 
 
@@ -108,7 +103,7 @@ No momento esta acessível ao público, para evitar de criar uma instância dent
 
 Tipo da instância é um t2.micro, com 8GB de armazenamento.​
 Instalamos o serviço apache2 para web.​
-A instância esta na Sub-rede pública com IP privado 10.10.1.20./24.
+A instância esta na Sub-rede pública com IP privado 10.10.1.30/24.
 
 
 ## Elastic Load Balancing (ELB)
