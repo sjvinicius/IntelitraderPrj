@@ -1,6 +1,5 @@
 //Libs
 import styled from 'styled-components';
-import { Redirect } from 'react-router-dom'
 
 
 //Icons
@@ -84,7 +83,7 @@ export const IconStatusJob = styled(BookmarkCheck)`
   margin-right: 1rem;
 `;
 
-export const TittleNav = styled(Redirect)`
+export const TittleNav = styled.p`
   font-size: 1rem;
   font-weight: normal;
   text-transform: capitalize;
@@ -120,10 +119,17 @@ export const ListJob = styled.div`
 
 export const CardJob = styled.div`
   position: relative;
+  margin: 2rem 0;
+`;
+
+export const SectionStatus = styled.div`
+  background-color: #333333;
+  height: 13rem;
 `;
 
 export const BackgroundCard = styled.img`
-  position: relative;
+  height: 11.25rem;
+  position: absolute;
 `;
 
 export const WrapperTittle = styled.div`
@@ -132,7 +138,7 @@ export const WrapperTittle = styled.div`
   height: 4rem;
   display: flex;
   background: #FB7A1D9f;
-  bottom: 5rem;
+  top: 4.5rem;
 `;
 
 export const TittleJob = styled.h2`
@@ -143,7 +149,7 @@ export const TittleJob = styled.h2`
 
 export const TabAction = styled.div`
   background-color: #333333;
-  position: relative;
-  bottom: 7rem;
   height: 3rem;
+  position: relative;
+  bottom: -3rem;
 `;

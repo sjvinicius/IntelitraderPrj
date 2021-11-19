@@ -107,26 +107,34 @@ export function Modal() {
 function AsideMenu() {
 
     const history = useHistory()
+
+    function LogOff(){
+
+        localStorage.setItem('tkUserUp', '')
+
+        history.push('/Login')
+
+    }
     
     return (
         <ContentAside>
             
             <ImgUser src={foto} />
             <NameUser>Vinicius</NameUser>
-            <TypeUser>Líder</TypeUser>
-            <Exit>Sair</Exit>
+            <TypeUser>Candidato</TypeUser>
+            <Exit onClick={LogOff}>Sair</Exit>
 
-            <WrapperNav>
+            <WrapperNav onClick={ () => { history.push('/Listar') } }>
                 <IconAllJob/>
-                <TittleNav onClick={ () => { history.push('/Listar') } }>Todas as Vagas</TittleNav>
+                <TittleNav >Todas as Vagas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
                 <IconMyJobs/>
-                <TittleNavNow onclick = { () => {history.push('/ListarMinhas')}}>Minhas vagas</TittleNavNow>
+                <TittleNavNow>Minhas vagas</TittleNavNow>
             </WrapperNav>
             <Line/>
-            <WrapperNav>
+            <WrapperNav onClick={ () => { history.push('/ListarCandidaturas') } }>
                 <IconStatusJob/>
                 <TittleNav>Candidaturas</TittleNav>
             </WrapperNav>
@@ -154,6 +162,60 @@ export default function BodyListarMinhas() {
 
                 <ListJob>
                     
+                    <CardJob>
+                        <BackgroundCard src={bec}/>
+                            <WrapperTittle>
+                                <TittleJob>Desenvolvedor BackEnd</TittleJob>
+                            </WrapperTittle>
+                        <TabAction>
+                            <ButtonSmall onClick={OpenModal} value='Ver Mais' readOnly />
+                        </TabAction>
+                    </CardJob>
+                    <CardJob>
+                        <BackgroundCard src={bec}/>
+                            <WrapperTittle>
+                                <TittleJob>Desenvolvedor BackEnd</TittleJob>
+                            </WrapperTittle>
+                        <TabAction>
+                            <ButtonSmall onClick={OpenModal} value='Ver Mais' readOnly />
+                        </TabAction>
+                    </CardJob>
+                    <CardJob>
+                        <BackgroundCard src={bec}/>
+                            <WrapperTittle>
+                                <TittleJob>Desenvolvedor BackEnd</TittleJob>
+                            </WrapperTittle>
+                        <TabAction>
+                            <ButtonSmall onClick={OpenModal} value='Ver Mais' readOnly />
+                        </TabAction>
+                    </CardJob>
+                    <CardJob>
+                        <BackgroundCard src={bec}/>
+                            <WrapperTittle>
+                                <TittleJob>Desenvolvedor BackEnd</TittleJob>
+                            </WrapperTittle>
+                        <TabAction>
+                            <ButtonSmall onClick={OpenModal} value='Ver Mais' readOnly />
+                        </TabAction>
+                    </CardJob>
+                    <CardJob>
+                        <BackgroundCard src={bec}/>
+                            <WrapperTittle>
+                                <TittleJob>Desenvolvedor BackEnd</TittleJob>
+                            </WrapperTittle>
+                        <TabAction>
+                            <ButtonSmall onClick={OpenModal} value='Ver Mais' readOnly />
+                        </TabAction>
+                    </CardJob>
+                    <CardJob>
+                        <BackgroundCard src={bec}/>
+                            <WrapperTittle>
+                                <TittleJob>Desenvolvedor BackEnd</TittleJob>
+                            </WrapperTittle>
+                        <TabAction>
+                            <ButtonSmall onClick={OpenModal} value='Ver Mais' readOnly />
+                        </TabAction>
+                    </CardJob>
                     <CardJob>
                         <BackgroundCard src={bec}/>
                             <WrapperTittle>

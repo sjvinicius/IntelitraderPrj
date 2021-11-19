@@ -1,34 +1,38 @@
 //Libs
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Switch, Route, BrowserRouter, Redirect} from 'react-router-dom'
+import {Switch, Route, BrowserRouter, /*Redirect*/} from 'react-router-dom'
 
 //Services
 import reportWebVitals from './reportWebVitals';
 
-//Styles
+//Components
 import Login from './pages/Login'
 import CandidatoListar from './pages/CandidatoListar'
 import CandidatoListarMinhas from './pages/CandidatoListarMinhas'
 import RHListar from './pages/RHListar'
 import LiderListar from './pages/LiderListar'
+import CandidatoListarCandidaturas from './pages/CandidatoListarCandidaturas';
+
+//Styles
 import './index.css';
 
-const PermCand = () => {
+
+// const PermCand = () => {
   
-  var varteste = '2';
+//   var varteste = '1';
 
-  return(
+//   return(
 
-    // UserAuth() === true &&
-    // ParseJwt.role 
-    varteste === '1' ?
-    <Route path='/Listar' name='Candidato' component={CandidatoListar} />
-    :
-    <Redirect to = '/login' />
+//     // UserAuth() === true &&
+//     // ParseJwt.role 
+//     varteste === '1' ?
+//     <Route path='/Listar' name='Candidato' component={CandidatoListar} />
+//     :
+//     <Redirect to = '/login' />
     
-  )
-}
+//   )
+// }
 // const PermRH = () => {
   
 //   var varteste = '2';
@@ -68,12 +72,13 @@ const route =(
         <Route exact path='/' name='Raiz' component={Login} />
         <Route path='/Login' name='Login' component={Login} />
         
-        <PermCand path='/Listar' name='Candidato' component={CandidatoListar} />
+        <Route path='/Listar' name='Candidato' component={CandidatoListar} />
         <Route path='/ListarMinhas' name='CandidatoMinhas' component={CandidatoListarMinhas} />
+        <Route path='/ListarCandidaturas' name='CandidatoCandidaturas' component={CandidatoListarCandidaturas} />
         
         <Route path='/ListarRH' name='RH' component={RHListar} />
+
         <Route path='/ListarLider' name='Lider' component={LiderListar} />
-        {/* <Route/> */}
       </Switch>
     </BrowserRouter>
   </>

@@ -17,6 +17,8 @@ import { WrapperModal, WrapperSubs, SubImg, IconCancel} from './stylesModal'
 
 import { WrapperModalCad, SectionCad, TittleInputCad, TittleLabel, WrapperPerfil, SectionWrapperPerfil } from './stylesModalCad'
 
+import { TittleNavNow } from '../../candidatoComponents/bodyListarMinhas/styles'
+
 //Img
 import logo from '../../../img/IntelitraderLogo.svg'
 import bec from '../../../img/backendcard.png'
@@ -322,17 +324,25 @@ function AsideMenu() {
 
     const history = useHistory();
     
+    function LogOff(){
+
+        localStorage.setItem('tkUserUp', '')
+
+        history.push('/Login')
+
+    }
+    
     return (
         <ContentAside >
             
             <ImgUser src={foto} />
             <NameUser>Vinicius</NameUser>
             <TypeUser>Recursos Humanos</TypeUser>
-            <Exit>Sair</Exit>
+            <Exit onClick={LogOff}>Sair</Exit>
 
             <WrapperNav>
                 <IconAllJob/>
-                <TittleNav onClick = { () => { history.push('/Listar') } }>Todas as Vagas</TittleNav>
+                <TittleNavNow onClick = { () => { history.push('/Listar') } }>Todas as Vagas</TittleNavNow>
             </WrapperNav>
             <Line/>
             <WrapperNav>

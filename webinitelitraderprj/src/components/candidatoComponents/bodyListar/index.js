@@ -1,6 +1,6 @@
 //  Libs
 import React, { useEffect, useState } from 'react'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 // Styles 
 import { ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, IconStatusJob, TittleNav, Line, /* Fim Aside */ Container, WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from './styles'
@@ -19,6 +19,9 @@ import bec from '../../../img/backendcard.png'
 // Components
 import { ButtonSmall } from '../../generic/button/styles'
 
+//Services
+import {api} from '../../../services/api/api'
+
 
 
 function CloseModal() {
@@ -33,11 +36,10 @@ function OpenModal() {
 
 }
 
-
 export function Modal() {
     
-    const [a, setTittle] = useState(``)
-    const [b, setSubTittle] = useState(``)
+    const [a, setTittle] = useState('')
+    const [b, setSubTittle] = useState('')
     const [descricao] = useState(`Esta destinada a voce candidato(a) que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
 
     Requisitos
@@ -50,10 +52,20 @@ export function Modal() {
     Azure Devops
     Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos`)
     
-    function BuscarVaga() {
+    async function BuscarVaga(id) {
         
-        setTittle('ASDASDASDASD')
-        setSubTittle('ASDASDASDASD')
+        const response = await api.get('/buscarvaga' + id, {
+
+            Headers : {
+
+                'Authorization' : 'Bearer' + localStorage.getItem('tkUserUp')
+
+            }
+
+        })
+        
+        setTittle('Titulo')
+        setSubTittle('Subtitulo')
     
     }
 
@@ -109,25 +121,33 @@ function AsideMenu() {
 
     const history = useHistory()
     
+    function LogOff(){
+
+        localStorage.setItem('tkUserUp', '')
+
+        history.push('/Login')
+
+    }
+    
     return (
         <ContentAside>
             
             <ImgUser src={foto} />
             <NameUser>Vinicius</NameUser>
             <TypeUser>Candidato</TypeUser>
-            <Exit>Sair</Exit>
+            <Exit onClick={LogOff}>Sair</Exit>
 
-            <WrapperNav>
+            <WrapperNav >
                 <IconAllJob/>
-                <TittleNavNow onClick={ () => { history.push('/Listar') } }>Todas as Vagas</TittleNavNow>
+                <TittleNavNow>Todas as Vagas</TittleNavNow>
             </WrapperNav>
             <Line/>
-            <WrapperNav>
+            <WrapperNav onClick = { () => {history.push('/ListarMinhas')} }>
                 <IconMyJobs/>
-                <TittleNav onclick = { () => { history.push('/ListarMinhas') } }>Minhas vagas</TittleNav>
+                <TittleNav>Minhas vagas</TittleNav>
             </WrapperNav>
             <Line/>
-            <WrapperNav>
+            <WrapperNav onClick = { () => {history.push('/ListarCandidaturas')} }>
                 <IconStatusJob/>
                 <TittleNav>Candidaturas</TittleNav>
             </WrapperNav>
@@ -151,9 +171,9 @@ export default function BodyListar () {
                     
                     <CardJob>
                         <BackgroundCard src={bec}/>
-                            <WrapperTittle>
-                                <TittleJob>Desenvolvedor BackEnd</TittleJob>
-                            </WrapperTittle>
+                        <WrapperTittle>
+                            <TittleJob>Desenvolvedor BackEnd</TittleJob>
+                        </WrapperTittle>
                         <TabAction>
                             <ButtonSmall onClick={OpenModal} value='Ver Mais' readOnly />
                         </TabAction>
