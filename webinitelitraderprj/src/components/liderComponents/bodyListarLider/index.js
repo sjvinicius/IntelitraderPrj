@@ -1,15 +1,23 @@
 
 // Libs
 import React, { useState, useEffect } from 'react'
+
 import { useHistory } from 'react-router-dom'
 
 //Styles
 import { Container, ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, IconStatusJob, TittleNav, Line, /* Fim Aside*/ WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from '../../candidatoComponents/bodyListar/styles'
-import { ContainerModal, WrapperModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../../candidatoComponents/bodyListar/stylesModal'
+
+import { ContainerModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../../candidatoComponents/bodyListar/stylesModal'
+
+import { WrapperModalPerfil, SectionModalPerfil, WrapperProfile, WrapperComp, IconWolfModal, IconEagleModal, WrapperInfosProfile, TextName, TextModalProfile } from '../../rhComponents/BodyListarRH/stylesModalPerfil'
+
+import { WrapperModal, ListCand, Cand } from './styles'
 
 //Imgs
 import foto from '../../../img/Foto.jpg'
+
 import logo from '../../../img/IntelitraderLogo.svg'
+
 import bec from '../../../img/backendcard.png'
 
 //Components
@@ -24,6 +32,18 @@ function OpenModal() {
 function CloseModal() {
 
     document.getElementById('Modal').style.display = 'none';
+
+}
+
+function OpenPerfil() {
+    
+    document.getElementById('ModalPerfil').style.display = 'flex';
+
+}
+
+function ClosePerfil() {
+    
+    document.getElementById('ModalPerfil').style.display = 'none';
 
 }
 
@@ -76,6 +96,9 @@ export function Modal() {
                             disable
                             />
                         </WrapperDesc>
+                        <ListCand>
+                            <Cand src={foto} onClick={OpenPerfil}/>
+                        </ListCand>
                         <Text>R$a Salario</Text>
                     </SectionInfo>
                     <Section>
@@ -97,6 +120,63 @@ export function Modal() {
 
     )
     
+}
+
+export function ModalPerfil() {
+    
+    return(
+
+        <ContainerModal id='ModalPerfil'>
+            <WrapperModalPerfil>
+                <Top>
+                    <IconClose onClick={ClosePerfil}/>
+                </Top>
+                <SectionModalPerfil>
+                    <WrapperProfile>
+                        <ImgUser src={foto}/>
+                        <WrapperComp>
+                            <IconWolfModal/>
+                            <IconEagleModal/>
+                        </WrapperComp>
+                        <TextModalProfile>63%<br/>
+                        Aderência</TextModalProfile>
+                        <TextModalProfile>sjf.vinicius@gmail.com<br/>
+                        (11) 9-5980-5820</TextModalProfile>
+                    </WrapperProfile>
+                    <WrapperInfosProfile>
+
+                        <TextName>Vinicius Silva de Jesus</TextName>
+                        <SubTittleJobModal>Desenvolvedor Front-End </SubTittleJobModal>
+
+                        <Text>Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.</Text>
+
+                        <Text>Técnico em Redes de Computadores<br/>
+                        Escola SENAI de Informática<br/>
+                        01/2019 - 06/2020</Text>
+                        
+                        <Text>Técnico em Redes de Computadores<br/>
+                        Escola SENAI de Informática<br/>
+                        01/2019 - 06/2020</Text>
+                        
+                        <Text>Técnico em Redes de Computadores<br/>
+                        Escola SENAI de Informática<br/>
+                        01/2019 - 06/2020</Text>
+                        
+                        <Text>Técnico em Redes de Computadores<br/>
+                        Escola SENAI de Informática<br/>
+                        01/2019 - 06/2020</Text>
+
+                        <Text>Técnico em Redes de Computadores<br/>
+                        Escola SENAI de Informática<br/>
+                        01/2019 - 06/2020</Text>
+
+                    </WrapperInfosProfile>
+                </SectionModalPerfil>
+            </WrapperModalPerfil>
+        </ContainerModal>
+
+    )
+
 }
 
 function AsideMenu() {
@@ -121,17 +201,17 @@ function AsideMenu() {
 
             <WrapperNav>
                 <IconAllJob/>
-                <TittleNav onClick={ () => { history.push('/Listar') } }>Todas as Vagas</TittleNav>
+                <TittleNav onClick={ () => { history.push('/ListarLider') } }>Todas as Vagas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
                 <IconMyJobs/>
-                <TittleNav>Minhas vagas</TittleNav>
+                <TittleNav>Candidaturas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
                 <IconStatusJob/>
-                <TittleNav>Candidaturas</TittleNav>
+                <TittleNav>FeedBack</TittleNav>
             </WrapperNav>
             <Line/>
 
@@ -166,6 +246,7 @@ export default function BodyListarLider() {
 
             </WrapperContent>
             <Modal/>
+            <ModalPerfil/>
         </Container>
     )
 

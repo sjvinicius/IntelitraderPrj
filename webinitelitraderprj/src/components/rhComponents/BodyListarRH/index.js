@@ -9,7 +9,7 @@ import { Container, WrapperContent, Logo, ListJob, CardJob, BackgroundCard, Wrap
 
 import { ContainerModal,  Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../../candidatoComponents/bodyListar/stylesModal'
 
-import { WrapperModalPerfil, SectionModalPerfil, WrapperProfile, WrapperComp, IconWolfModal, IconEagleModal, WrapperInfosProfile, TextName, TextModalProfile } from './stylesModalPerfil'
+import { WrapperModalPerfil, SectionModalPerfil, WrapperProfile, WrapperComp, IconWolfModal, IconEagleModal, WrapperInfosProfile, TextName, WrapperTech, TextModalProfile } from './stylesModalPerfil'
 
 import { WrapperAlign } from '../../loginComponents/bodyLogin/styles'
 
@@ -37,7 +37,7 @@ function OpenModal() {
 
 }
 
-function OpenPefil() {
+function OpenPerfil() {
     
     document.getElementById('ModalPerfil').style.display = 'flex';
 
@@ -173,6 +173,18 @@ export function ModalCadRH(){
 
 export function ModalRH() {
 
+    const [descricao] = useState(`Esta destinada a voce candidato(a) que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
+
+    Requisitos
+
+    Conhecimentos em C# 
+    Cursando Técnico ou Superior em Desenvolvimento
+    Programação Orientada a Objetos
+    Visual Studio Community
+    GitHub
+    Azure Devops
+    Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos`)
+
     const [a, setTittle] = useState('')
     const [b, setSubTittle] = useState('')
     
@@ -201,41 +213,14 @@ export function ModalRH() {
                         <TittleJobModal>{a}</TittleJobModal>
                         <SubTittleJobModal>{b}</SubTittleJobModal>
                         <WrapperDesc>
-                            <TextDesc>
-                                Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os Requisitos
-
-                                Requisitos
-
-                                Conhecimentos em C#
-                                Cursando Técnico ou Superior em Desenvolvimento
-                                Programação Orientada a Objetos
-                                Visual Studio Community
-                                GitHub
-                                Azure Devops
-                                Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
-
-                                Requisitos
-
-                                Conhecimentos em C#
-                                Cursando Técnico ou Superior em Desenvolvimento
-                                Programação Orientada a Objetos
-                                Visual Studio Community
-                                GitHub
-                                Azure Devops
-                                Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
-
-                                Requisitos
-
-                                Conhecimentos em C#
-                                Cursando Técnico ou Superior em Desenvolvimento
-                                Programação Orientada a Objetos
-                                Visual Studio Community
-                                GitHub
-                                Azure Devops
-                            </TextDesc>
+                            <TextDesc
+                                value={descricao}
+                                readOnly
+                                disable
+                            />
                         </WrapperDesc>
                         <WrapperSubs>
-                            <SubImg onClick={OpenPefil} src={foto}/>
+                            <SubImg onClick={OpenPerfil} src={foto}/>
                             <ButtonModal value='Aprovado' readOnly/>
                             <IconCancel/>
                         </WrapperSubs>
@@ -291,26 +276,33 @@ export function ModalPerfil() {
 
                         <Text>Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.</Text>
 
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
+                        <WrapperTech>
+                            <TextName>Experiência</TextName>
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <TextName>Aprendizagem</TextName>
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
 
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                        </WrapperTech>
                     </WrapperInfosProfile>
                 </SectionModalPerfil>
             </WrapperModalPerfil>

@@ -2,7 +2,7 @@
 import React from 'react'
 
 //Styles
-import BodyListarRH from '../../components/rhComponents/bodyListarRH/' 
+import BodyListarRH from '../../components/rhComponents/BodyListarRH' 
 
 export default function RHListar() {
     

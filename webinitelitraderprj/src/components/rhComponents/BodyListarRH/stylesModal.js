@@ -8,7 +8,7 @@ export const WrapperModal = styled.div`
   position: absolute;
   background-color: #292929;
   width: 60vw;
-  height: 70vh;
+  height: 60vh;
 `;
 
 export const WrapperSubs = styled.div`

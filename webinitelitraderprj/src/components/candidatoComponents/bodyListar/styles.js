@@ -1,7 +1,6 @@
 //Libs
 import styled from 'styled-components';
 
-
 //Icons
 import { BriefcaseAlt } from '@styled-icons/boxicons-regular/BriefcaseAlt'
 import { TargetArrow } from '@styled-icons/fluentui-system-regular/TargetArrow'
@@ -152,4 +151,5 @@ export const TabAction = styled.div`
   height: 3rem;
   position: relative;
   bottom: -3rem;
+
 `;

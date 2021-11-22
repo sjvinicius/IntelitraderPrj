@@ -1,11 +1,12 @@
 //  Libs
 import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import ReactTooltip from 'react-tooltip'
 
 // Styles 
 import { ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, IconStatusJob, TittleNav, Line, /* Fim Aside */ Container, WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from './styles'
 
-import { ContainerModal, WrapperModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from './stylesModal'
+import { ContainerModal, WrapperModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon, TextTooltip } from './stylesModal'
 
 import { TittleNavNow } from '../bodyListarMinhas/styles'
 
@@ -20,7 +21,7 @@ import bec from '../../../img/backendcard.png'
 import { ButtonSmall } from '../../generic/button/styles'
 
 //Services
-import {api} from '../../../services/api/api'
+// import {api} from '../../../services/api/api'
 
 
 
@@ -41,7 +42,7 @@ export function Modal() {
     const [a, setTittle] = useState('')
     const [b, setSubTittle] = useState('')
     const [descricao] = useState(`Esta destinada a voce candidato(a) que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
-
+    
     Requisitos
 
     Conhecimentos em C# 
@@ -51,18 +52,20 @@ export function Modal() {
     GitHub
     Azure Devops
     Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos`)
-    
+    const [lobo] = useState('Lobo: Analisa, quantifica, é lógico, é crítico, é realista, gosta de números, entende de dinheiro, sabe como as coisas funcionam. Gosta de trabalhar sozinho, realizar, analisar dados, lidar com aspectos financeiros, montar as coisas, fazer algo funcionar, resolver problemas difíceis. Como são pessoas muito objetivas, são perfeitas para atividades de execução, com escopo e prazos definidos.');
+    const [gato] = useState(`Gato: É curioso, brinca, é sensível com os outros, gosta de ensinar, toca muito nas pessoas, gosta de apoiar, é expressivo, emocional, fala muito. Gosta de conseguir que os outros trabalhem bem juntos, de resolver questões de clientes, expressar ideias, desenvolver relacionamentos, fazer parte de uma equipe, convencer as pessoas, perceber o ambiente.`);
+
     async function BuscarVaga(id) {
         
-        const response = await api.get('/buscarvaga' + id, {
+        // const response = await api.get('/buscarvaga' + id, {
 
-            Headers : {
+            // Headers : {
 
-                'Authorization' : 'Bearer' + localStorage.getItem('tkUserUp')
+                // 'Authorization' : 'Bearer' + localStorage.getItem('tkUserUp')
 
-            }
+            // }
 
-        })
+        // })
         
         setTittle('Titulo')
         setSubTittle('Subtitulo')
@@ -89,7 +92,7 @@ export function Modal() {
                         <SubTittleJobModal>{b}</SubTittleJobModal>
                         <WrapperDesc>
                             <TextDesc
-                                value={descricao}
+                                value={descricao}by
                                 readOnly
                                 disable
                             />
@@ -98,10 +101,16 @@ export function Modal() {
                     </SectionInfo>
                     <Section>
                         <WrapperPerfis>
-                            <CatIcon />
-                            <WolfIcon />
-                            <SharkIcon />
-                            <EagleIcon />
+                            <CatIcon data-tip data-for='CatTooltip'/>
+                            <ReactTooltip id='CatTooltip'>
+                                <TextTooltip>{gato}</TextTooltip>
+                            </ReactTooltip>
+                            <WolfIcon data-tip data-for='WolfTooltip' /> 
+                            <ReactTooltip id='WolfTooltip'>
+                                <TextTooltip>{lobo}</TextTooltip>
+                            </ReactTooltip>
+                            {/* <SharkIcon /> */}
+                            {/* <EagleIcon /> */}
                         </WrapperPerfis>
                         <SubTittleJob> $Contrato </SubTittleJob>
                         <SubTittleJob> $Nível </SubTittleJob>

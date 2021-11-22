@@ -7,27 +7,26 @@ import {Grooveshark} from '@styled-icons/entypo-social/Grooveshark'
 import {Wolframlanguage} from '@styled-icons/simple-icons/Wolframlanguage'
 
 export const ContainerModal = styled.div`
-  position: relative;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
   display: none;
   background: #00000099;
   position: absolute;
   margin: 0;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
   transition: all 2s ease-in-out;
 `;
 
 export const WrapperModal = styled.div`
-  position: absolute;
+  position: relative;
   background-color: #292929;
   width: 60vw;
-  height: 60vh;
+  height: 55vh;
 `;
 
 export const Top = styled.div`
-  /* background-color: blue; */
   height: 1rem;
   padding: 0.5rem;
 `;
@@ -117,7 +116,7 @@ export const Section = styled.div`
 `;
 
 export const WrapperPerfis = styled.div`
-  /* background-color: #FFF; */
+  position: relative;
   width: 100%;
   display:flex;
   justify-content: space-around;
@@ -169,3 +168,8 @@ export const EagleIcon = styled(Eagle)`
     color: #FB7A1D;
   }
 `;
+
+export const TextTooltip = styled(Text)`
+  width: 20rem;
+
+`

@@ -9,8 +9,8 @@ import { Text } from '../../candidatoComponents/bodyListar/stylesModal'
 
 export const WrapperModalPerfil = styled(WrapperModal)`
   position: relative;
-  width: 70vw;
-  height: 90vh;
+  width: 60vw;
+  height: 80vh;
   align-items: center;  
 `;
 
@@ -19,7 +19,7 @@ export const SectionModalPerfil = styled.div`
 `;
 
 export const WrapperProfile = styled.div`
-  width: 40rem;
+  width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;  
@@ -37,7 +37,7 @@ export const WrapperComp = styled.div`
 `;
 
 export const IconWolfModal = styled(WolfIcon)`
-  width: 3rem;  
+  width: 3rem;
   
 `;
 
@@ -47,7 +47,10 @@ export const IconEagleModal = styled(EagleIcon)`
 `;
 
 export const WrapperInfosProfile = styled.div`
-    overflow: auto;
+  width: 40rem;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
 
 `;
 
@@ -55,6 +58,12 @@ export const TextName = styled(Text)`
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
+
+`;
+
+export const WrapperTech = styled.div`
+  height: 24rem;
+  overflow: auto;
 
 `;
 
