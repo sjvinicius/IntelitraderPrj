@@ -20,7 +20,7 @@
           "lib/netstandard2.0/Flunt.dll": {}
         }
       },
-      "InteliTrader.Comum/1.0.0": {
+      "InteliTrader.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
@@ -28,10 +28,10 @@
           "Flunt": "2.0.5"
         },
         "compile": {
-          "bin/placeholder/InteliTrader.Comum.dll": {}
+          "bin/placeholder/InteliTrader.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/InteliTrader.Comum.dll": {}
+          "bin/placeholder/InteliTrader.Shared.dll": {}
         }
       }
     }
@@ -73,16 +73,16 @@
         "lib/netstandard2.0/Flunt.dll"
       ]
     },
-    "InteliTrader.Comum/1.0.0": {
+    "InteliTrader.Shared/1.0.0": {
       "type": "project",
-      "path": "../InteliTrader.Comum/InteliTrader.Comum.csproj",
-      "msbuildProject": "../InteliTrader.Comum/InteliTrader.Comum.csproj"
+      "path": "../InteliTrader.Comum/InteliTrader.Shared.csproj",
+      "msbuildProject": "../InteliTrader.Comum/InteliTrader.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Flunt >= 2.0.5",
-      "InteliTrader.Comum >= 1.0.0"
+      "InteliTrader.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -116,8 +116,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj": {
-              "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj"
+            "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Shared.csproj": {
+              "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Shared.csproj"
             }
           }
         }

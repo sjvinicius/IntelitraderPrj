@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\InteliTrader.Dominio\InteliTrader.Dominio.csproj" />
     <ProjectReference Include="..\InteliTrader.Infra.Data\InteliTrader.Infra.Data.csproj" />
   </ItemGroup>
 

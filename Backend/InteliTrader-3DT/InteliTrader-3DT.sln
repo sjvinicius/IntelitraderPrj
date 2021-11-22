@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.Dominio", "InteliTrader.Dominio\InteliTrader.Dominio.csproj", "{479870C4-9152-4F69-89C8-A0176B2721AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.Comum", "InteliTrader.Comum\InteliTrader.Comum.csproj", "{F8DA9260-CCBC-4E90-A38F-5A21F5758815}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.Shared", "InteliTrader.Comum\InteliTrader.Shared.csproj", "{F8DA9260-CCBC-4E90-A38F-5A21F5758815}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.Testes", "InteliTrader.Testes\InteliTrader.Testes.csproj", "{F249693B-51A1-40B3-98CA-8E1DDF681367}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.Infra.Data", "InteliTrader.Infra.Data\InteliTrader.Infra.Data.csproj", "{31EB35D4-2919-4A5A-859D-B51D45E667A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteliTrader.API", "InteliTrader.API\InteliTrader.API.csproj", "{F9883A05-630E-4954-BADB-E283C9A6E6FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliTrader.API", "InteliTrader.API\InteliTrader.API.csproj", "{F9883A05-630E-4954-BADB-E283C9A6E6FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

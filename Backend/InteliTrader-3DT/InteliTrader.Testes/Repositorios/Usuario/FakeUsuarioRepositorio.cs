@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using InteliTrader.Dominio.Entidades;
 using InteliTrader.Dominio.Interfaces;
 
-namespace InteliTrader.Testes.Repositorios
+namespace InteliTrader.Testes.Repositorios.Usuario
 {
     public class FakeUsuarioRepositorio : IUsuarioRepository
     {
-        public void Adicionar(Usuario usuario)
+        public void Adicionar(Domain.Entidades.Usuario usuario)
         {
             
         }

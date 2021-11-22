@@ -27,14 +27,14 @@ namespace InteliTrader.Dominio.Entidades
                       .IsEmail(email, "Email", "formato incorreto de email")
                       .IsGreaterThan(senha, 12, "Senha", "A senha deve ter 8 caracteres ou mais")
                       .IsGreaterThan(telefone, 16, "Telefone", "O Telefone deve ter 11 caracteres")
-                      .IsGreaterThan(rg, 16, "RG", "O RG deve ter 10 caracteres")
-                      .IsGreaterThan(cpf, 16, "CPF", "O CPF deve ter 11 caracteres")
+                      .IsGreaterThan(rg, 14, "RG", "O RG deve ter 10 caracteres")
+                      .IsGreaterThan(cpf, 13, "CPF", "O CPF deve ter 11 caracteres")
                       .IsNotEmpty(descricao, "Descricao", "O campo Descricao não pode ser vazio")
                       .IsNotEmpty(cursando, "Cursando", "O campo Cursando não pode ser vazio")
                       .IsNotEmpty(instituicao, "Instituicao", "O campo Instituicao não pode ser vazio")
-                      .IsNotEmpty(trabalho, "Trabalho", "O campo trabalho não pode ser vazio")
-                      .IsNotEmpty(ondeTrabalha, "OndeTrabalha", "O campo onde Trabalha não pode ser vazio")
-                  );
+                      .IsNotEmpty(trabalho, "Trabalho", "Não é obrigatório informar caso não tenha")
+                      .IsNotEmpty(ondeTrabalha, "OndeTrabalha", "Não é obrigatório informar caso não tenha")
+                  ); 
             if (IsValid)
             {
                 Nome = nome;

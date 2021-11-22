@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InteliTrader.Comum\InteliTrader.Comum.csproj" />
+    <ProjectReference Include="..\InteliTrader.Comum\InteliTrader.Shared.csproj" />
   </ItemGroup>
 
 </Project>

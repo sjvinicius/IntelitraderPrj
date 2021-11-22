@@ -81,7 +81,7 @@ namespace InteliTrader.API
             //Injeções de dependência
             #region Injeção de Dependência Usuario
             services.AddTransient<IUsuarioRepository, UsuarioRepository>();
-            services.AddTransient<CriarUsuarioHandler, CriarUsuarioHandler>();
+            services.AddTransient<CriarContaHandler, CriarContaHandler>();
             services.AddTransient<LogarHandle, LogarHandle>();
             #endregion
 

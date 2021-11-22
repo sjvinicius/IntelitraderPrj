@@ -11,17 +11,17 @@ using Xunit;
 
 namespace InteliTrader.Testes.Handler
 {
-    public class CriarUsuarioHandlerTeste
+    public class CriarContaHandlerTeste
     {
         [Fact]
         public void DeveRetornarCasoOsDadosDoHandleSejamValido()
         {
             // Criar um command
-            var command = new CriarUsuarioCommand();
+            var command = new CriarContaCommand();
             command.Nome = "Paulo";
             command.Sobrenome = "Brandão";
             command.Email = "paulobrandaoofficial@email.com";
-            command.Senha = "6548974564";
+            command.Senha = "pastel234";
             command.Telefone = "11970520234";
             command.RG =  "534625861";
             command.CPF = "46732305824";
@@ -31,11 +31,11 @@ namespace InteliTrader.Testes.Handler
             command.OndeTrabalha = "";
             command.TiposUsuario = InteliTrader.Comum.Enum.EnTipoUsuario.Candidato;
             // Criar um handle
-            var handle = new CriarUsuarioHandler(new FakeUsuarioRepositorio());
+            var handle = new CriarContaHandler(new FakeUsuarioRepositorio());
             // Pegar o resultado
             var resultado = (GenericCommandResult)handle.Handler(command);
             // Validar a condição
-            Assert.True(true, "Usuario Válido");
+            Assert.True(resultado.Sucesso, "Usuario Válido");
         }
     }
 }

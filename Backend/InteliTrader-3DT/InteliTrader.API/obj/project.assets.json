@@ -1503,26 +1503,12 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "InteliTrader.Comum/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "BCrypt.Net-Core": "1.6.0",
-          "Flunt": "2.0.5"
-        },
-        "compile": {
-          "bin/placeholder/InteliTrader.Comum.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/InteliTrader.Comum.dll": {}
-        }
-      },
       "InteliTrader.Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Flunt": "2.0.5",
-          "InteliTrader.Comum": "1.0.0"
+          "InteliTrader.Shared": "1.0.0"
         },
         "compile": {
           "bin/placeholder/InteliTrader.Dominio.dll": {}
@@ -1545,6 +1531,20 @@
         },
         "runtime": {
           "bin/placeholder/InteliTrader.Infra.Data.dll": {}
+        }
+      },
+      "InteliTrader.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BCrypt.Net-Core": "1.6.0",
+          "Flunt": "2.0.5"
+        },
+        "compile": {
+          "bin/placeholder/InteliTrader.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InteliTrader.Shared.dll": {}
         }
       }
     }
@@ -5595,11 +5595,6 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "InteliTrader.Comum/1.0.0": {
-      "type": "project",
-      "path": "../InteliTrader.Comum/InteliTrader.Comum.csproj",
-      "msbuildProject": "../InteliTrader.Comum/InteliTrader.Comum.csproj"
-    },
     "InteliTrader.Dominio/1.0.0": {
       "type": "project",
       "path": "../InteliTrader.Dominio/InteliTrader.Dominio.csproj",
@@ -5609,10 +5604,16 @@
       "type": "project",
       "path": "../InteliTrader.Infra.Data/InteliTrader.Infra.Data.csproj",
       "msbuildProject": "../InteliTrader.Infra.Data/InteliTrader.Infra.Data.csproj"
+    },
+    "InteliTrader.Shared/1.0.0": {
+      "type": "project",
+      "path": "../InteliTrader.Comum/InteliTrader.Shared.csproj",
+      "msbuildProject": "../InteliTrader.Comum/InteliTrader.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "InteliTrader.Dominio >= 1.0.0",
       "InteliTrader.Infra.Data >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
@@ -5654,6 +5655,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj": {
+              "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj"
+            },
             "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Infra.Data\\InteliTrader.Infra.Data.csproj": {
               "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Infra.Data\\InteliTrader.Infra.Data.csproj"
             }

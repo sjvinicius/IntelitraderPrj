@@ -13,7 +13,7 @@ namespace InteliTrader.Testes.Commands
         [Fact]
         public void DeveRetornarErroSeCasoDadosForemInvalidos()
         {
-            var command = new LogarCommands();
+            var command = new LogarCommand();
 
             command.Email = "marcos@email.com";
             command.Senha = "robe";

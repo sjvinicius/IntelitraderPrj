@@ -1,5 +1,5 @@
 ﻿using InteliTrader.Comum.Commands;
-using InteliTrader.Dominio.Commands;
+using InteliTrader.Dominio.Commands.Autenticação;
 using InteliTrader.Dominio.Commands.Usuario;
 using InteliTrader.Dominio.Entidades;
 using InteliTrader.Dominio.Handlers.Autenticação;
@@ -23,40 +23,11 @@ namespace InteliTrader.API.Controllers
     {
         [Route("signup")]
         [HttpPost]
-        public GenericCommandResult SignUp(CriarUsuarioCommand command, [FromServices] CriarUsuarioHandler handle)
+        public GenericCommandResult SignUp(CriarContaCommand command, [FromServices] CriarContaHandler handle)
         {
             return (GenericCommandResult)handle.Handler(command);
         }
-
-        // Criamos nosso método que vai gerar nosso Token
-        private string GenerateJSONWebToken(Usuario userInfo)
-        {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ChaveSecretaCodeTurSenai132"));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-            // Definimos nossas Claims (dados da sessão) para poderem ser capturadas
-            // a qualquer momento enquanto o Token for ativo
-            var claims = new[] {
-        new Claim(JwtRegisteredClaimNames.FamilyName, userInfo.Nome),
-        new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
-        new Claim(ClaimTypes.Role, userInfo.TipoUsuario.ToString()),
-        new Claim("role", userInfo.TipoUsuario.ToString()),
-        new Claim(JwtRegisteredClaimNames.Jti, userInfo.Id.ToString())
-    };
-
-            // Configuramos nosso Token e seu tempo de vida
-            var token = new JwtSecurityToken
-                (
-                    "InteliTrader",
-                    "InteliTrader",
-                    claims,
-                    expires: DateTime.Now.AddMinutes(120),
-                    signingCredentials: credentials
-                );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
-
+        
         [Route("signin")]
         [HttpPost]
         public GenericCommandResult SignIn(LogarCommand command, [FromServices] LogarHandle handle)
@@ -66,10 +37,42 @@ namespace InteliTrader.API.Controllers
             if (resultado.Sucesso)
             {
                 var token = GenerateJSONWebToken((Usuario)resultado.Data);
+
                 return new GenericCommandResult(resultado.Sucesso, resultado.Mensagem, new { token = token });
             }
 
             return new GenericCommandResult(false, resultado.Mensagem, resultado.Data);
         }
+
+
+        // Criamos nosso método que vai gerar nosso Token
+        private string GenerateJSONWebToken(Usuario userInfo)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ChaveSecretaInteliTraderSenai132"));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            // Definimos nossas Claims (dados da sessão) para poderem ser capturadas
+            // a qualquer momento enquanto o Token for ativo
+            var claims = new[] {
+            new Claim(JwtRegisteredClaimNames.FamilyName, userInfo.Nome),
+            new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
+            new Claim(ClaimTypes.Role, userInfo.TipoUsuario.ToString()),
+            new Claim("role", userInfo.TipoUsuario.ToString()),
+            new Claim(JwtRegisteredClaimNames.Jti, userInfo.Id.ToString())
+            };
+
+            // Configuramos nosso Token e seu tempo de vida
+            var token = new JwtSecurityToken
+                (
+                    "InteliTrader",
+                    "InteliTrader",
+                    claims,
+                    expires: DateTime.Now.AddMinutes(30),
+                    signingCredentials: credentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
     }
 }

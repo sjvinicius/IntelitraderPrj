@@ -20,6 +20,8 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+    <Folder Include="Repositories\Candidatos\" />
+    <Folder Include="Repositories\Vagas\" />
   </ItemGroup>
 
   <ItemGroup>

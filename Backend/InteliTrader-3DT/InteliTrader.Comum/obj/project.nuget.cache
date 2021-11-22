@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DjPlpzg7Tks1bFLX+kMNkiG0ad0lHOY+2pybrjHXzkcOEnTA28BymqW8iiUMJ6wwBdZmlVU8LvSX77hsT1xr5g==",
+  "dgSpecHash": "Ooj4p//APeHU+OyKGbm5Gu/3jTE/sJvxR1L758YJrE7BntVWri9S6xmjutImmuyUhKwX+1u0fPKCzjR75ECjpA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
+  "projectFilePath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46732305824\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\46732305824\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"

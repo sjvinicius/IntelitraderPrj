@@ -10,13 +10,14 @@ using System.Threading.Tasks;
 
 namespace InteliTrader.Dominio.Commands.Usuario
 {
-    public class CriarUsuarioCommand : Notifiable<Notification>, ICommand
+    public class CriarContaCommand : Notifiable<Notification>, ICommand
     {
-        public CriarUsuarioCommand()
+        public CriarContaCommand()
         {
+
         }
 
-        public CriarUsuarioCommand(string nome, string sobrenome, string email, string senha, string telefone, string rg, string cpf, string descricao, string cursando, string instituicao, string trabalho, string ondeTrabalha, EnTipoUsuario tiposUsuario)
+        public CriarContaCommand(string nome, string sobrenome, string email, string senha, string telefone, string rg, string cpf, string descricao, string cursando, string instituicao, string trabalho, string ondeTrabalha, EnTipoUsuario tiposUsuario)
         {
             Nome = nome;
             Sobrenome = sobrenome;
@@ -58,12 +59,12 @@ namespace InteliTrader.Dominio.Commands.Usuario
                 .IsEmail(Email, "Email", "formato incorreto de email")
                 .IsGreaterThan(Senha, 8, "Senha", "A senha deve ter 8 caracteres ou mais")
                 .IsGreaterOrEqualsThan(Telefone, 16, "Telefone", "O Telefone para contato deve ter 11 caracteres")
-                .IsGreaterOrEqualsThan(RG, 16, "RG", "O RG deve ter 10 caracteres")
-                .IsGreaterOrEqualsThan(CPF, 16, "CPF", "O CPF deve ter 11 caracteres")
+                .IsGreaterOrEqualsThan(RG, 14, "RG", "O RG deve ter 10 caracteres")
+                .IsGreaterOrEqualsThan(CPF, 13, "CPF", "O CPF deve ter 11 caracteres")
                 .IsNotEmpty(Cursando, "Cursando", "Não é Obrigatório")
                 .IsNotEmpty(Instituicao, "Instituição", "Não é Obrigatório")
-                .IsNotEmpty(Trabalho, "Trabalho", "Não é Obrigatório")
-                .IsNotEmpty(OndeTrabalha, "Local de Trabalho", "Não é Obrigatório")
+                .IsNotEmpty(Trabalho, "Trabalho", "Não é obrigatório informar caso não tenha")
+                .IsNotEmpty(OndeTrabalha, "Local de Trabalho", "Não é obrigatório informar caso não tenha")
 
             );
         }

@@ -1538,7 +1538,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "InteliTrader.Comum/1.0.0": {
+      "InteliTrader.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Flunt": "2.0.5",
+          "InteliTrader.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InteliTrader.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InteliTrader.Dominio.dll": {}
+        }
+      },
+      "InteliTrader.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
@@ -1546,24 +1560,10 @@
           "Flunt": "2.0.5"
         },
         "compile": {
-          "bin/placeholder/InteliTrader.Comum.dll": {}
+          "bin/placeholder/InteliTrader.Shared.dll": {}
         },
         "runtime": {
-          "bin/placeholder/InteliTrader.Comum.dll": {}
-        }
-      },
-      "InteliTrader.Dominio/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "Flunt": "2.0.5",
-          "InteliTrader.Comum": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/InteliTrader.Dominio.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/InteliTrader.Dominio.dll": {}
+          "bin/placeholder/InteliTrader.Shared.dll": {}
         }
       }
     }
@@ -5821,15 +5821,15 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "InteliTrader.Comum/1.0.0": {
-      "type": "project",
-      "path": "../InteliTrader.Comum/InteliTrader.Comum.csproj",
-      "msbuildProject": "../InteliTrader.Comum/InteliTrader.Comum.csproj"
-    },
     "InteliTrader.Dominio/1.0.0": {
       "type": "project",
       "path": "../InteliTrader.Dominio/InteliTrader.Dominio.csproj",
       "msbuildProject": "../InteliTrader.Dominio/InteliTrader.Dominio.csproj"
+    },
+    "InteliTrader.Shared/1.0.0": {
+      "type": "project",
+      "path": "../InteliTrader.Comum/InteliTrader.Shared.csproj",
+      "msbuildProject": "../InteliTrader.Comum/InteliTrader.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {

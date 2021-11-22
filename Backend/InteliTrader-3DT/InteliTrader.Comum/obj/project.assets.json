@@ -73,9 +73,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
-      "projectName": "InteliTrader.Comum",
-      "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Comum.csproj",
+      "projectUniqueName": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Shared.csproj",
+      "projectName": "InteliTrader.Shared",
+      "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\InteliTrader.Shared.csproj",
       "packagesPath": "C:\\Users\\46732305824\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Comum\\obj\\",
       "projectStyle": "PackageReference",
