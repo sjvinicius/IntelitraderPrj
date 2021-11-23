@@ -41,5 +41,21 @@ namespace InteliTrader.Dominio.Entidades
 
         //Composições
         public IReadOnlyCollection<Candidato> Candidatos { get; private set; }
+
+        //metodos
+        public void AlterarVaga(string nomeVaga)
+        {
+            AddNotifications(
+            new Contract<Notification>()
+                .Requires()
+                .IsNotEmpty(NomeVaga, "NomeVaga", "Campo 'NomeVaga' não pode ser vazio!")
+            );
+
+            if (IsValid)
+            {
+                NomeVaga = nomeVaga;
+            }
+
+        }
     }
 }

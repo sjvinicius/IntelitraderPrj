@@ -20,6 +20,7 @@ namespace InteliTrader.Infra.Data.Repositorio
             _context = context;
         }
 
+        //Commands 
         public void Adicionar(Usuario usuario)
         {
             _context.Usuarios.Add(usuario);
@@ -55,6 +56,11 @@ namespace InteliTrader.Infra.Data.Repositorio
                 .Include(x => x.TipoUsuario)
                 .OrderBy(x => x.DataCriacao)
                 .ToList();
+        }
+
+        IEnumerable<Usuario> IUsuarioRepository.Listar(bool? ativo)
+        {
+            throw new NotImplementedException();
         }
     }
 }

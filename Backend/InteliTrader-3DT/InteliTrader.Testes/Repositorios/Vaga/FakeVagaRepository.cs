@@ -12,7 +12,7 @@ namespace InteliTrader.Testes.Repositorios.Vaga
     {
         public void Adicionar(Vagas vagas)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Alterar(Vagas vagas)
@@ -22,17 +22,22 @@ namespace InteliTrader.Testes.Repositorios.Vaga
 
         public Vagas BuscarPorId(Guid id)
         {
-            throw new NotImplementedException();
+            return new Vagas("Desenvolvimento de sistemas","",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,"48%");
+          
         }
 
+        public Vagas BuscarPorNome(string nome)
+        {
+            return null;
+        }
         public void Deletar(Vagas vagas)
         {
-            throw new NotImplementedException();
+            
         }
 
         public IEnumerable<Vagas> Listar()
         {
-            throw new NotImplementedException();
+            return null;
         }
     }
 }

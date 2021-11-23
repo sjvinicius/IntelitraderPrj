@@ -16,5 +16,6 @@ namespace InteliTrader.Dominio.Interfaces
         //queries
         IEnumerable<Vagas> Listar();
         Vagas BuscarPorId(Guid id);
+        Vagas BuscarPorNome(string nome);
     }
 }
