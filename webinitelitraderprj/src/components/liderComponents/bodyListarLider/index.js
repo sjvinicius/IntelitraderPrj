@@ -4,14 +4,14 @@ import React, { useState, useEffect } from 'react'
 
 import { useHistory } from 'react-router-dom'
 
+import ReactTooltip from 'react-tooltip'
+
 //Styles
-import { Container, ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, IconStatusJob, TittleNav, Line, /* Fim Aside*/ WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from '../../candidatoComponents/bodyListar/styles'
+import { Container, ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, TittleNav, Line, /* Fim Aside*/ WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from '../../candidatoComponents/bodyListar/styles'
 
-import { ContainerModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../../candidatoComponents/bodyListar/stylesModal'
+import { ContainerModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, /*SharkIcon,*/ /*EagleIcon,*/ TextTooltip } from '../../candidatoComponents/bodyListar/stylesModal'
 
-import { WrapperModalPerfil, SectionModalPerfil, WrapperProfile, WrapperComp, IconWolfModal, IconEagleModal, WrapperInfosProfile, TextName, TextModalProfile } from '../../rhComponents/BodyListarRH/stylesModalPerfil'
-
-import { WrapperModal, ListCand, Cand } from './styles'
+import { WrapperModal } from './styles'
 
 //Imgs
 import foto from '../../../img/Foto.jpg'
@@ -35,24 +35,13 @@ function CloseModal() {
 
 }
 
-function OpenPerfil() {
-    
-    document.getElementById('ModalPerfil').style.display = 'flex';
-
-}
-
-function ClosePerfil() {
-    
-    document.getElementById('ModalPerfil').style.display = 'none';
-
-}
 
 export function Modal() {
     
     const [a, setTittle] = useState('')
     const [b, setSubTittle] = useState('')
     const [descricao] = useState(`Esta destinada a voce candidato(a) que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
-
+    
     Requisitos
 
     Conhecimentos em C# 
@@ -62,11 +51,23 @@ export function Modal() {
     GitHub
     Azure Devops
     Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos`)
-    
-    function BuscarVaga() {
+    const [lobo] = useState('Lobo: Analisa, quantifica, é lógico, é crítico, é realista, gosta de números, entende de dinheiro, sabe como as coisas funcionam. Gosta de trabalhar sozinho, realizar, analisar dados, lidar com aspectos financeiros, montar as coisas, fazer algo funcionar, resolver problemas difíceis. Como são pessoas muito objetivas, são perfeitas para atividades de execução, com escopo e prazos definidos.');
+    const [gato] = useState(`Gato: É curioso, brinca, é sensível com os outros, gosta de ensinar, toca muito nas pessoas, gosta de apoiar, é expressivo, emocional, fala muito. Gosta de conseguir que os outros trabalhem bem juntos, de resolver questões de clientes, expressar ideias, desenvolver relacionamentos, fazer parte de uma equipe, convencer as pessoas, perceber o ambiente.`);
+
+    async function BuscarVaga(id) {
         
-        setTittle('ASDASDASDASD')
-        setSubTittle('ASDASDASDASD')
+        // const response = await api.get('/buscarvaga' + id, {
+
+            // Headers : {
+
+                // 'Authorization' : 'Bearer' + localStorage.getItem('tkUserUp')
+
+            // }
+
+        // })
+        
+        setTittle('Titulo')
+        setSubTittle('Subtitulo')
     
     }
 
@@ -89,30 +90,37 @@ export function Modal() {
                         <TittleJobModal>{a}</TittleJobModal>
                         <SubTittleJobModal>{b}</SubTittleJobModal>
                         <WrapperDesc>
-                            <TextDesc 
-                            value = {descricao}
-                            
-                            readOnly
-                            disable
+                            <TextDesc
+                                value={descricao}by
+                                readOnly
+                                disable
                             />
                         </WrapperDesc>
-                        <ListCand>
-                            <Cand src={foto} onClick={OpenPerfil}/>
-                        </ListCand>
                         <Text>R$a Salario</Text>
                     </SectionInfo>
                     <Section>
                         <WrapperPerfis>
-                            <CatIcon />
-                            <WolfIcon />
-                            <SharkIcon />
-                            <EagleIcon />
+                            <CatIcon data-tip data-for='CatTooltip'/>
+                            <ReactTooltip id='CatTooltip'>
+                                <TextTooltip>{gato}</TextTooltip>
+                            </ReactTooltip>
+                            <WolfIcon data-tip data-for='WolfTooltip' /> 
+                            <ReactTooltip id='WolfTooltip'>
+                                <TextTooltip>{lobo}</TextTooltip>
+                            </ReactTooltip>
+                            {/* <SharkIcon /> */}
+                            {/* <EagleIcon /> */}
                         </WrapperPerfis>
                         <SubTittleJob> $Contrato </SubTittleJob>
                         <SubTittleJob> $Nível </SubTittleJob>
                         <SubTittleJob> $Area </SubTittleJob>
                         <SubTittleJob> $Local</SubTittleJob>
-                        <Button value='Candidatar' readOnly/>
+                        <Button 
+                            disabled 
+                            value='Candidatar' 
+                            readOnly
+                            style={{cursor: 'default'}}
+                        />
                     </Section>
                 </WrapperSection>
             </WrapperModal>
@@ -122,62 +130,6 @@ export function Modal() {
     
 }
 
-export function ModalPerfil() {
-    
-    return(
-
-        <ContainerModal id='ModalPerfil'>
-            <WrapperModalPerfil>
-                <Top>
-                    <IconClose onClick={ClosePerfil}/>
-                </Top>
-                <SectionModalPerfil>
-                    <WrapperProfile>
-                        <ImgUser src={foto}/>
-                        <WrapperComp>
-                            <IconWolfModal/>
-                            <IconEagleModal/>
-                        </WrapperComp>
-                        <TextModalProfile>63%<br/>
-                        Aderência</TextModalProfile>
-                        <TextModalProfile>sjf.vinicius@gmail.com<br/>
-                        (11) 9-5980-5820</TextModalProfile>
-                    </WrapperProfile>
-                    <WrapperInfosProfile>
-
-                        <TextName>Vinicius Silva de Jesus</TextName>
-                        <SubTittleJobModal>Desenvolvedor Front-End </SubTittleJobModal>
-
-                        <Text>Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.</Text>
-
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-
-                    </WrapperInfosProfile>
-                </SectionModalPerfil>
-            </WrapperModalPerfil>
-        </ContainerModal>
-
-    )
-
-}
 
 function AsideMenu() {
 
@@ -201,17 +153,12 @@ function AsideMenu() {
 
             <WrapperNav>
                 <IconAllJob/>
-                <TittleNav onClick={ () => { history.push('/ListarLider') } }>Todas as Vagas</TittleNav>
+                <TittleNav>Todas as Vagas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
                 <IconMyJobs/>
-                <TittleNav>Candidaturas</TittleNav>
-            </WrapperNav>
-            <Line/>
-            <WrapperNav>
-                <IconStatusJob/>
-                <TittleNav>FeedBack</TittleNav>
+                <TittleNav onClick = { () => { history.push('/SelecionadosLider') } }>Candidaturas</TittleNav>
             </WrapperNav>
             <Line/>
 
@@ -246,7 +193,6 @@ export default function BodyListarLider() {
 
             </WrapperContent>
             <Modal/>
-            <ModalPerfil/>
         </Container>
     )
 

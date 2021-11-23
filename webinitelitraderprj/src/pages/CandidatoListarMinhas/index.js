@@ -8,8 +8,10 @@ export default function CandidatoListarMinhas() {
 
     return(
 
-        <BodyListarMinhas/>
-
+        <>
+            <BodyListarMinhas/>
+        </>
+        
     )
 
 }

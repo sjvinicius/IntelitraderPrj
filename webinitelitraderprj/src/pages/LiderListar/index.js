@@ -6,7 +6,10 @@ export default function LiderListar() {
     
     return(
 
-        <BodyListarLider/>
-
+        <>
+            <BodyListarLider/>
+        </>
+    
     )
+
 }

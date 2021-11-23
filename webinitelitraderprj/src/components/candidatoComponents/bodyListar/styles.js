@@ -86,6 +86,7 @@ export const TittleNav = styled.p`
   font-size: 1rem;
   font-weight: normal;
   text-transform: capitalize;
+  user-select: none;
 `;
 
 export const Line = styled.div`

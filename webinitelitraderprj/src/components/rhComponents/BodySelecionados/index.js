@@ -2,18 +2,22 @@
 import React, { useState, useEffect } from 'react'
 import {useHistory} from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import ReactTooltip from 'react-tooltip'
+
 
 //Styles
-import { Container, WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction, ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, TittleNav, Line } from '../../candidatoComponents/bodyListar/styles'
+import { WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction, ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, TittleNav, Line } from '../../candidatoComponents/bodyListar/styles'
 
-import { ContainerModal,  Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, /*SharkIcon,*/ /*EagleIcon,*/ TextTooltip } from '../../candidatoComponents/bodyListar/stylesModal'
+import { ContainerModal,  Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../../candidatoComponents/bodyListar/stylesModal'
+
+import { WrapperModalPerfil, SectionModalPerfil, WrapperProfile, WrapperComp, IconWolfModal, IconEagleModal, WrapperInfosProfile, TextName, WrapperTech, TextModalProfile } from './stylesModalPerfil'
 
 import { WrapperAlign } from '../../loginComponents/bodyLogin/styles'
 
-import { WrapperModal } from './stylesModal'
+import { WrapperModal, WrapperSubs, SubImg, IconCancel} from './stylesModal'
 
-import { WrapperModalCad, SectionCad, TittleInputCad, TittleLabel, WrapperPerfil, SectionWrapperPerfil } from './stylesModalCad'
+import { Container } from './styles'
+
+import { WrapperModalCad, SectionCad, TittleInputCad, TittleLabel, WrapperPerfil, SectionWrapperPerfil } from '../BodyListarRH/stylesModalCad'
 
 import { TittleNavNow } from '../../candidatoComponents/bodyListarMinhas/styles'
 
@@ -24,7 +28,7 @@ import foto from '../../../img/Foto.jpg'
 
 
 //Components
-import { ButtonSmall, Button, ButtonAside, ButtonCancel, ButtonCad } from '../../generic/button/styles'
+import { ButtonSmall, Button, ButtonModal, ButtonAside, ButtonCancel, ButtonCad } from '../../generic/button/styles'
 import { InputCad, InputDesc, SelectCad, OptionCad, InputBoxCad } from '../../generic/input/styles'
 
 
@@ -35,9 +39,21 @@ function OpenModal() {
 
 }
 
+function OpenPerfil() {
+    
+    document.getElementById('ModalPerfil').style.display = 'flex';
+
+}
+
 function CloseModal() {
 
     document.getElementById('Modal').style.display = 'none';
+
+}
+
+function ClosePerfil() {
+    
+    document.getElementById('ModalPerfil').style.display = 'none';
 
 }
 
@@ -150,18 +166,17 @@ export function ModalCadRH(){
                     </WrapperSection>
                 </form>
             </WrapperModalCad>
+            <ModalPerfil/>
         </ContainerModal>
 
     )
 
 }
 
-export function Modal() {
-    
-    const [a, setTittle] = useState('')
-    const [b, setSubTittle] = useState('')
+export function ModalRH() {
+
     const [descricao] = useState(`Esta destinada a voce candidato(a) que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
-    
+
     Requisitos
 
     Conhecimentos em C# 
@@ -171,23 +186,14 @@ export function Modal() {
     GitHub
     Azure Devops
     Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos`)
-    const [lobo] = useState('Lobo: Analisa, quantifica, é lógico, é crítico, é realista, gosta de números, entende de dinheiro, sabe como as coisas funcionam. Gosta de trabalhar sozinho, realizar, analisar dados, lidar com aspectos financeiros, montar as coisas, fazer algo funcionar, resolver problemas difíceis. Como são pessoas muito objetivas, são perfeitas para atividades de execução, com escopo e prazos definidos.');
-    const [gato] = useState(`Gato: É curioso, brinca, é sensível com os outros, gosta de ensinar, toca muito nas pessoas, gosta de apoiar, é expressivo, emocional, fala muito. Gosta de conseguir que os outros trabalhem bem juntos, de resolver questões de clientes, expressar ideias, desenvolver relacionamentos, fazer parte de uma equipe, convencer as pessoas, perceber o ambiente.`);
 
-    async function BuscarVaga(id) {
-        
-        // const response = await api.get('/buscarvaga' + id, {
-
-            // Headers : {
-
-                // 'Authorization' : 'Bearer' + localStorage.getItem('tkUserUp')
-
-            // }
-
-        // })
+    const [a, setTittle] = useState('')
+    const [b, setSubTittle] = useState('')
+    
+    function BuscarVaga() {
         
         setTittle('Titulo')
-        setSubTittle('Subtitulo')
+        setSubTittle('SubTitulo')
     
     }
 
@@ -196,7 +202,6 @@ export function Modal() {
         BuscarVaga()
         
     },[])
-    
 
     return(
 
@@ -211,25 +216,24 @@ export function Modal() {
                         <SubTittleJobModal>{b}</SubTittleJobModal>
                         <WrapperDesc>
                             <TextDesc
-                                value={descricao}by
+                                value={descricao}
                                 readOnly
                                 disable
                             />
                         </WrapperDesc>
+                        <WrapperSubs>
+                            <SubImg onClick={OpenPerfil} src={foto}/>
+                            <ButtonModal value='Aprovado' readOnly/>
+                            <IconCancel/>
+                        </WrapperSubs>
                         <Text>R$a Salario</Text>
                     </SectionInfo>
                     <Section>
                         <WrapperPerfis>
-                            <CatIcon data-tip data-for='CatTooltip'/>
-                            <ReactTooltip id='CatTooltip'>
-                                <TextTooltip>{gato}</TextTooltip>
-                            </ReactTooltip>
-                            <WolfIcon data-tip data-for='WolfTooltip' /> 
-                            <ReactTooltip id='WolfTooltip'>
-                                <TextTooltip>{lobo}</TextTooltip>
-                            </ReactTooltip>
-                            {/* <SharkIcon /> */}
-                            {/* <EagleIcon /> */}
+                            <CatIcon />
+                            <WolfIcon />
+                            <SharkIcon />
+                            <EagleIcon />
                         </WrapperPerfis>
                         <SubTittleJob> $Contrato </SubTittleJob>
                         <SubTittleJob> $Nível </SubTittleJob>
@@ -244,12 +248,76 @@ export function Modal() {
                     </Section>
                 </WrapperSection>
             </WrapperModal>
+            <ModalPerfil/>
         </ContainerModal>
 
     )
     
 }
 
+export function ModalPerfil() {
+    
+    return(
+
+        <ContainerModal id='ModalPerfil'>
+            <WrapperModalPerfil>
+                <Top>
+                    <IconClose onClick={ClosePerfil}/>
+                </Top>
+                <SectionModalPerfil>
+                    <WrapperProfile>
+                        <ImgUser src={foto}/>
+                        <WrapperComp>
+                            <IconWolfModal/>
+                            <IconEagleModal/>
+                        </WrapperComp>
+                        <TextModalProfile>63%<br/>
+                        Aderência</TextModalProfile>
+                        <TextModalProfile>sjf.vinicius@gmail.com<br/>
+                        (11) 9-5980-5820</TextModalProfile>
+                    </WrapperProfile>
+                    <WrapperInfosProfile>
+
+                        <TextName>Vinicius Silva de Jesus</TextName>
+                        <SubTittleJobModal>Desenvolvedor Front-End </SubTittleJobModal>
+
+                        <Text>Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.</Text>
+
+                        <WrapperTech>
+                            <TextName>Experiência</TextName>
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <TextName>Aprendizagem</TextName>
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                        </WrapperTech>
+                    </WrapperInfosProfile>
+                </SectionModalPerfil>
+            </WrapperModalPerfil>
+        </ContainerModal>
+
+    )
+
+}
 
 function AsideMenu() {
 
@@ -273,12 +341,12 @@ function AsideMenu() {
 
             <WrapperNav>
                 <IconAllJob/>
-                <TittleNavNow onClick = { () => { history.push('/ListarRH') } }>Todas as Vagas</TittleNavNow>
+                <TittleNav onClick = { () => { history.push('/ListarRH') } }>Todas as Vagas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
                 <IconMyJobs/>
-                <TittleNav onClick = { () => { history.push('/SelecionadosRH') } }>Selecionados</TittleNav>
+                <TittleNavNow onClick = { () => { history.push('/SelecionadosRH') } }>Selecionados</TittleNavNow>
             </WrapperNav>
             <Line/>
             <WrapperNav>
@@ -291,7 +359,7 @@ function AsideMenu() {
 }
 
 
-export default function BodyListarRH() {
+export default function BodySelecionadosRH() {
     
 
     return(
@@ -316,7 +384,8 @@ export default function BodyListarRH() {
                 </ListJob>
 
             </WrapperContent>
-            <Modal />
+            <ModalRH />
+            <ModalCadRH />
         </Container>
 
     )
