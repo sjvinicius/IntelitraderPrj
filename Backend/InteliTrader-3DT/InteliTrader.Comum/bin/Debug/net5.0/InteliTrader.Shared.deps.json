@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "InteliTrader.Dominio/1.0.0": {
+      "InteliTrader.Shared/1.0.0": {
         "dependencies": {
-          "Flunt": "2.0.5",
-          "InteliTrader.Shared": "1.0.0"
+          "BCrypt.Net-Core": "1.6.0",
+          "Flunt": "2.0.5"
         },
         "runtime": {
-          "InteliTrader.Dominio.dll": {}
+          "InteliTrader.Shared.dll": {}
         }
       },
       "BCrypt.Net-Core/1.6.0": {
@@ -30,20 +30,11 @@
             "fileVersion": "2.0.5.0"
           }
         }
-      },
-      "InteliTrader.Shared/1.0.0": {
-        "dependencies": {
-          "BCrypt.Net-Core": "1.6.0",
-          "Flunt": "2.0.5"
-        },
-        "runtime": {
-          "InteliTrader.Shared.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "InteliTrader.Dominio/1.0.0": {
+    "InteliTrader.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -61,11 +52,6 @@
       "sha512": "sha512-CMgq8FUYjkHzyZT3PhkUwZyy79mudON+EL4b0SAT7BfIOJ2CNypwnbdA0cPHAM2CYQfO2L8ubNJCiBHQOIv2pA==",
       "path": "flunt/2.0.5",
       "hashPath": "flunt.2.0.5.nupkg.sha512"
-    },
-    "InteliTrader.Shared/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

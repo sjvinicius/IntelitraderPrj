@@ -18,7 +18,7 @@ namespace InteliTrader.Infra.Data.Contexts
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Candidato> Candidatos { get; set; }
-        public DbSet<Vagas> Vagas { get; set; }
+        public DbSet<Vaga> Vagas { get; set; }
         public DbSet<TesteTecnico> TesteTecnicos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -49,21 +49,21 @@ namespace InteliTrader.Infra.Data.Contexts
             modelBuilder.Entity<Usuario>().HasIndex(x => x.Email).IsUnique();
 
             //Senha
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasColumnType("VARCHAR(200)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasMaxLength(200);
+            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasColumnType("VARCHAR(8)");
+            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasMaxLength(8);
             modelBuilder.Entity<Usuario>().Property(x => x.Senha).IsRequired();
 
             //RG
-            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasMaxLength(16);
-            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasColumnType("VARCHAR(16)");
+            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasMaxLength(8);
+            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasColumnType("VARCHAR(8)");
             modelBuilder.Entity<Usuario>().Property(x => x.RG).IsRequired();
             //CPF
-            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasMaxLength(16);
-            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasColumnType("VARCHAR(16)");
+            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasMaxLength(11);
+            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasColumnType("VARCHAR(11)");
             modelBuilder.Entity<Usuario>().Property(x => x.CPF).IsRequired();
             //Telefone
-            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasMaxLength(15);
-            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasColumnType("VARCHAR(16)");
+            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasMaxLength(12);
+            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasColumnType("VARCHAR(12)");
             modelBuilder.Entity<Usuario>().Property(x => x.Telefone).IsRequired();
             //Descrição
             modelBuilder.Entity<Usuario>().Property(x => x.Descricao).HasMaxLength(80);
@@ -102,7 +102,7 @@ namespace InteliTrader.Infra.Data.Contexts
 
             //Id Chave estrangeira Vaga
             modelBuilder.Entity<Candidato>()
-                .HasOne<Vagas>(x => x.Vaga)
+                .HasOne<Vaga>(x => x.Vaga)
                 .WithMany(x => x.Candidatos)
                 .HasForeignKey(x => x.IdVaga);
 
@@ -127,25 +127,25 @@ namespace InteliTrader.Infra.Data.Contexts
 
             #region Tabela Vagas
             //Nome Tabela
-            modelBuilder.Entity<Vagas>().ToTable("Vagas");
+            modelBuilder.Entity<Vaga>().ToTable("Vagas");
 
             //ID Chave Primária
-            modelBuilder.Entity<Vagas>().Property(x => x.Id);
+            modelBuilder.Entity<Vaga>().Property(x => x.Id);
 
-            //Nome Curso
-            modelBuilder.Entity<Vagas>().Property(x => x.NomeVaga).HasColumnType("VARCHAR(200)");
-            modelBuilder.Entity<Vagas>().Property(x => x.NomeVaga).HasMaxLength(200);
-            modelBuilder.Entity<Vagas>().Property(x => x.NomeVaga).IsRequired();
-            modelBuilder.Entity<Vagas>().HasIndex(x => x.NomeVaga).IsUnique();
+            //Nome Vaga
+            modelBuilder.Entity<Vaga>().Property(x => x.NomeVaga).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<Vaga>().Property(x => x.NomeVaga).HasMaxLength(200);
+            modelBuilder.Entity<Vaga>().Property(x => x.NomeVaga).IsRequired();
+            modelBuilder.Entity<Vaga>().HasIndex(x => x.NomeVaga).IsUnique();
 
             //Data Criação
-            modelBuilder.Entity<Vagas>().Property(x => x.DataCriacao).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<Vaga>().Property(x => x.DataCriacao).HasDefaultValueSql("GETDATE()");
 
             // DML - dados padrões
-            modelBuilder.Entity<Vagas>().HasData(
-                new Vagas("Vaga Estágio Back-End","Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,"35%"),
-                new Vagas("Vaga Dev Junior Front End", "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, "28%"),
-                new Vagas("Vaga Dev Sênior Back End", "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, "42%")
+            modelBuilder.Entity<Vaga>().HasData(
+                new Vaga("Vaga Estágio Back-End","Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,"35%"),
+                new Vaga("Vaga Dev Junior Front End", "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, "28%"),
+                new Vaga("Vaga Dev Sênior Back End", "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, "42%")
                 );
             #endregion
 

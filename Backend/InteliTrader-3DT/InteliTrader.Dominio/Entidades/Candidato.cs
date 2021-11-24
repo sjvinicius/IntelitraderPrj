@@ -41,6 +41,6 @@ namespace InteliTrader.Dominio.Entidades
 
         //Composições
         public Guid IdVaga { get; set; }
-        public Vagas Vaga { get; set; }
+        public Vaga Vaga { get; set; }
     }
 }

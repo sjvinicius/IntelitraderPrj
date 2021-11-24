@@ -10,12 +10,12 @@ namespace InteliTrader.Dominio.Interfaces
     public interface IVagasRepository
     {
         //commands
-        void Adicionar(Vagas vagas);
-        void Alterar(Vagas vagas);
-        void Deletar(Vagas vagas);
+        void Adicionar(Vaga vagas);
+        void Alterar(Vaga vagas);
+        void Deletar(Vaga vagas);
         //queries
-        IEnumerable<Vagas> Listar();
-        Vagas BuscarPorId(Guid id);
-        Vagas BuscarPorNome(string nome);
+        IEnumerable<Vaga> Listar();
+        Vaga BuscarPorId(Guid id);
+        Vaga BuscarPorNome(string nome);
     }
 }

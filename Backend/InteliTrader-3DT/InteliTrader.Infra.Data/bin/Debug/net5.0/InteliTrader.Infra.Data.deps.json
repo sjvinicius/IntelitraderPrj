@@ -1079,22 +1079,22 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
-      "InteliTrader.Comum/1.0.0": {
+      "InteliTrader.Dominio/1.0.0": {
+        "dependencies": {
+          "Flunt": "2.0.5",
+          "InteliTrader.Shared": "1.0.0"
+        },
+        "runtime": {
+          "InteliTrader.Dominio.dll": {}
+        }
+      },
+      "InteliTrader.Shared/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Core": "1.6.0",
           "Flunt": "2.0.5"
         },
         "runtime": {
-          "InteliTrader.Comum.dll": {}
-        }
-      },
-      "InteliTrader.Dominio/1.0.0": {
-        "dependencies": {
-          "Flunt": "2.0.5",
-          "InteliTrader.Comum": "1.0.0"
-        },
-        "runtime": {
-          "InteliTrader.Dominio.dll": {}
+          "InteliTrader.Shared.dll": {}
         }
       }
     }
@@ -1798,12 +1798,12 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
-    "InteliTrader.Comum/1.0.0": {
+    "InteliTrader.Dominio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "InteliTrader.Dominio/1.0.0": {
+    "InteliTrader.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

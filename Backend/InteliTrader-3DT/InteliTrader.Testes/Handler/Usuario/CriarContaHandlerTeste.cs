@@ -2,6 +2,7 @@
 using InteliTrader.Dominio.Commands.Usuario;
 using InteliTrader.Dominio.Handlers.Usuarios;
 using InteliTrader.Testes.Repositorios;
+using InteliTrader.Testes.Repositorios.Usuario;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace InteliTrader.Testes.Handler
             command.OndeTrabalha = "";
             command.TiposUsuario = InteliTrader.Comum.Enum.EnTipoUsuario.Candidato;
             // Criar um handle
-            var handle = new CriarContaHandler(new FakeUsuarioRepositorio());
+            var handle = new CriarContaHandler(new FakeUsuarioRepository());
             // Pegar o resultado
             var resultado = (GenericCommandResult)handle.Handler(command);
             // Validar a condição

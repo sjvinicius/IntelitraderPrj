@@ -22,20 +22,20 @@ namespace InteliTrader.Infra.Data.Repositories.Vagas
         }
 
         //Commands
-        public void Adicionar(Dominio.Entidades.Vagas vagas) 
+        public void Adicionar(Dominio.Entidades.Vaga vagas) 
         {
             _InteliContext.Vagas.Add(vagas);
             _InteliContext.SaveChanges();
         }
 
-        public void Alterar(Dominio.Entidades.Vagas vagas)
+        public void Alterar(Dominio.Entidades.Vaga vagas)
         {
             _InteliContext.Entry(vagas).State = EntityState.Modified;
             _InteliContext.SaveChanges();
         }
 
 
-        public void Deletar(Dominio.Entidades.Vagas vagas)
+        public void Deletar(Dominio.Entidades.Vaga vagas)
         {
             _InteliContext.Vagas.Remove(vagas);
             _InteliContext.SaveChanges();
@@ -43,18 +43,18 @@ namespace InteliTrader.Infra.Data.Repositories.Vagas
 
 
         //Querys
-        public IEnumerable<Dominio.Entidades.Vagas> Listar()
+        public IEnumerable<Dominio.Entidades.Vaga> Listar()
         {
             return _InteliContext.Vagas
                 .AsNoTracking()
                 .ToList();
         }
-        public Dominio.Entidades.Vagas BuscarPorId(Guid id)
+        public Dominio.Entidades.Vaga BuscarPorId(Guid id)
         {
             return _InteliContext.Vagas.FirstOrDefault(x => x.Id == id);
         }
 
-        public Dominio.Entidades.Vagas BuscarPorNome(string nome)
+        public Dominio.Entidades.Vaga BuscarPorNome(string nome)
         {
             return _InteliContext.Vagas.AsNoTracking().FirstOrDefault(x => x.NomeVaga == nome);
         }

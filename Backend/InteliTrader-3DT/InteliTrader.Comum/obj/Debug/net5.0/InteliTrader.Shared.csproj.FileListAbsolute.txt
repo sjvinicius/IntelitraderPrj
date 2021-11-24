@@ -1,0 +1,12 @@
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\bin\Debug\net5.0\InteliTrader.Shared.deps.json
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\bin\Debug\net5.0\InteliTrader.Shared.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\bin\Debug\net5.0\ref\InteliTrader.Shared.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\bin\Debug\net5.0\InteliTrader.Shared.pdb
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Shared.csproj.AssemblyReference.cache
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Shared.AssemblyInfoInputs.cache
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Shared.AssemblyInfo.cs
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Shared.csproj.CoreCompileInputs.cache
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Shared.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\ref\InteliTrader.Shared.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Comum\obj\Debug\net5.0\InteliTrader.Shared.pdb

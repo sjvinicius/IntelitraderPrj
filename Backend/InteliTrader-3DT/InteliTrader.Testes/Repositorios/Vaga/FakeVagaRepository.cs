@@ -10,32 +10,32 @@ namespace InteliTrader.Testes.Repositorios.Vaga
 {
     public class FakeVagaRepository : IVagasRepository
     {
-        public void Adicionar(Vagas vagas)
+        public void Adicionar(Dominio.Entidades.Vaga vagas)
         {
             
         }
 
-        public void Alterar(Vagas vagas)
+        public void Alterar(Dominio.Entidades.Vaga vagas)
         {
             throw new NotImplementedException();
         }
 
-        public Vagas BuscarPorId(Guid id)
+        public Dominio.Entidades.Vaga BuscarPorId(Guid id)
         {
-            return new Vagas("Desenvolvimento de sistemas","",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,"48%");
+            return new Dominio.Entidades.Vaga("Desenvolvimento de sistemas","", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,"48%");
           
         }
 
-        public Vagas BuscarPorNome(string nome)
+        public Dominio.Entidades.Vaga BuscarPorNome(string nome)
         {
             return null;
         }
-        public void Deletar(Vagas vagas)
+        public void Deletar(Dominio.Entidades.Vaga vagas)
         {
             
         }
 
-        public IEnumerable<Vagas> Listar()
+        public IEnumerable<Dominio.Entidades.Vaga> Listar()
         {
             return null;
         }
