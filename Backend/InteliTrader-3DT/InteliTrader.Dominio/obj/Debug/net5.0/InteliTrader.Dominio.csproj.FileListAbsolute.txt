@@ -25,6 +25,5 @@ C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrad
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Dominio.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\ref\InteliTrader.Dominio.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Dominio.pdb
-C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\obj\Debug\net5.0\InteliTrader.Dominio.csproj.CopyComplete
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Shared.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Dominio\bin\Debug\net5.0\InteliTrader.Shared.pdb

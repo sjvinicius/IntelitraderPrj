@@ -30,7 +30,7 @@ namespace InteliTrader.Dominio.Handlers.Vagas
             }
 
             //salvando no banco
-            Vaga novaVaga = new Vaga(command.NomeVaga);
+            Vaga novaVaga = new Vaga(command.NomeVaga,command.Descricao,InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada); 
 
             if (!novaVaga.IsValid)
             {

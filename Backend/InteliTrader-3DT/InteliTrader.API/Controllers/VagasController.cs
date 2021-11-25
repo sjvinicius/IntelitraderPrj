@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using InteliTrader.Comum.Commands;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,6 @@ namespace InteliTrader.API.Controllers
     [ApiController]
     public class VagasController : ControllerBase
     {
+
     }
 }

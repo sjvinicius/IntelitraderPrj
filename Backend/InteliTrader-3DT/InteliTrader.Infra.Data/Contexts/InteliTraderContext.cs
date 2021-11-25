@@ -143,9 +143,9 @@ namespace InteliTrader.Infra.Data.Contexts
 
             // DML - dados padrões
             modelBuilder.Entity<Vaga>().HasData(
-                new Vaga("Vaga Estágio Back-End","Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,"35%"),
-                new Vaga("Vaga Dev Junior Front End", "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, "28%"),
-                new Vaga("Vaga Dev Sênior Back End", "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada, "42%")
+                new Vaga("Vaga Estágio Back-End","Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada),
+                new Vaga("Vaga Dev Junior Front End", "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada),
+                new Vaga("Vaga Dev Sênior Back End", "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada)
                 );
             #endregion
 

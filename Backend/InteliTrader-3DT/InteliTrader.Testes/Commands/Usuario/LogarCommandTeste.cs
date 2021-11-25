@@ -16,7 +16,7 @@ namespace InteliTrader.Testes.Commands
             var command = new LogarCommand();
 
             command.Email = "marcos@email.com";
-            command.Senha = "robe";
+            command.Senha = "roberto2345";
 
             command.Validar();
 

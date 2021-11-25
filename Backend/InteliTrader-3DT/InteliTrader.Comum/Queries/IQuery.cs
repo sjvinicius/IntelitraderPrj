@@ -8,5 +8,6 @@ namespace InteliTrader.Shared.Queries
 {
     public interface IQuery
     {
+        void Validar();
     }
 }

@@ -16,28 +16,27 @@ namespace InteliTrader.Dominio.Entidades
         {
 
         }
-        public Vaga(string nomeVaga, string descricao, EnVagaSituacao situacaoVaga, string porcentagemSucesso)
+        public Vaga(string nomeVaga, string descricao, EnVagaSituacao situacaoVaga)
         {
             AddNotifications(
                   new Contract<Notification>()
                       .Requires()
                       .IsNotEmpty(nomeVaga, "Nome da Vaga", "O nome da vaga não pode ser vazio")
-                      .IsNotEmpty(descricao, "Descricao", "A Descricao não pode ser vazia")
-                      .IsNotEmpty(porcentagemSucesso, "Porcentagem de Sucesso", "O Campo Porcentagem Sucesso não pode ser vazio")                    
+                      .IsNotEmpty(descricao, "Descricao", "A Descricao não pode ser vazia")                                       
                   );
             if (IsValid)
             {
             NomeVaga = nomeVaga;
             Descricao = descricao;
             SituacaoVaga = situacaoVaga;
-            PorcentagemSucesso = porcentagemSucesso;
+
             }
         }
 
         public string NomeVaga { get; private set; }
         public string Descricao { get; private set; }
         public EnVagaSituacao SituacaoVaga { get; private set; }
-        public string PorcentagemSucesso { get; private set; }
+
 
         //Composições
         public IReadOnlyCollection<Candidato> Candidatos { get; private set; }

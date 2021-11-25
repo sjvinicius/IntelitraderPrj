@@ -39,11 +39,11 @@ namespace InteliTrader.Dominio.Commands.Candidato
                 new Contract<Notification>()
                 .Requires()
                 .IsNotNull(Nome, "Nome", "Campo 'Nome' não pode ser nulo!")
-                .IsNotNull(Sobrenome, "Rosto", "Campo 'Rosto' não pode ser vazio!")
-                .IsNotNull(Personalidade, "DataNascimento", "Campo 'DataNascimento' não pode ser vazio!")
-                .IsNotNull(Funcao, "RA", "Campo 'RA' não pode ser nulo!")
-                .IsNotEmpty(IdVaga, "IdPeriodo", "Campo 'IdPeriodo' não pode ser vazio!")
-                .IsNotEmpty(IdUsuarios, "IdCurso", "Campo 'IdCurso' não pode ser vazio!")
+                .IsNotNull(Sobrenome, "Sobrenome", "Campo 'Sobrenome' não pode ser vazio!")
+                .IsNotNull(Personalidade, "Personalidade", "Campo 'DataNascimento' não pode ser vazio!")
+                .IsNotNull(Funcao, "Função", "O Campo 'Função' não pode ser nulo!")
+                .IsNotEmpty(IdVaga, "IdVaga", "Campo 'IdVaga' não pode ser vazio!")
+                .IsNotEmpty(IdUsuarios, "IdUsuario", "Campo 'IdUsuario' não pode ser vazio!")
             );
         }
     }

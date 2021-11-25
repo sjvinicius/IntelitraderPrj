@@ -61,7 +61,7 @@ C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrad
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.API\obj\Debug\net5.0\InteliTrader.API.pdb
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.API\obj\Debug\net5.0\InteliTrader.API.genruntimeconfig.cache
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.API\obj\Debug\net5.0\InteliTrader.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.API\obj\Debug\net5.0\InteliTrader.API.csproj.CopyComplete
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.API\bin\Debug\net5.0\BCrypt.Net-Core.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.API\bin\Debug\net5.0\InteliTrader.Shared.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.API\bin\Debug\net5.0\InteliTrader.Shared.pdb
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.API\obj\Debug\net5.0\InteliTrader.API.csproj.CopyComplete

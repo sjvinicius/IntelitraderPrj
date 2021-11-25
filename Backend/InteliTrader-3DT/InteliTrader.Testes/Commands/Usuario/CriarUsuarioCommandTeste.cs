@@ -11,7 +11,7 @@ namespace InteliTrader.Testes.Commands
    public class CriarUsuarioCommandTeste
     {
         [Fact]
-        public void DeveRetornarErroSeDadosForemValido()
+        public void DeveRetornarSeDadosForemValidos()
         {
             var command = new CriarContaCommand(
                 "Ruan",
@@ -32,7 +32,7 @@ namespace InteliTrader.Testes.Commands
         }
 
         [Fact]
-        public void DeveRetornarErroSeDadosForemPreenchidos()
+        public void DeveRetornarSeDadosForemPreenchidos()
         {
             var command = new CriarContaCommand(
                 "Ruan",

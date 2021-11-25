@@ -12,7 +12,7 @@ namespace InteliTrader.Dominio.Entidades
 {
     public class Candidato : Base
     {
-        public Candidato(string nome, string sobrenome, string personalidade, string funcao, EnSituacaoCandidato situacao)
+        public Candidato(string nome, string sobrenome, string personalidade, string funcao)
         {
             AddNotifications(
                   new Contract<Notification>()
@@ -28,7 +28,6 @@ namespace InteliTrader.Dominio.Entidades
             Sobrenome = sobrenome;
             Personalidade = personalidade;
             Funcao = funcao;
-            Situacao = situacao;
             }
         }
 

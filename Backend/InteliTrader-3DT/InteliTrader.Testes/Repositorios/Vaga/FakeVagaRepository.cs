@@ -22,7 +22,7 @@ namespace InteliTrader.Testes.Repositorios.Vaga
 
         public Dominio.Entidades.Vaga BuscarPorId(Guid id)
         {
-            return new Dominio.Entidades.Vaga("Desenvolvimento de sistemas","", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada,"48%");
+            return new Dominio.Entidades.Vaga("Desenvolvimento de sistemas","", InteliTrader.Comum.Enum.EnVagaSituacao.VagaPublicada);
           
         }
 
