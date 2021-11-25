@@ -1,7 +1,6 @@
 
 // Libs
 import React, { useState, useEffect } from 'react'
-
 import { useHistory } from 'react-router-dom'
 
 //Styles
@@ -91,7 +90,6 @@ export function Modal() {
                         <WrapperDesc>
                             <TextDesc 
                             value = {descricao}
-                            
                             readOnly
                             disable
                             />
@@ -222,7 +220,7 @@ export default function BodySelecionadosLider() {
     return(
         <Container>
         <AsideMenu/>
-        <WrapperContent>
+            <WrapperContent>
                 <Logo src={logo}/>
 
                 <ListJob>

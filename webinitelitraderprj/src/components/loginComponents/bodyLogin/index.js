@@ -1,71 +1,73 @@
-// Libs
+//Libs
 import React from 'react'
-import { useForm } from 'react-hook-form'
-import { useHistory } from 'react-router-dom'
 
-// Styles
-import { Container, Logo, Error, FormLogin, TittleInput, WrapperAlign, IconUser, IconPwd, SignUp } from './styles'
+//Styles
+import { Container, ContentLogin, SectionBanner, SectionLogin, Logo, FormLogin, WrapperAlign, SignUp, TittleBanner,/*Icon,*/ TextBanner} from './styles'
 
-// Components
-import { Input } from '../../generic/input/styles'
-import { Button } from '../../generic/button/styles'
+//Imgs
+// import {} from ''
 
-//Img
-import logo from '../../../img/IntelitraderLogo.svg'
+//Components
+import {Input} from '../../generic/input/styles'
+import {Button} from '../../generic/button/styles'
 
-
-
-
-export default function BodyLogin () {
-
-    const {register, handleSubmit} = useForm()
-    const history = useHistory()
-    var errorNull = ''
-
-    //Funcoes
-    async function Autenticar(data){
-
-        // const response = await api.get('/Autentic', 
-        //     {
-        //         email : data.email,
-        //         senha : data.pwd   
-        //     }
-        // )
-
-        if(data.email === '' || data.pwd === ''){
-
-            errorNull = 'Preencha todos os campos antes de continuar'
-            
-        }else{
-            
-            console.log(data.email + '' + data.pwd)
-            history.push('/Listar')
-
-        }
-        
-
-
-    }
+export default function BodyLogin(){
 
     return(
 
         <Container>
-            <Logo src={logo}/>
-            <FormLogin onSubmit={handleSubmit(Autenticar)} >
-                <Error> {errorNull} </Error>
-                <TittleInput> Email </TittleInput>
-                <WrapperAlign>
-                    <IconUser />
-                    <Input type='email' {...register('email')} />
-                </WrapperAlign>
-                <TittleInput> Senha </TittleInput>
-                <WrapperAlign>
-                    <IconPwd/>
-                    <Input type='password' {...register('pwd')} />
-                </WrapperAlign>
-                <Button type='submit' value='Entrar' readOnly/>
-            </FormLogin>
-            <SignUp> Cadastre-se </SignUp>
+
+            <ContentLogin>
+
+                <SectionBanner>
+
+                    <TittleBanner>Conheça nossas oportunidades !</TittleBanner>
+
+                        <WrapperAlign>
+                            {/* <Icon/> */}
+                            <TextBanner>Cadastre-se em nosso site</TextBanner>
+                        </WrapperAlign>
+                        
+                        <WrapperAlign>
+                            {/* <Icon/> */}
+                            <TextBanner>Conheça a si mesmo</TextBanner>
+                        </WrapperAlign>
+                        
+                        <WrapperAlign>
+                            {/* <Icon/> */}
+                            <TextBanner>Candidate-se em nossas vagas</TextBanner>
+                        </WrapperAlign>
+
+                        <WrapperAlign>
+                            {/* <Icon/> */}
+                            <TextBanner>Acompanhe seu processo</TextBanner>
+                        </WrapperAlign>
+                    
+                </SectionBanner>
+
+                <SectionLogin>
+
+                    <Logo/>
+                    <FormLogin>
+
+                        <WrapperAlign>
+                            <Input />
+                        </WrapperAlign>
+                        
+                        <WrapperAlign>
+                            <Input />
+                        </WrapperAlign>
+
+                        <Button />
+
+                        <SignUp>Cadastre-se</SignUp>
+
+                    </FormLogin>
+
+                </SectionLogin>
+
+            </ContentLogin>
+
         </Container>
 
     )

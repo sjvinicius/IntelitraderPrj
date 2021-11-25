@@ -1,6 +1,6 @@
 //Libs
 import styled from 'styled-components';
-
+  
 //Icons
 import { BriefcaseAlt } from '@styled-icons/boxicons-regular/BriefcaseAlt'
 import { TargetArrow } from '@styled-icons/fluentui-system-regular/TargetArrow'
