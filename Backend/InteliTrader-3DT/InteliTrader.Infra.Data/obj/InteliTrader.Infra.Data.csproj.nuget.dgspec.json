@@ -50,6 +50,10 @@
             "Flunt": {
               "target": "Package",
               "version": "[2.0.5, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

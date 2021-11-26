@@ -82,8 +82,8 @@ namespace InteliTrader.Infra.Data.Migrations
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("VARCHAR(16)");
+                        .HasMaxLength(11)
+                        .HasColumnType("VARCHAR(11)");
 
                     b.Property<string>("Cursando")
                         .IsRequired()
@@ -118,13 +118,13 @@ namespace InteliTrader.Infra.Data.Migrations
 
                     b.Property<string>("RG")
                         .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("VARCHAR(16)");
+                        .HasMaxLength(9)
+                        .HasColumnType("VARCHAR(9)");
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("VARCHAR(200)");
+                        .HasMaxLength(8)
+                        .HasColumnType("VARCHAR(8)");
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
@@ -133,8 +133,8 @@ namespace InteliTrader.Infra.Data.Migrations
 
                     b.Property<string>("Telefone")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("VARCHAR(15)");
+                        .HasMaxLength(11)
+                        .HasColumnType("VARCHAR(11)");
 
                     b.Property<int>("TipoUsuario")
                         .HasColumnType("int");
@@ -151,7 +151,7 @@ namespace InteliTrader.Infra.Data.Migrations
                     b.ToTable("Usuarios");
                 });
 
-            modelBuilder.Entity("InteliTrader.Dominio.Entidades.Vagas", b =>
+            modelBuilder.Entity("InteliTrader.Dominio.Entidades.Vaga", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -170,9 +170,6 @@ namespace InteliTrader.Infra.Data.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("VARCHAR(200)");
 
-                    b.Property<string>("PorcentagemSucesso")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("SituacaoVaga")
                         .HasColumnType("int");
 
@@ -186,36 +183,33 @@ namespace InteliTrader.Infra.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0bf9dd6e-26c0-4301-a5aa-b0ff2e8e608c"),
-                            DataCriacao = new DateTime(2021, 11, 17, 16, 36, 2, 410, DateTimeKind.Local).AddTicks(782),
+                            Id = new Guid("af5a09c9-6551-4125-bc88-428c26a7f418"),
+                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 821, DateTimeKind.Local).AddTicks(8280),
                             Descricao = "Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",
                             NomeVaga = "Vaga Estágio Back-End",
-                            PorcentagemSucesso = "35%",
                             SituacaoVaga = 1
                         },
                         new
                         {
-                            Id = new Guid("fac88a9b-d11b-4221-87fa-c281c1ac8d12"),
-                            DataCriacao = new DateTime(2021, 11, 17, 16, 36, 2, 411, DateTimeKind.Local).AddTicks(4890),
+                            Id = new Guid("04e3b42f-3af4-4f62-a8e1-d6039c88728b"),
+                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 823, DateTimeKind.Local).AddTicks(2393),
                             Descricao = "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript",
                             NomeVaga = "Vaga Dev Junior Front End",
-                            PorcentagemSucesso = "28%",
                             SituacaoVaga = 1
                         },
                         new
                         {
-                            Id = new Guid("36a07eef-1826-4952-845b-afe36a8d2f17"),
-                            DataCriacao = new DateTime(2021, 11, 17, 16, 36, 2, 411, DateTimeKind.Local).AddTicks(4915),
+                            Id = new Guid("a419b1a1-73b5-4a49-b5b6-f9527a181fd2"),
+                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 823, DateTimeKind.Local).AddTicks(2424),
                             Descricao = "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js",
                             NomeVaga = "Vaga Dev Sênior Back End",
-                            PorcentagemSucesso = "42%",
                             SituacaoVaga = 1
                         });
                 });
 
             modelBuilder.Entity("InteliTrader.Dominio.Entidades.Candidato", b =>
                 {
-                    b.HasOne("InteliTrader.Dominio.Entidades.Vagas", "Vaga")
+                    b.HasOne("InteliTrader.Dominio.Entidades.Vaga", "Vaga")
                         .WithMany("Candidatos")
                         .HasForeignKey("IdVaga")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -224,7 +218,7 @@ namespace InteliTrader.Infra.Data.Migrations
                     b.Navigation("Vaga");
                 });
 
-            modelBuilder.Entity("InteliTrader.Dominio.Entidades.Vagas", b =>
+            modelBuilder.Entity("InteliTrader.Dominio.Entidades.Vaga", b =>
                 {
                     b.Navigation("Candidatos");
                 });

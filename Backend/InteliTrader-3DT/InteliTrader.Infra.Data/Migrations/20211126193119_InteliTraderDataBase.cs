@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace InteliTrader.Infra.Data.Migrations
 {
-    public partial class InteliTraderDevBanco : Migration
+    public partial class InteliTraderDataBase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -27,10 +27,10 @@ namespace InteliTrader.Infra.Data.Migrations
                     Nome = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false),
                     Sobrenome = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false),
                     Email = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false),
-                    Senha = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false),
-                    RG = table.Column<string>(type: "VARCHAR(16)", maxLength: 16, nullable: false),
-                    CPF = table.Column<string>(type: "VARCHAR(16)", maxLength: 16, nullable: false),
-                    Telefone = table.Column<string>(type: "VARCHAR(15)", maxLength: 15, nullable: false),
+                    Senha = table.Column<string>(type: "VARCHAR(8)", maxLength: 8, nullable: false),
+                    RG = table.Column<string>(type: "VARCHAR(9)", maxLength: 9, nullable: false),
+                    CPF = table.Column<string>(type: "VARCHAR(11)", maxLength: 11, nullable: false),
+                    Telefone = table.Column<string>(type: "VARCHAR(11)", maxLength: 11, nullable: false),
                     Descricao = table.Column<string>(type: "varchar(80)", maxLength: 80, nullable: false),
                     Cursando = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     Instituicao = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -52,7 +52,6 @@ namespace InteliTrader.Infra.Data.Migrations
                     NomeVaga = table.Column<string>(type: "VARCHAR(200)", maxLength: 200, nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SituacaoVaga = table.Column<int>(type: "int", nullable: false),
-                    PorcentagemSucesso = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DataCriacao = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GETDATE()")
                 },
                 constraints: table =>
@@ -86,18 +85,18 @@ namespace InteliTrader.Infra.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Vagas",
-                columns: new[] { "Id", "DataCriacao", "Descricao", "NomeVaga", "PorcentagemSucesso", "SituacaoVaga" },
-                values: new object[] { new Guid("0bf9dd6e-26c0-4301-a5aa-b0ff2e8e608c"), new DateTime(2021, 11, 17, 16, 36, 2, 410, DateTimeKind.Local).AddTicks(782), "Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST", "Vaga Estágio Back-End", "35%", 1 });
+                columns: new[] { "Id", "DataCriacao", "Descricao", "NomeVaga", "SituacaoVaga" },
+                values: new object[] { new Guid("af5a09c9-6551-4125-bc88-428c26a7f418"), new DateTime(2021, 11, 26, 16, 31, 18, 821, DateTimeKind.Local).AddTicks(8280), "Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST", "Vaga Estágio Back-End", 1 });
 
             migrationBuilder.InsertData(
                 table: "Vagas",
-                columns: new[] { "Id", "DataCriacao", "Descricao", "NomeVaga", "PorcentagemSucesso", "SituacaoVaga" },
-                values: new object[] { new Guid("fac88a9b-d11b-4221-87fa-c281c1ac8d12"), new DateTime(2021, 11, 17, 16, 36, 2, 411, DateTimeKind.Local).AddTicks(4890), "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript", "Vaga Dev Junior Front End", "28%", 1 });
+                columns: new[] { "Id", "DataCriacao", "Descricao", "NomeVaga", "SituacaoVaga" },
+                values: new object[] { new Guid("04e3b42f-3af4-4f62-a8e1-d6039c88728b"), new DateTime(2021, 11, 26, 16, 31, 18, 823, DateTimeKind.Local).AddTicks(2393), "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript", "Vaga Dev Junior Front End", 1 });
 
             migrationBuilder.InsertData(
                 table: "Vagas",
-                columns: new[] { "Id", "DataCriacao", "Descricao", "NomeVaga", "PorcentagemSucesso", "SituacaoVaga" },
-                values: new object[] { new Guid("36a07eef-1826-4952-845b-afe36a8d2f17"), new DateTime(2021, 11, 17, 16, 36, 2, 411, DateTimeKind.Local).AddTicks(4915), "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js", "Vaga Dev Sênior Back End", "42%", 1 });
+                columns: new[] { "Id", "DataCriacao", "Descricao", "NomeVaga", "SituacaoVaga" },
+                values: new object[] { new Guid("a419b1a1-73b5-4a49-b5b6-f9527a181fd2"), new DateTime(2021, 11, 26, 16, 31, 18, 823, DateTimeKind.Local).AddTicks(2424), "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js", "Vaga Dev Sênior Back End", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Candidatos_IdVaga",

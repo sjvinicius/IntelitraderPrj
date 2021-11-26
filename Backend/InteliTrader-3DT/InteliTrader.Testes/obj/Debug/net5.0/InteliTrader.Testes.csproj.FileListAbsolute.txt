@@ -202,8 +202,12 @@ C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrad
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\InteliTrader.Comum.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\InteliTrader.Dominio.dll
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\InteliTrader.Dominio.pdb
-C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\InteliTrader.Comum.pdb
 C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\obj\Debug\net5.0\InteliTrader.Testes.genruntimeconfig.cache
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\BCrypt.Net-Core.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\InteliTrader.Shared.dll
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\bin\Debug\net5.0\InteliTrader.Shared.pdb

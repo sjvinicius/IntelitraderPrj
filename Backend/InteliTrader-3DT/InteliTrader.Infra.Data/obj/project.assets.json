@@ -1557,7 +1557,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "BCrypt.Net-Core": "1.6.0",
-          "Flunt": "2.0.5"
+          "Flunt": "2.0.5",
+          "System.IdentityModel.Tokens.Jwt": "5.0.0"
         },
         "compile": {
           "bin/placeholder/InteliTrader.Shared.dll": {}

@@ -4,8 +4,10 @@ using InteliTrader.Dominio.Commands.Usuario;
 using InteliTrader.Dominio.Entidades;
 using InteliTrader.Dominio.Handlers.Autenticação;
 using InteliTrader.Dominio.Handlers.Usuarios;
+using InteliTrader.Shared.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -18,60 +20,45 @@ using System.Threading.Tasks;
 namespace InteliTrader.API.Controllers
 {
     [Route("v1/account")]
+    [Produces("application/json")]
     [ApiController]
     public class UsuariosController : ControllerBase
     {
-        [Route("signup")]
+        public IConfiguration Configuration { get; }
+        public UsuariosController(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        [Route("Cadastro")]
         [HttpPost]
-        public GenericCommandResult SignUp(CriarContaCommand command, [FromServices] CriarContaHandler handle)
+        public GenericCommandResult SignUp([FromBody] CriarContaCommand command, [FromServices] CriarContaHandler handle)
         {
             return (GenericCommandResult)handle.Handler(command);
         }
         
-        [Route("signin")]
+        [Route("Login")]
         [HttpPost]
-        public GenericCommandResult SignIn(LogarCommand command, [FromServices] LogarHandle handle)
+        public GenericCommandResult SignIn([FromBody]LogarCommand command, [FromServices] LogarHandle handle)
         {
             var resultado = (GenericCommandResult)handle.Handler(command);
 
             if (resultado.Sucesso)
             {
-                var token = GenerateJSONWebToken((Usuario)resultado.Data);
-
-                return new GenericCommandResult(resultado.Sucesso, resultado.Mensagem, new { token = token });
+                Usuario usuario = (Usuario)resultado.Data;
+                var token = new Token(
+                                        Configuration["Token:issuer"],
+                                        Configuration["Token:audience"],
+                                        Configuration["Token:secretKey"]
+                                     )
+                                    .GerarJsonWebToken(
+                                        usuario.Id,
+                                        usuario.Nome,
+                                        usuario.Email,
+                                        usuario.TipoUsuario.ToString()                    
+                                     );
+                return new GenericCommandResult(true, "Usuario Logado", new { token = token });
             }
-
-            return new GenericCommandResult(false, resultado.Mensagem, resultado.Data);
-        }
-
-
-        // Criamos nosso método que vai gerar nosso Token
-        private string GenerateJSONWebToken(Usuario userInfo)
-        {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ChaveSecretaInteliTraderSenai132"));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-            // Definimos nossas Claims (dados da sessão) para poderem ser capturadas
-            // a qualquer momento enquanto o Token for ativo
-            var claims = new[] {
-            new Claim(JwtRegisteredClaimNames.FamilyName, userInfo.Nome),
-            new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
-            new Claim(ClaimTypes.Role, userInfo.TipoUsuario.ToString()),
-            new Claim("role", userInfo.TipoUsuario.ToString()),
-            new Claim(JwtRegisteredClaimNames.Jti, userInfo.Id.ToString())
-            };
-
-            // Configuramos nosso Token e seu tempo de vida
-            var token = new JwtSecurityToken
-                (
-                    "InteliTrader",
-                    "InteliTrader",
-                    claims,
-                    expires: DateTime.Now.AddMinutes(30),
-                    signingCredentials: credentials
-                );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            return resultado;
         }
 
     }
