@@ -9,6 +9,8 @@ import reportWebVitals from './reportWebVitals';
 //Components
 import Login from './pages/Login'
 
+import Cadastrar from './pages/Cadastrar'
+
 import CandidatoListar from './pages/CandidatoListar'
 import CandidatoListarMinhas from './pages/CandidatoListarMinhas'
 import CandidatoListarCandidaturas from './pages/CandidatoListarCandidaturas';
@@ -76,6 +78,7 @@ const route =(
       <Switch>
         <Route exact path='/'             name='Raiz'                   component={Login} />
         <Route path='/Login'              name='Login'                  component={Login} />
+        <Route path='/Cadastrar'              name='Cadastrar'                  component={Cadastrar} />
         
         <Route path='/Listar'             name='Candidato'              component={CandidatoListar} />
         <Route path='/ListarMinhas'       name='CandidatoMinhas'        component={CandidatoListarMinhas} />

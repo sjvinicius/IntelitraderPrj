@@ -129,10 +129,10 @@ export const CatIcon = styled(LogoGitlab)`
   height: 3.6rem;
   border: 3px solid #FFF;
   border-radius: 50%;
-  transition: width 2s, height 2s, border-color 2s, color 2s;
+  transition: /*width 2s, height 2s,*/ border-color 2s, color 2s;
   :hover{
-    width: 4.2rem;
-    height: 4rem;
+    /* width: 4.2rem;
+    height: 4rem; */
     color: #FB7A1D;
     border: 3px solid;
     border-color: #FB7A1D;
@@ -142,9 +142,9 @@ export const WolfIcon = styled(Wolframlanguage)`
   width: 4rem;
   color: #FFF;
   border-radius: 50%;
-  transition: width 2s, height 2s, color 1s;
+  transition: /*width 2s, height 2s,*/ color 1s;
   :hover{
-    width: 4.5rem;
+    /* width: 4.5rem; */
     color: #FB7A1D;
   }
 `;
@@ -152,9 +152,9 @@ export const SharkIcon = styled(Grooveshark)`
   width: 4.6rem;
   color: #FFF;
   border-radius: 50%;
-  transition: width 2s, height 2s, border-color 2s, color 2s;
+  transition: /*width 2s, height 2s,*/ border-color 2s, color 2s;
   :hover{
-    width: 5rem;
+    /* width: 5rem; */
     color: #FB7A1D;
   }
 `;
@@ -162,9 +162,9 @@ export const EagleIcon = styled(Eagle)`
   width: 4rem;
   color: #FFF;
   border-radius: 50%;
-  transition: width 2s, height 2s, color 1s, border 2s;
+  transition: /*width 2s, height 2s,*/ color 1s, border 2s;
   :hover{
-    width: 4.5rem;
+    /* width: 4.5rem; */
     color: #FB7A1D;
   }
 `;

@@ -18,9 +18,9 @@ export const Button = styled.input`
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: background-color 3s ease-in-out, color 2s ease-in-out;
+  transition: background-color 1s ease-in-out, color 2s ease-in-out;
   :hover {
-    transition: background-color 3s , color 2s;
+    transition: background-color 1s , color 2s;
     background-color: #FFF;
     color: #FB7A1D;
 

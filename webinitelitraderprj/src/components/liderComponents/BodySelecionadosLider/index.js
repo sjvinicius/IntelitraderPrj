@@ -1,36 +1,41 @@
-
-// Libs
+//Libs
 import React, { useState, useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+
 
 //Styles
-import { Container, ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, TittleNav, Line, /* Fim Aside*/ WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction } from '../../candidatoComponents/bodyListar/styles'
+import { WrapperContent, Logo, ListJob, CardJob, BackgroundCard, WrapperTittle, TittleJob, TabAction, ContentAside, ImgUser, NameUser, TypeUser, Exit, WrapperNav, IconAllJob, IconMyJobs, TittleNav, Line } from '../../candidatoComponents/bodyListar/styles'
 
-import { ContainerModal, Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../../candidatoComponents/bodyListar/stylesModal'
+import { ContainerModal,  Top, IconClose, WrapperSection, SectionInfo, TittleJobModal, SubTittleJobModal, SubTittleJob, WrapperDesc, TextDesc, Text, Section, WrapperPerfis, CatIcon, WolfIcon, SharkIcon, EagleIcon } from '../../candidatoComponents/bodyListar/stylesModal'
 
-import { WrapperModalPerfil, SectionModalPerfil, WrapperProfile, WrapperComp, IconWolfModal, IconEagleModal, WrapperInfosProfile, TextName, TextModalProfile } from '../../rhComponents/BodyListarRH/stylesModalPerfil'
+import { WrapperModalPerfil, SectionModalPerfil, WrapperProfile, WrapperComp, IconWolfModal, IconEagleModal, WrapperInfosProfile, TextName, WrapperTech, TextModalProfile } from '../../rhComponents/BodySelecionados/stylesModalPerfil'
 
-import { WrapperModal, ListCand, Cand } from './styles'
+import { WrapperAlign } from '../../loginComponents/bodyLogin/styles'
 
-//Imgs
+import { WrapperModal, WrapperSubs, SubImg, IconCancel} from '../../rhComponents/BodySelecionados/stylesModal'
+
+import { Container } from './styles'
+
+import { WrapperModalCad, SectionCad, TittleInputCad, TittleLabel, WrapperPerfil, SectionWrapperPerfil } from '../../rhComponents/BodyListarRH/stylesModalCad'
+
+import { TittleNavNow } from '../../candidatoComponents/bodyListarMinhas/styles'
+
+//Img
+import logo from '../../../img/IntelitraderLogo.svg'
+import bec from '../../../img/backendcard.png'
 import foto from '../../../img/Foto.jpg'
 
-import logo from '../../../img/IntelitraderLogo.svg'
-
-import bec from '../../../img/backendcard.png'
 
 //Components
-import { ButtonSmall, Button } from '../../generic/button/styles'
+import { ButtonSmall, Button, ButtonModal, ButtonAside, ButtonCancel, ButtonCad } from '../../generic/button/styles'
+import { InputCad, InputDesc, SelectCad, OptionCad, InputBoxCad } from '../../generic/input/styles'
+
+
 
 function OpenModal() {
-
-    document.getElementById('Modal').style.display = 'flex';
-
-}
-
-function CloseModal() {
-
-    document.getElementById('Modal').style.display = 'none';
+    
+    document.getElementById('Modal').style.display = 'flex'
 
 }
 
@@ -40,16 +45,136 @@ function OpenPerfil() {
 
 }
 
+function CloseModal() {
+
+    document.getElementById('Modal').style.display = 'none';
+
+}
+
 function ClosePerfil() {
     
     document.getElementById('ModalPerfil').style.display = 'none';
 
 }
 
-export function Modal() {
-    
-    const [a, setTittle] = useState('')
-    const [b, setSubTittle] = useState('')
+function OpenModalCadRH() {
+
+    document.getElementById('ModalCadRH').style.display = 'flex'
+    console.log('modal aberto')
+
+}
+
+function CloseModalCadRH() {
+
+    document.getElementById('ModalCadRH').style.display = 'none'
+
+}
+
+export function ModalCadRH(){
+
+    const { register } = useForm();
+
+    return(
+
+        <ContainerModal id='ModalCadRH'>
+            <WrapperModalCad>
+                <Top>
+                    <IconClose onClick={CloseModalCadRH}/>
+                </Top>
+                <form>
+                    <WrapperSection>
+                        <SectionCad>
+                            <TittleInputCad> Título </TittleInputCad>
+                            <InputCad type='text' placeholder='Ex: Desenvolvedor C#' {...register('pwd')} />
+                            
+                            <TittleInputCad> Subtítulo </TittleInputCad>
+                            <InputCad type='text' placeholder='Ex: BackEnd'{...register('pwd')} />
+
+                            <TittleInputCad> Descrição </TittleInputCad>
+                            <InputDesc type='text' placeholder='Ex: Vaga destinada ao candidato que tem experiencia em desenvolvimento de software backend' {...register('pwd')} />
+
+                            <TittleInputCad> Salário </TittleInputCad>
+                            <SelectCad placeholder='R$' type="number" {...register('pwd') }>
+                                <OptionCad value="" disabled selected>Selecione uma Opção</OptionCad>
+                                <OptionCad value='1'>R$500</OptionCad>
+                                <OptionCad value='2'>R$500 ~ 1</OptionCad>
+                                <OptionCad value='3'>R$1000 ~ 1500</OptionCad>
+                                <OptionCad value='4'>R$1500 ~ 2000</OptionCad>
+                                <OptionCad value='5'>&gt;R$2000</OptionCad>
+                            </SelectCad>
+
+                            <ButtonCancel value='cancelar' type='submit'/>
+
+                        </SectionCad>
+                        <SectionCad>
+                            <TittleInputCad>Perfil Ideal</TittleInputCad>
+                            <SectionWrapperPerfil>
+                                <WrapperPerfil>
+
+                                    <WrapperAlign>
+                                        <InputBoxCad type="checkbox" />
+                                        <TittleLabel>Organizado</TittleLabel>
+                                    </WrapperAlign>
+                                    <WrapperAlign>
+                                        <InputBoxCad type="checkbox" />
+                                        <TittleLabel>Planejador</TittleLabel>
+                                    </WrapperAlign>
+                                    <WrapperAlign>
+                                        <InputBoxCad type="checkbox" />
+                                        <TittleLabel>Criativo</TittleLabel>
+                                    </WrapperAlign>
+                                    <WrapperAlign>
+                                        <InputBoxCad type="checkbox" />
+                                        <TittleLabel>Comunicador</TittleLabel>
+                                    </WrapperAlign>
+
+                                </WrapperPerfil>
+                                <WrapperPerfil>
+
+                                    <WrapperAlign>
+                                        <InputBoxCad id='checkCad' type="checkbox" />
+                                        <TittleLabel>Empático</TittleLabel>
+                                    </WrapperAlign>
+                                    <WrapperAlign>
+                                        <InputBoxCad id='checkCad' type="checkbox" />
+                                        <TittleLabel>Curioso</TittleLabel>
+                                    </WrapperAlign>
+                                    <WrapperAlign>
+                                        <InputBoxCad id='checkCad' type="checkbox" />
+                                        <TittleLabel>Prático</TittleLabel>
+                                    </WrapperAlign>
+                                    <WrapperAlign>
+                                        <InputBoxCad id='checkCad' type="checkbox" />
+                                        <TittleLabel>Competitivo</TittleLabel>
+                                    </WrapperAlign>
+
+                                </WrapperPerfil>
+                            </SectionWrapperPerfil>
+
+                            <TittleInputCad> Tipo de Contrato </TittleInputCad>
+                            <InputCad type='text' placeholder='Ex: CLT, Temporário' {...register('pwd')} />
+
+                            <TittleInputCad> Hierarquia </TittleInputCad>
+                            <InputCad type='text' placeholder='Ex: Júnior, Sênior, Pleno' {...register('pwd')} />
+                            
+                            <TittleInputCad> Área </TittleInputCad>
+                            <InputCad type='text' placeholder='Ex: Administrativo, Tecnologia' {...register('pwd')} />
+
+                            <ButtonCad value='Cadastrar' />
+
+                        </SectionCad>
+                    </WrapperSection>
+                </form>
+            </WrapperModalCad>
+            <ModalPerfil/>
+        </ContainerModal>
+
+    )
+
+}
+
+export function ModalRH() {
+
     const [descricao] = useState(`Esta destinada a voce candidato(a) que está procurando pela primeira oportunidade de emprego acompanhe os requisitos
 
     Requisitos
@@ -61,11 +186,14 @@ export function Modal() {
     GitHub
     Azure Devops
     Esta vaga esta destinada a voce candidato que está procurando pela primeira oportunidade de emprego acompanhe os requisitos`)
+
+    const [a, setTittle] = useState('')
+    const [b, setSubTittle] = useState('')
     
     function BuscarVaga() {
         
-        setTittle('Desenvolvedor C#')
-        setSubTittle('BackEnd')
+        setTittle('Titulo')
+        setSubTittle('SubTitulo')
     
     }
 
@@ -74,7 +202,6 @@ export function Modal() {
         BuscarVaga()
         
     },[])
-    
 
     return(
 
@@ -88,15 +215,17 @@ export function Modal() {
                         <TittleJobModal>{a}</TittleJobModal>
                         <SubTittleJobModal>{b}</SubTittleJobModal>
                         <WrapperDesc>
-                            <TextDesc 
-                            value = {descricao}
-                            readOnly
-                            disable
+                            <TextDesc
+                                value={descricao}
+                                readOnly
+                                disable
                             />
                         </WrapperDesc>
-                        <ListCand>
-                            <Cand src={foto} onClick={OpenPerfil}/>
-                        </ListCand>
+                        <WrapperSubs>
+                            <SubImg onClick={OpenPerfil} src={foto}/>
+                            <ButtonModal value='Aprovado' readOnly/>
+                            <IconCancel/>
+                        </WrapperSubs>
                         <Text>R$a Salario</Text>
                     </SectionInfo>
                     <Section>
@@ -110,10 +239,16 @@ export function Modal() {
                         <SubTittleJob> $Nível </SubTittleJob>
                         <SubTittleJob> $Area </SubTittleJob>
                         <SubTittleJob> $Local</SubTittleJob>
-                        <Button value='Candidatar' readOnly/>
+                        <Button 
+                            disabled 
+                            value='Candidatar' 
+                            readOnly
+                            style={{cursor: 'default'}}
+                        />
                     </Section>
                 </WrapperSection>
             </WrapperModal>
+            <ModalPerfil/>
         </ContainerModal>
 
     )
@@ -148,26 +283,33 @@ export function ModalPerfil() {
 
                         <Text>Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.</Text>
 
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-                        
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
+                        <WrapperTech>
+                            <TextName>Experiência</TextName>
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <TextName>Aprendizagem</TextName>
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                            
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
 
-                        <Text>Técnico em Redes de Computadores<br/>
-                        Escola SENAI de Informática<br/>
-                        01/2019 - 06/2020</Text>
-
+                            <Text>Técnico em Redes de Computadores<br/>
+                            Escola SENAI de Informática<br/>
+                            01/2019 - 06/2020</Text>
+                        </WrapperTech>
                     </WrapperInfosProfile>
                 </SectionModalPerfil>
             </WrapperModalPerfil>
@@ -179,8 +321,8 @@ export function ModalPerfil() {
 
 function AsideMenu() {
 
-    const history = useHistory()
-
+    const history = useHistory();
+    
     function LogOff(){
 
         localStorage.setItem('tkUserUp', '')
@@ -190,23 +332,26 @@ function AsideMenu() {
     }
     
     return (
-        <ContentAside>
+        <ContentAside >
             
             <ImgUser src={foto} />
             <NameUser>Vinicius</NameUser>
-            <TypeUser>Líder</TypeUser>
+            <TypeUser>Recursos Humanos</TypeUser>
             <Exit onClick={LogOff}>Sair</Exit>
 
             <WrapperNav>
                 <IconAllJob/>
-                <TittleNav onClick={ () => { history.push('/ListarLider') } }>Todas as Vagas</TittleNav>
+                <TittleNav onClick = { () => { history.push('/ListarRH') } }>Todas as Vagas</TittleNav>
             </WrapperNav>
             <Line/>
             <WrapperNav>
                 <IconMyJobs/>
-                <TittleNav>Candidaturas</TittleNav>
+                <TittleNavNow onClick = { () => { history.push('/SelecionadosRH') } }>Selecionados</TittleNavNow>
             </WrapperNav>
             <Line/>
+            <WrapperNav>
+                <ButtonAside onClick = { OpenModalCadRH } value='Nova Vaga' readOnly/>
+            </WrapperNav>
 
         </ContentAside>
     )
@@ -214,12 +359,13 @@ function AsideMenu() {
 }
 
 
-
 export default function BodySelecionadosLider() {
     
+
     return(
+
         <Container>
-        <AsideMenu/>
+            <AsideMenu/>
             <WrapperContent>
                 <Logo src={logo}/>
 
@@ -238,9 +384,10 @@ export default function BodySelecionadosLider() {
                 </ListJob>
 
             </WrapperContent>
-            <Modal/>
-            <ModalPerfil/>
+            <ModalRH />
+            <ModalCadRH />
         </Container>
+
     )
 
 }

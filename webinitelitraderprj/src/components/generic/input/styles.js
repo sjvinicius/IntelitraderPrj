@@ -11,6 +11,7 @@ export const Input = styled.input`
   border-bottom: 1px solid #FB7A1D;
   font-weight: lighter;
   text-align: center;
+  margin: 0 1rem;
 `;
 
 export const InputCad = styled(Input)`
