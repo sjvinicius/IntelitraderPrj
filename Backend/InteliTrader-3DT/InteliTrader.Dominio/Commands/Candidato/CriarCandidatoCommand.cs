@@ -19,11 +19,7 @@ namespace InteliTrader.Dominio.Commands.Candidato
             Funcao = funcao;
         }
 
-        //Nome = nome;
-        //    Sobrenome = sobrenome;
-        //    Personalidade = personalidade;
-        //    Funcao = funcao;
-        //    Situacao = situacao;
+        
 
         public string Nome { get; set; }
         public string Sobrenome { get; set; }

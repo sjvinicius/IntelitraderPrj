@@ -67,6 +67,20 @@ namespace InteliTrader.Dominio.Commands.Usuario
                 .IsNotEmpty(OndeTrabalha, "Local de Trabalho", "Não é obrigatório informar caso não tenha")
 
             );
+            if (IsValid)
+            {
+                Nome = Nome;
+                Sobrenome = Sobrenome;
+                Email = Email;
+                Senha = Senha;
+                RG = RG;
+                CPF = CPF;
+                Descricao = Descricao;
+                Cursando = Cursando;
+                Instituicao = Instituicao;
+                Trabalho = Trabalho;
+                OndeTrabalha = OndeTrabalha;
+            }
         }
     }
 }
