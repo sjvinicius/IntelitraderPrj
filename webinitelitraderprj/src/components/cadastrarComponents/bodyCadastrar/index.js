@@ -1,35 +1,30 @@
 //Libs
 import React from 'react'
-import {useForm} from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 
 //Styles
-import { Container, ContentLogin, SectionSubPerson, TopPerson, TittleSub, IconSubPerson, IconSubProf, IconSubLearn, SectionInformation, DataCand, WrapperForm, SubTittleSub, DataXp, InputDataXp, TittleInput, ButtonSub, FooterSub } from './styles'
+import { Container, ContentLogin, SectionSubPerson, TopPerson, TittleSub, IconSubPerson, IconSubProf, IconSubLearn, SectionInformation, DataCand, WrapperForm, SubTittleSub, DataXp, InputDataXp, TittleInput, PreTittleInput, ButtonSub } from './styles'
+// import { SectionSubExperience } from './stylesExperience'
 
 //Components
 import {Input} from '../../generic/input/styles'
 
 
 export function ContentSubPerson(){
+
     const {register, handleSubmit} = useForm();
 
     function Continuar(data) {
         
         if(
-            // data.nome != null 
-            // || 
             data.nome !== '' && 
-            // data.sobrenome != null 
-            // || 
             data.sobrenome !== '' &&
-            // data.cpf != null 
-            // || 
             data.cpf !== '' &&
-            // data.email != null 
-            // || 
             data.email !== ''
         ){
 
-            console.log('renderiza cada 2')
+            // document.getElementById('CadCont').style.display = 'flex'
+            console.log('renderiza')
 
         }else{
 
@@ -41,7 +36,7 @@ export function ContentSubPerson(){
     
     return(
 
-        <SectionSubPerson>
+        <SectionSubPerson id='cad'>
 
             <TopPerson>
                 <TittleSub>Cadastre-se</TittleSub>
@@ -62,10 +57,10 @@ export function ContentSubPerson(){
                     <TittleInput>Email</TittleInput>
                     <Input {...register('email')}/>
                     
-                </DataCand>
-                <DataXp>
-                    <InputDataXp onSubmit={handleSubmit(Continuar)}>
-                        <TittleInput>Formação 1</TittleInput>
+                </DataCand >
+                <DataXp onSubmit={handleSubmit(Continuar)}>
+                    <InputDataXp >
+                        <PreTittleInput>Formação 1</PreTittleInput>
                             <WrapperForm>
                                 <TittleInput>Curso</TittleInput>
                                 <Input {...register('f1curso')}/>
@@ -78,10 +73,10 @@ export function ContentSubPerson(){
                                 <TittleInput>Fim</TittleInput>
                                 <Input {...register('f1fim')}/>
                             </WrapperForm>
-                        </InputDataXp>
+                    </InputDataXp>
                         
-                        <InputDataXp>
-                        <TittleInput>Formação 2</TittleInput>
+                    <InputDataXp>
+                        <PreTittleInput>Formação 2</PreTittleInput>
                             <WrapperForm>
                                 <TittleInput>Curso</TittleInput>
                                 <Input {...register('f2curso')}/>
@@ -93,18 +88,42 @@ export function ContentSubPerson(){
                                 <Input {...register('f2inicio')}/>
                                 <TittleInput>Fim</TittleInput>
                                 <Input {...register('f2fim')}/>
+                                <ButtonSub type='submit' value='Continuar'/>
                             </WrapperForm>
                     </InputDataXp>
                 </DataXp>
             </SectionInformation>
-            <FooterSub>
-                <ButtonSub type='submit' value='Continuar'/>
-            </FooterSub>
 
         </SectionSubPerson>
 
     )
 
+}
+
+export function ContentSubExperience() {
+    return(
+
+        <SectionSubPerson id='cadCont'>
+
+            <TopPerson>
+                <TittleSub>Cadastre-se</TittleSub>
+                <IconSubPerson/>
+                <IconSubProf/>
+                <IconSubLearn/>
+            </TopPerson>
+            <SectionInformation>
+
+                <DataCand>
+
+                    <SubTittleSub>Profissional</SubTittleSub>
+                    
+                </DataCand>
+
+
+            </SectionInformation>
+
+        </SectionSubPerson>
+    )
 }
 
 export default function BodyLogin(){
@@ -115,7 +134,8 @@ export default function BodyLogin(){
 
             <ContentLogin>
 
-                <ContentSubPerson/>
+                {/* <ContentSubPerson/> */}
+                <ContentSubExperience/>
                     
             </ContentLogin>
 

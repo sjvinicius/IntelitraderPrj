@@ -28,12 +28,14 @@ export const ContentLogin = styled.div`
   background: #333333D9;
   width: 80vw;
   height: 80vh;
+  position: absolute;
   border-radius: 15px;
   display: flex;
 `;
 
 export const SectionSubPerson = styled.div`
   /* background-color: lightblue; */
+  position: relative;
   margin: 0 auto;
 `;
 
@@ -97,7 +99,7 @@ export const SubTittleSub = styled.h2`
   margin: 0;
 `;
 
-export const DataXp = styled.div`
+export const DataXp = styled.form`
   display: flex;
 `;
 
@@ -107,9 +109,10 @@ export const WrapperForm = styled.div`
 
 `;
 
-export const InputDataXp = styled.form`
+export const InputDataXp = styled.div`
   /* background-color: lightgreen; */
   width: 15rem;
+  height: 90%;
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -120,15 +123,19 @@ export const InputDataXp = styled.form`
   padding: 1.3rem 3rem;
 `;
 
-export const TittleInput = styled.p`
+export const PreTittleInput = styled.p`
   margin: 1rem 0 0 0;
   color: #FFF;
 `;
 
-export const ButtonSub = styled(Button)`
-  margin: 2rem auto;
+export const TittleInput = styled.p`
+  margin: 1rem 0 0 0;
+  color: #FB7A1D;
 `;
 
-export const FooterSub = styled.div`
-  margin-bottom: 2rem;
+export const ButtonSub = styled(Button)`
+margin-top: 2rem;
+margin-left: 5.3rem;
+/* margin: 2rem auto; */
+  /* transform: rotate(90deg); */
 `;
