@@ -3,11 +3,11 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 
 //Styles
-import { Container, ContentLogin, SectionSubPerson, TopPerson, TittleSub, IconSubPerson, IconSubProf, IconSubLearn, SectionInformation, DataCand, WrapperForm, SubTittleSub, DataXp, InputDataXp, TittleInput, PreTittleInput, ButtonSub } from './styles'
+import { Container, ContentLogin, SectionSubPerson, TopPerson, TittleSub, IconSubPerson, IconSubPersonA, IconSubProf, IconSubProfA, IconSubLearn, IconSubLearnA, SectionInformation, DataCand, WrapperExp, WrapperSectionInput, WrapperForm, SubTittleSub, WrapperInput, DataXp, InputDataXp, TittleInput, PreTittleInput, ButtonSub, InputSub, ButtonSubCont } from './styles'
 // import { SectionSubExperience } from './stylesExperience'
 
 //Components
-import {Input} from '../../generic/input/styles'
+import {Input, InputDesc} from '../../generic/input/styles'
 
 
 export function ContentSubPerson(){
@@ -40,25 +40,25 @@ export function ContentSubPerson(){
 
             <TopPerson>
                 <TittleSub>Cadastre-se</TittleSub>
-                <IconSubPerson/>
+                <IconSubPersonA/>
                 <IconSubProf/>
                 <IconSubLearn/>
             </TopPerson>
-            <SectionInformation>
+            <SectionInformation onSubmit={handleSubmit(Continuar)}>
                 <DataCand>
                     <SubTittleSub>Pessoal</SubTittleSub>
                     
-                    <TittleInput>Nome</TittleInput>
+                    <TittleInput>Nome *</TittleInput>
                     <Input {...register('nome')}/>
                     <TittleInput>Sobrenome</TittleInput>
                     <Input {...register('sobrenome')}/>
-                    <TittleInput>CPF</TittleInput>
+                    <TittleInput>CPF *</TittleInput>
                     <Input {...register('cpf')}/>
-                    <TittleInput>Email</TittleInput>
+                    <TittleInput>Email *</TittleInput>
                     <Input {...register('email')}/>
                     
                 </DataCand >
-                <DataXp onSubmit={handleSubmit(Continuar)}>
+                <DataXp>
                     <InputDataXp >
                         <PreTittleInput>Formação 1</PreTittleInput>
                             <WrapperForm>
@@ -101,24 +101,105 @@ export function ContentSubPerson(){
 }
 
 export function ContentSubExperience() {
+
+    const {register, handleSubmit} = useForm();
+
+    function CadCont(){
+
+        console.log('botao')
+
+    }
+
     return(
 
         <SectionSubPerson id='cadCont'>
 
             <TopPerson>
                 <TittleSub>Cadastre-se</TittleSub>
-                <IconSubPerson/>
-                <IconSubProf/>
+                <IconSubPersonA/>
+                <IconSubProfA/>
                 <IconSubLearn/>
             </TopPerson>
-            <SectionInformation>
+            <SectionInformation onSubmit={handleSubmit(CadCont)}>
 
                 <DataCand>
-
-                    <SubTittleSub>Profissional</SubTittleSub>
                     
-                </DataCand>
+                    <SubTittleSub>Profissional</SubTittleSub>
+                    <TittleInput>Informações Complementares *</TittleInput>
+                    <InputDesc />
+                    <PreTittleInput>Experiência 1</PreTittleInput>
+                    <WrapperExp>
+                        <WrapperInput>
+                            <TittleInput>Cargo</TittleInput>
+                            <InputSub/>
+                        </WrapperInput>
+                        <WrapperInput>
+                            <TittleInput>Empresa</TittleInput>
+                            <InputSub/>
+                        </WrapperInput>
+                        <WrapperInput>
+                            <TittleInput>Início</TittleInput>
+                            <InputSub/>
+                        </WrapperInput>
+                        <WrapperInput>
+                            <TittleInput>Fim</TittleInput>
+                            <InputSub/>
+                        </WrapperInput>
+                    </WrapperExp>
+                    
 
+                </DataCand>
+                <DataCand>
+                        <PreTittleInput>Experiência 2</PreTittleInput>
+                        
+                        <WrapperExp>
+                            <WrapperInput>
+                                <TittleInput>Cargo</TittleInput>
+                                <InputSub/>
+                            </WrapperInput>
+                            <WrapperInput>
+                                <TittleInput>Empresa</TittleInput>
+                                <InputSub/>
+                            </WrapperInput>
+                            <WrapperInput>
+                                <TittleInput>Início</TittleInput>
+                                <InputSub/>
+                            </WrapperInput>
+                            <WrapperInput>
+                                <TittleInput>Fim</TittleInput>
+                                <InputSub/>
+                            </WrapperInput>
+                        </WrapperExp>
+                    
+                    
+                    <WrapperSectionInput>
+                    
+                        <PreTittleInput>Experiência 3</PreTittleInput>
+                        
+                        <WrapperExp>
+                            <WrapperInput>
+                                <TittleInput>Cargo</TittleInput>
+                                <InputSub/>
+                            </WrapperInput>
+                            <WrapperInput>
+                                <TittleInput>Empresa</TittleInput>
+                                <InputSub/>
+                            </WrapperInput>
+                            <WrapperInput>
+                                <TittleInput>Início</TittleInput>
+                                <InputSub/>
+                            </WrapperInput>
+                            <WrapperInput>
+                            <TittleInput>Fim</TittleInput>
+                            <InputSub/>
+                            </WrapperInput>
+                        </WrapperExp>
+                        
+                    </WrapperSectionInput>
+                    <ButtonSubCont type='submit' value='Continuar'/>
+                    
+
+                </DataCand>
 
             </SectionInformation>
 

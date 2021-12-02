@@ -127,6 +127,13 @@ export const IconPwd = styled(Lock)`
 export const SignUp = styled.p`
   color: #FB7A1D;
   margin-top: 2rem; 
+  cursor: pointer;
+  transition: color 2s;
+  :hover{
+    color: #FFF;
+    transition: color 2s;
+
+  }
 `;
 
 export const IconCoin = styled(MoneyDollarCircle)`

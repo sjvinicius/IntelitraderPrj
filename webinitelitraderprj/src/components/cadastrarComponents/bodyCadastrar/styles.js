@@ -11,6 +11,7 @@ import {PersonTag} from '@styled-icons/fluentui-system-regular/PersonTag'
 
 //Styles
 import {Button} from '../../generic/button/styles'
+import {Input} from '../../generic/input/styles'
 
 export const Container = styled.div`
   background-image: url(${bgCadastro});
@@ -26,8 +27,8 @@ export const Container = styled.div`
 
 export const ContentLogin = styled.div`
   background: #333333D9;
-  width: 80vw;
-  height: 80vh;
+  width: 90vw;
+  height: 90vh;
   position: absolute;
   border-radius: 15px;
   display: flex;
@@ -60,6 +61,11 @@ export const IconSubPerson = styled(Person)`
   }
 `;
 
+export const IconSubPersonA = styled(Person)`
+  width: 3rem;
+  color: #FB7A1D;
+`;
+
 export const IconSubProf = styled(PersonAccounts)`
   width: 3rem;
   transition: color 2s;
@@ -67,6 +73,12 @@ export const IconSubProf = styled(PersonAccounts)`
     color: #FB7A1D;
     transition: color 2s;
   }
+
+`;
+
+export const IconSubProfA = styled(PersonAccounts)`
+  width: 3rem;
+  color: #FB7A1D;
 
 `;
 
@@ -79,19 +91,38 @@ export const IconSubLearn = styled(PersonTag)`
   }
 `;
 
-export const SectionInformation = styled.div`
-  /* background-color: lightgrey; */
+export const IconSubLearnA = styled(PersonTag)`
+  width: 3rem;
+  color: #FB7A1D;
+`;
+
+export const SectionInformation = styled.form`
+  background-color: lightgrey;
   display: flex;
+  width: 100%;
+  height: 70%;
 `;
 
 export const DataCand = styled.div`
-  /* background-color: red; */
-  padding: 1rem ;
+  background-color: red;
+  width: 35rem;
+  justify-content: space-between;
 `;
 
-// export const WrapperInputs = styled.div`
-//   background-color: lightgreen;
-// `;
+export const WrapperExp = styled.div`
+  background-color:red;
+  width: 28rem;
+  height: 6.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
+export const WrapperSectionInput = styled.div`
+  /* background-color:red; */
+  margin: 2.7rem 0;
+
+`;
 
 export const SubTittleSub = styled.h2`
   color: #FFF;
@@ -99,7 +130,12 @@ export const SubTittleSub = styled.h2`
   margin: 0;
 `;
 
-export const DataXp = styled.form`
+export const WrapperInput = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const DataXp = styled.div`
   display: flex;
 `;
 
@@ -139,3 +175,13 @@ margin-left: 5.3rem;
 /* margin: 2rem auto; */
   /* transform: rotate(90deg); */
 `;
+
+export const ButtonSubCont = styled(Button)`
+
+  margin-top: 5rem;
+`;
+
+export const InputSub = styled(Input)`
+  width: 8rem;
+`;
+

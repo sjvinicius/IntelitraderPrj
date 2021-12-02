@@ -101,7 +101,7 @@ export default function BodyLogin(){
 
                         <Button value='Login' type='submit'/>
 
-                        <SignUp>Cadastre-se</SignUp>
+                        <SignUp onClick={ () => { history.push('/cadastrar') } } >Cadastre-se</SignUp>
 
                     </FormLogin>
 
