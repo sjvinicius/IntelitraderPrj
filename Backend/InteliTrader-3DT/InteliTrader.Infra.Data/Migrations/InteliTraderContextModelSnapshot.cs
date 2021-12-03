@@ -82,8 +82,8 @@ namespace InteliTrader.Infra.Data.Migrations
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("VARCHAR(11)");
+                        .HasMaxLength(16)
+                        .HasColumnType("VARCHAR(16)");
 
                     b.Property<string>("Cursando")
                         .IsRequired()
@@ -106,7 +106,9 @@ namespace InteliTrader.Infra.Data.Migrations
                         .HasColumnType("VARCHAR(200)");
 
                     b.Property<string>("Instituicao")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -118,13 +120,13 @@ namespace InteliTrader.Infra.Data.Migrations
 
                     b.Property<string>("RG")
                         .IsRequired()
-                        .HasMaxLength(9)
-                        .HasColumnType("VARCHAR(9)");
+                        .HasMaxLength(13)
+                        .HasColumnType("VARCHAR(13)");
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasMaxLength(8)
-                        .HasColumnType("VARCHAR(8)");
+                        .HasMaxLength(200)
+                        .HasColumnType("VARCHAR(200)");
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
@@ -133,8 +135,8 @@ namespace InteliTrader.Infra.Data.Migrations
 
                     b.Property<string>("Telefone")
                         .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("VARCHAR(11)");
+                        .HasMaxLength(16)
+                        .HasColumnType("VARCHAR(16)");
 
                     b.Property<int>("TipoUsuario")
                         .HasColumnType("int");
@@ -183,24 +185,24 @@ namespace InteliTrader.Infra.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("af5a09c9-6551-4125-bc88-428c26a7f418"),
-                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 821, DateTimeKind.Local).AddTicks(8280),
+                            Id = new Guid("df93ade3-6d8a-4187-b61c-66a0a461c6ba"),
+                            DataCriacao = new DateTime(2021, 12, 2, 14, 37, 8, 101, DateTimeKind.Local).AddTicks(4049),
                             Descricao = "Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",
                             NomeVaga = "Vaga Estágio Back-End",
                             SituacaoVaga = 1
                         },
                         new
                         {
-                            Id = new Guid("04e3b42f-3af4-4f62-a8e1-d6039c88728b"),
-                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 823, DateTimeKind.Local).AddTicks(2393),
+                            Id = new Guid("4d40421a-a379-425f-b68d-a10f6d6766fb"),
+                            DataCriacao = new DateTime(2021, 12, 2, 14, 37, 8, 119, DateTimeKind.Local).AddTicks(4030),
                             Descricao = "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript",
                             NomeVaga = "Vaga Dev Junior Front End",
                             SituacaoVaga = 1
                         },
                         new
                         {
-                            Id = new Guid("a419b1a1-73b5-4a49-b5b6-f9527a181fd2"),
-                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 823, DateTimeKind.Local).AddTicks(2424),
+                            Id = new Guid("cb5e0bfd-c1a3-4e04-93fc-954dc5bac788"),
+                            DataCriacao = new DateTime(2021, 12, 2, 14, 37, 8, 119, DateTimeKind.Local).AddTicks(4100),
                             Descricao = "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js",
                             NomeVaga = "Vaga Dev Sênior Back End",
                             SituacaoVaga = 1

@@ -48,30 +48,30 @@ namespace InteliTrader.API.Controllers
             return (GenericQueryResult)handle.Handler(query);
         }
 
-        [Route("ProcurarPorNome")]
-        [HttpGet]
-        public GenericQueryResult SearchByName(string jobName, [FromServices] BuscarPorNomeVagaHandler handle)
-        {
+        //[Route("searchName/{JobName}")]
+        //[HttpGet]
+        //public GenericQueryResult SearchByName(string jobName, [FromServices] BuscarPorNomeVagaHandler handle)
+        //{
 
-            var query = new BuscarPorNomeVagaQuery
-            {
-                NomeVaga = jobName
-            };
+        //    var query = new BuscarPorNomeVagaQuery
+        //    {
+        //        NomeVaga = jobName
+        //    };
 
-            return (GenericQueryResult)handle.Handler(query);
-        }
+        //    return (GenericQueryResult)handle.Handler(query);
+        //}
 
-        [Route("ProcuraPorId")]
-        [HttpGet]
-         public GenericQueryResult SearchById(Guid id, [FromServices] BuscarPorIdVagaHandler handle)
-        {
-            var query = new BuscarPorIdVagaQuery
-            {
-                Id = id
-            };
+        //[Route("searchId/{id}")]
+        //[HttpGet]
+        //public GenericQueryResult SearchById(Guid id, [FromServices] BuscarPorIdVagaHandler handle)
+        //{
+        //    var query = new BuscarPorIdVagaQuery
+        //    {
+        //        Id = id
+        //    };
 
 
-            return (GenericQueryResult)handle.Handler(query);
-        }
+        //    return (GenericQueryResult)handle.Handler(query);
+        //}
     }
 }

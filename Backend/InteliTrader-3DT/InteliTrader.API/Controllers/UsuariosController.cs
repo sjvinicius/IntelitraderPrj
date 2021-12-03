@@ -4,7 +4,6 @@ using InteliTrader.Dominio.Commands.Usuario;
 using InteliTrader.Dominio.Entidades;
 using InteliTrader.Dominio.Handlers.Autenticação;
 using InteliTrader.Dominio.Handlers.Usuarios;
-using InteliTrader.Shared.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -38,27 +37,44 @@ namespace InteliTrader.API.Controllers
         
         [Route("Login")]
         [HttpPost]
-        public GenericCommandResult SignIn([FromBody]LogarCommand command, [FromServices] LogarHandle handle)
+        public GenericCommandResult Signin(LogarCommand command, [FromServices] LogarHandle handler)
         {
-            var resultado = (GenericCommandResult)handle.Handler(command);
+            var resultado = (GenericCommandResult)handler.Handler(command);
 
             if (resultado.Sucesso)
             {
-                Usuario usuario = (Usuario)resultado.Data;
-                var token = new Token(
-                                        Configuration["Token:issuer"],
-                                        Configuration["Token:audience"],
-                                        Configuration["Token:secretKey"]
-                                     )
-                                    .GerarJsonWebToken(
-                                        usuario.Id,
-                                        usuario.Nome,
-                                        usuario.Email,
-                                        usuario.TipoUsuario.ToString()                    
-                                     );
-                return new GenericCommandResult(true, "Usuario Logado", new { token = token });
+                var token = GenerateJSONWebToken((Usuario)resultado.Data);
+                return new GenericCommandResult(resultado.Sucesso, resultado.Mensagem, new { Token = token });
             }
-            return resultado;
+            return new GenericCommandResult(false, resultado.Mensagem, resultado.Data);
+        }
+
+        private string GenerateJSONWebToken(Usuario userInfo)
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Intelitrader-chave-autenticacao"));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            // Definimos nossas Claims (dados da sessão) para poderem ser capturadas
+            // a qualquer momento enquanto o Token for ativo
+            var claims = new[] {
+                new Claim(JwtRegisteredClaimNames.FamilyName, userInfo.Nome),
+                new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
+                new Claim(ClaimTypes.Role, userInfo.TipoUsuario.ToString()),
+                new Claim("role", userInfo.TipoUsuario.ToString()),
+                new Claim(JwtRegisteredClaimNames.Jti, userInfo.Id.ToString())
+            };
+
+            // Configuramos nosso Token e seu tempo de vida
+            var token = new JwtSecurityToken
+                (
+                    "InteliTrader",
+                    "InteliTrader",
+                    claims,
+                    expires: DateTime.Now.AddMinutes(50),
+                    signingCredentials: credentials
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
     }

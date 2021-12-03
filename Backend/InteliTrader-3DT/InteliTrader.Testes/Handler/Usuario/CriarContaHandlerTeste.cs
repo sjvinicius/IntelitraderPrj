@@ -21,15 +21,16 @@ namespace InteliTrader.Testes.Handler
             var command = new CriarContaCommand();
             command.Nome = "Paulo";
             command.Sobrenome = "Brandão";
-            command.Email = "paulobrandaoofficial@email.com";
-            command.Senha = "pastel234";
-            command.Telefone = "11970520234";
+            command.Email = "paulobrandaoofficial@gmail.com";
+            command.Senha = "pastel2345";
             command.RG =  "534625861";
-            command.CPF = "46732305824";
+            command.CPF = "38475694328";
+            command.Telefone = "11948573645";
+            command.Descricao = "Tenho 20 anos e sou recém formado na aréa de tecnologia, estou em busca de uma oportunidade onde eu possa compartilhar meus conhecimentos aplicando no ambiente de trabalho e aprendendo mais com profissionais capacitados.";
             command.Cursando = "Desenvolvimento de Sistemas";
             command.Instituicao = "Senai Diadema";
-            command.Trabalho = "";
-            command.OndeTrabalha = "";
+            command.Trabalho = "N/F";
+            command.OndeTrabalha = "N/F";
             command.TiposUsuario = InteliTrader.Comum.Enum.EnTipoUsuario.Candidato;
             // Criar um handle
             var handle = new CriarContaHandler(new FakeUsuarioRepository());

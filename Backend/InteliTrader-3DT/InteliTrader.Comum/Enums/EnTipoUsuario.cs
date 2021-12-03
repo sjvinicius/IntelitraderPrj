@@ -8,7 +8,8 @@ namespace InteliTrader.Comum.Enum
 {
    public enum EnTipoUsuario
     {
-        RH = 1,
-        Candidato = 2
+        Candidato = 1,
+        RH = 2,
+        Lider = 3
     }
 }

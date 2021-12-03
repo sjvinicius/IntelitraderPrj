@@ -26,7 +26,7 @@ namespace InteliTrader.Testes.Repositorios.Usuario
 
         public Dominio.Entidades.Usuario BuscarPorId(Guid id)
         {
-            return new Dominio.Entidades.Usuario("Lucas","Nogueira","nogueirapaz@email.com","pastel234","534625861","46732305824","11970520234","Procurando meu Primeiro emprego","Dev Sistemas","Senai Diadema","N/A","N/A",InteliTrader.Comum.Enum.EnTipoUsuario.Candidato);
+            return new Dominio.Entidades.Usuario("Paulo","Grandão", "paulobrandaoofficial@gmail.com", "pastel2345","534625861","38475948356","11947586934","Procurando meu Primeiro emprego","Dev Sistemas","Senai Diadema","N/A","N/A",InteliTrader.Comum.Enum.EnTipoUsuario.Candidato);
         }
 
         public void Deletar(Guid id)

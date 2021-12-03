@@ -44,14 +44,9 @@ namespace InteliTrader.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "InteliTrader.API", Version = "v1" });
             });
 
-            services.AddAuthentication(options => 
-            {
-                //definiu a forma de autenticação
-                options.DefaultAuthenticateScheme = "JwtBearer";
-                options.DefaultChallengeScheme = "JwtBearer";
-            
-            })
-                .AddJwtBearer("JwtBearer",options =>
+            //JWT
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
                 {
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
@@ -70,12 +65,10 @@ namespace InteliTrader.API
             // adiciona a política CORS ao projeto
             services.AddCors(options => {
                 options.AddPolicy("CorsPolicy",
-                    builder => {
+                    builder =>
                         builder.AllowAnyOrigin()
                                .AllowAnyHeader()
-                               .AllowAnyMethod();
-                    }
-                );
+                               .AllowAnyMethod());
             });
 
             //Injeções de dependência
@@ -94,9 +87,14 @@ namespace InteliTrader.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "InteliTrader.API v1"));
+                app.UseSwaggerUI(c => {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "InteliTrader.API v1");
+                    c.RoutePrefix = string.Empty;
+
+                    });
             }
 
+            app.
             app.UseRouting();
 
             app.UseAuthentication();

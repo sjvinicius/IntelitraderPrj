@@ -8,8 +8,12 @@ namespace InteliTrader.Comum.Enum
 {
    public enum EnSituacaoCandidato
    {
-       Análise = 1,
-       Aprovado = 2,
-       Reprovado = 3,
+       Candidatura=1,
+       AnáliseRH = 2,
+       AnáliseLider =3,
+       AprovadoRH = 4,
+       ReprovadoRH = 5,
+       AprovadoLider= 6,
+       ReprovadoLider = 7
    }
 }

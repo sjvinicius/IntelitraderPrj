@@ -49,21 +49,21 @@ namespace InteliTrader.Infra.Data.Contexts
             modelBuilder.Entity<Usuario>().HasIndex(x => x.Email).IsUnique();
 
             //Senha
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasColumnType("VARCHAR(8)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasMaxLength(8);
+            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasMaxLength(200);
             modelBuilder.Entity<Usuario>().Property(x => x.Senha).IsRequired();
 
             //RG
-            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasMaxLength(9);
-            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasColumnType("VARCHAR(9)");
+            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasMaxLength(13);
+            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasColumnType("VARCHAR(13)");
             modelBuilder.Entity<Usuario>().Property(x => x.RG).IsRequired();
             //CPF
-            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasMaxLength(11);
-            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasColumnType("VARCHAR(11)");
+            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasMaxLength(16);
+            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasColumnType("VARCHAR(16)");
             modelBuilder.Entity<Usuario>().Property(x => x.CPF).IsRequired();
             //Telefone
-            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasMaxLength(11);
-            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasColumnType("VARCHAR(11)");
+            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasMaxLength(16);
+            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasColumnType("VARCHAR(16)");
             modelBuilder.Entity<Usuario>().Property(x => x.Telefone).IsRequired();
             //Descrição
             modelBuilder.Entity<Usuario>().Property(x => x.Descricao).HasMaxLength(80);
@@ -74,9 +74,9 @@ namespace InteliTrader.Infra.Data.Contexts
             modelBuilder.Entity<Usuario>().Property(x => x.Cursando).HasColumnType("varchar(50)");
             modelBuilder.Entity<Usuario>().Property(x => x.Cursando).IsRequired();
             //Instituição
-            modelBuilder.Entity<Usuario>().Property(x => x.Cursando).HasMaxLength(50);
-            modelBuilder.Entity<Usuario>().Property(x => x.Cursando).HasColumnType("varchar(50)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Cursando).IsRequired();
+            modelBuilder.Entity<Usuario>().Property(x => x.Instituicao).HasMaxLength(50);
+            modelBuilder.Entity<Usuario>().Property(x => x.Instituicao).HasColumnType("varchar(50)");
+            modelBuilder.Entity<Usuario>().Property(x => x.Instituicao).IsRequired();
             //TipoUsuario
             modelBuilder.Entity<Usuario>().Property(x => x.TipoUsuario).IsRequired();
 
