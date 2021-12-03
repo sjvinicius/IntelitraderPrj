@@ -1,7 +1,9 @@
 using InteliTrader.Dominio.Handlers.Autenticação;
 using InteliTrader.Dominio.Handlers.Usuarios;
+using InteliTrader.Dominio.Handlers.Vagas;
 using InteliTrader.Dominio.Interfaces;
 using InteliTrader.Infra.Data.Contexts;
+using InteliTrader.Infra.Data.Repositories.Vagas;
 using InteliTrader.Infra.Data.Repositorio;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -77,6 +79,10 @@ namespace InteliTrader.API
             services.AddTransient<CriarContaHandler, CriarContaHandler>();
             services.AddTransient<LogarHandle, LogarHandle>();
             #endregion
+            #region Injeção de Dependencia Vagas
+            services.AddTransient<IVagasRepository, VagasRepository>();
+            services.AddTransient<CriarVagasHandler, CriarVagasHandler>();
+            #endregion
 
         }
 
@@ -89,12 +95,12 @@ namespace InteliTrader.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "InteliTrader.API v1");
-                    c.RoutePrefix = string.Empty;
+                    
 
                     });
             }
 
-            app.
+            
             app.UseRouting();
 
             app.UseAuthentication();

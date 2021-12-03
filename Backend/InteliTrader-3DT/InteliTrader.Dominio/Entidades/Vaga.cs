@@ -22,13 +22,14 @@ namespace InteliTrader.Dominio.Entidades
                   new Contract<Notification>()
                       .Requires()
                       .IsNotEmpty(nomeVaga, "Nome da Vaga", "O nome da vaga não pode ser vazio")
-                      .IsNotEmpty(descricao, "Descricao", "A Descricao não pode ser vazia")                                       
+                      .IsNotEmpty(descricao, "Descricao", "A Descricao não pode ser vazia")
+                      
                   );
             if (IsValid)
             {
-            NomeVaga = nomeVaga;
-            Descricao = descricao;
-            SituacaoVaga = situacaoVaga;
+                NomeVaga = nomeVaga;
+                Descricao = descricao;
+                SituacaoVaga = situacaoVaga;
 
             }
         }

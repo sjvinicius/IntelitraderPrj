@@ -5620,19 +5620,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\48784309822\\.nuget\\packages\\": {}
+    "C:\\Users\\46732305824\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.API\\InteliTrader.API.csproj",
+      "projectUniqueName": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.API\\InteliTrader.API.csproj",
       "projectName": "InteliTrader.API",
-      "projectPath": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.API\\InteliTrader.API.csproj",
-      "packagesPath": "C:\\Users\\48784309822\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.API\\obj\\",
+      "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.API\\InteliTrader.API.csproj",
+      "packagesPath": "C:\\Users\\46732305824\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\48784309822\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\46732305824\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5646,11 +5650,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj": {
-              "projectPath": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj"
+            "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj": {
+              "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Dominio\\InteliTrader.Dominio.csproj"
             },
-            "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Infra.Data\\InteliTrader.Infra.Data.csproj": {
-              "projectPath": "C:\\Users\\48784309822\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Infra.Data\\InteliTrader.Infra.Data.csproj"
+            "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Infra.Data\\InteliTrader.Infra.Data.csproj": {
+              "projectPath": "C:\\Users\\46732305824\\Desktop\\IntelitraderPrj\\Backend\\InteliTrader-3DT\\InteliTrader.Infra.Data\\InteliTrader.Infra.Data.csproj"
             }
           }
         }
@@ -5716,7 +5720,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -18,21 +18,21 @@ namespace InteliTrader.API.Controllers
     [ApiController]
     public class VagasController : ControllerBase
     {
-        [Route("registraVaga")]
+        [Route("CadastroVagas")]
         [HttpPost]
-        public GenericCommandResult Register(CriarVagaCommand command, [FromServices] CriarVagasHandler handle)
+        public GenericCommandResult SignUp([FromBody] CriarVagaCommand command, [FromServices] CriarVagasHandler handle)
         {
             return (GenericCommandResult)handle.Handler(command);
         }
 
-        [Route("update")]
+        [Route("AlterarVaga")]
         [HttpPatch]
         public GenericCommandResult Update(AlterarVagaCommand command, [FromServices] AlterarVagaHandler handle)
         {
             return (GenericCommandResult)handle.Handler(command);
         }
 
-        [Route("delete")]
+        [Route("DeletarVaga")]
         [HttpDelete]
         public GenericCommandResult Delete(DeletarVagaCommand command, [FromServices] DeletarVagaHandler handle)
         {
@@ -47,31 +47,5 @@ namespace InteliTrader.API.Controllers
 
             return (GenericQueryResult)handle.Handler(query);
         }
-
-        //[Route("searchName/{JobName}")]
-        //[HttpGet]
-        //public GenericQueryResult SearchByName(string jobName, [FromServices] BuscarPorNomeVagaHandler handle)
-        //{
-
-        //    var query = new BuscarPorNomeVagaQuery
-        //    {
-        //        NomeVaga = jobName
-        //    };
-
-        //    return (GenericQueryResult)handle.Handler(query);
-        //}
-
-        //[Route("searchId/{id}")]
-        //[HttpGet]
-        //public GenericQueryResult SearchById(Guid id, [FromServices] BuscarPorIdVagaHandler handle)
-        //{
-        //    var query = new BuscarPorIdVagaQuery
-        //    {
-        //        Id = id
-        //    };
-
-
-        //    return (GenericQueryResult)handle.Handler(query);
-        //}
     }
 }
