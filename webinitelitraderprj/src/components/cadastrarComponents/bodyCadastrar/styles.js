@@ -8,10 +8,24 @@ import bgCadastro from '../../../img/bgCadastro.png'
 import {Person} from '@styled-icons/fluentui-system-regular/Person'
 import {PersonAccounts} from '@styled-icons/fluentui-system-regular/PersonAccounts'
 import {PersonTag} from '@styled-icons/fluentui-system-regular/PersonTag'
+import {ArrowBack} from '@styled-icons/boxicons-regular/ArrowBack'
 
 //Styles
 import {Button} from '../../generic/button/styles'
 import {Input} from '../../generic/input/styles'
+
+export const ModalCont = styled.div`
+  display: none;
+  margin: 0 auto; 
+`;
+
+export const ModalCad = styled.div`
+  margin: 0 auto; 
+`;
+
+export const ACContent = styled.div`
+  margin: 0 auto; 
+`;
 
 export const Container = styled.div`
   background-image: url(${bgCadastro});
@@ -97,20 +111,26 @@ export const IconSubLearnA = styled(PersonTag)`
 `;
 
 export const SectionInformation = styled.form`
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   display: flex;
   width: 100%;
   height: 70%;
 `;
 
 export const DataCand = styled.div`
-  background-color: red;
+  /* background-color: red; */
   width: 35rem;
   justify-content: space-between;
 `;
 
+export const DataCandCad = styled.div`
+  /* background-color: red; */
+  width: 20rem;
+  justify-content: space-between;
+`;
+
 export const WrapperExp = styled.div`
-  background-color:red;
+  /* background-color:red; */
   width: 28rem;
   height: 6.1rem;
   display: flex;
@@ -147,7 +167,7 @@ export const WrapperForm = styled.div`
 
 export const InputDataXp = styled.div`
   /* background-color: lightgreen; */
-  width: 15rem;
+  width: 17rem;
   height: 90%;
   display:flex;
   flex-direction: column;
@@ -167,6 +187,7 @@ export const PreTittleInput = styled.p`
 export const TittleInput = styled.p`
   margin: 1rem 0 0 0;
   color: #FB7A1D;
+  margin-top: 1rem;
 `;
 
 export const ButtonSub = styled(Button)`
@@ -182,6 +203,25 @@ export const ButtonSubCont = styled(Button)`
 `;
 
 export const InputSub = styled(Input)`
-  width: 8rem;
+  width: 10rem;
 `;
 
+export const IconBack = styled(ArrowBack)`
+  width: 3rem;
+  margin: 3rem 2rem;
+  color: #FFF;
+  cursor: pointer;
+  :hover{
+    color: #FB7A1D;
+
+  }
+`;
+
+// export const ACContent = styled.div`
+
+
+// `;  
+
+// export const WrapperPerfis = styled.div`
+
+// `;
