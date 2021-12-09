@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InteliTrader.Infra.Data.Migrations
 {
     [DbContext(typeof(InteliTraderContext))]
-    [Migration("20211126193119_InteliTraderDataBase")]
-    partial class InteliTraderDataBase
+    [Migration("20211208181851_IntelitraderDatabase")]
+    partial class IntelitraderDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,23 +27,65 @@ namespace InteliTrader.Infra.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("DataCriacao")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("AnoFim")
+                        .HasMaxLength(16)
+                        .HasColumnType("VARCHAR(16)");
 
-                    b.Property<string>("Funcao")
+                    b.Property<string>("AnoInicio")
+                        .HasMaxLength(16)
+                        .HasColumnType("VARCHAR(16)");
+
+                    b.Property<string>("CPF")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("VARCHAR(200)");
 
+                    b.Property<string>("Cargo")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("VARCHAR(200)");
+
+                    b.Property<string>("Curso")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("VARCHAR(50)");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("VARCHAR(200)");
+
+                    b.Property<string>("Empresa")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("IdVaga")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("InformacoesComplementares")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("VARCHAR(80)");
+
+                    b.Property<string>("Instituicao")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("VARCHAR(50)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("VARCHAR(200)");
 
-                    b.Property<string>("Personalidade")
+                    b.Property<string>("Periodo")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("VARCHAR(200)");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("VARCHAR(200)");
 
@@ -55,7 +97,16 @@ namespace InteliTrader.Infra.Data.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("VARCHAR(200)");
 
+                    b.Property<int>("TipoUsuario")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("CPF")
+                        .IsUnique();
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.HasIndex("IdVaga");
 
@@ -76,74 +127,39 @@ namespace InteliTrader.Infra.Data.Migrations
                     b.ToTable("TesteTecnicos");
                 });
 
-            modelBuilder.Entity("InteliTrader.Dominio.Entidades.Usuario", b =>
+            modelBuilder.Entity("InteliTrader.Dominio.Entidades.UsuarioLogin", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CPF")
-                        .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("VARCHAR(11)");
-
-                    b.Property<string>("Cursando")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("DataCriacao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
-                    b.Property<string>("Descricao")
-                        .IsRequired()
-                        .HasMaxLength(80)
-                        .HasColumnType("varchar(80)");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("VARCHAR(200)");
-
-                    b.Property<string>("Instituicao")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("VARCHAR(200)");
 
-                    b.Property<string>("OndeTrabalha")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RG")
-                        .IsRequired()
-                        .HasMaxLength(9)
-                        .HasColumnType("VARCHAR(9)");
-
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasMaxLength(8)
-                        .HasColumnType("VARCHAR(8)");
+                        .HasMaxLength(200)
+                        .HasColumnType("VARCHAR(200)");
 
                     b.Property<string>("Sobrenome")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("VARCHAR(200)");
 
-                    b.Property<string>("Telefone")
-                        .IsRequired()
-                        .HasMaxLength(11)
-                        .HasColumnType("VARCHAR(11)");
-
                     b.Property<int>("TipoUsuario")
                         .HasColumnType("int");
-
-                    b.Property<string>("Trabalho")
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50)");
 
                     b.HasKey("Id");
 
@@ -180,29 +196,29 @@ namespace InteliTrader.Infra.Data.Migrations
                     b.HasIndex("NomeVaga")
                         .IsUnique();
 
-                    b.ToTable("Vagas");
+                    b.ToTable("Vaga");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("af5a09c9-6551-4125-bc88-428c26a7f418"),
-                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 821, DateTimeKind.Local).AddTicks(8280),
+                            Id = new Guid("e0099b32-d96f-49c0-81ba-e3d61ac4719b"),
+                            DataCriacao = new DateTime(2021, 12, 8, 15, 18, 51, 39, DateTimeKind.Local).AddTicks(3238),
                             Descricao = "Estágio para BackEnd Exigindo conhecimento em : C#, .NET, ASP.NETCORE,Manipulação de API REST",
                             NomeVaga = "Vaga Estágio Back-End",
                             SituacaoVaga = 1
                         },
                         new
                         {
-                            Id = new Guid("04e3b42f-3af4-4f62-a8e1-d6039c88728b"),
-                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 823, DateTimeKind.Local).AddTicks(2393),
+                            Id = new Guid("67e0f3f8-be3f-4ebc-bb5b-888577476dc8"),
+                            DataCriacao = new DateTime(2021, 12, 8, 15, 18, 51, 42, DateTimeKind.Local).AddTicks(4181),
                             Descricao = "Vaga para FrontEnd Junior Exigindo conhecimento em : HTML, CSS,JavaScript",
                             NomeVaga = "Vaga Dev Junior Front End",
                             SituacaoVaga = 1
                         },
                         new
                         {
-                            Id = new Guid("a419b1a1-73b5-4a49-b5b6-f9527a181fd2"),
-                            DataCriacao = new DateTime(2021, 11, 26, 16, 31, 18, 823, DateTimeKind.Local).AddTicks(2424),
+                            Id = new Guid("813f3e79-0d86-47ba-b1b7-ffccab32e137"),
+                            DataCriacao = new DateTime(2021, 12, 8, 15, 18, 51, 42, DateTimeKind.Local).AddTicks(4241),
                             Descricao = "Vaga para BackEnd Sênior Exigindo conhecimento em : PYTHON, Criação e Manipulação de API REST,node.js",
                             NomeVaga = "Vaga Dev Sênior Back End",
                             SituacaoVaga = 1

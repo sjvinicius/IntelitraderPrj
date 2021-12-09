@@ -16,7 +16,7 @@ namespace InteliTrader.Infra.Data.Contexts
 
         }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<UsuarioLogin> Usuarios { get; set; }
         public DbSet<Candidato> Candidatos { get; set; }
         public DbSet<Vaga> Vagas { get; set; }
         public DbSet<TesteTecnico> TesteTecnicos { get; set; }
@@ -27,70 +27,37 @@ namespace InteliTrader.Infra.Data.Contexts
 
             #region tabela Usuarios
             // Nome da Tabela
-            modelBuilder.Entity<Usuario>().ToTable("Usuarios");
+            modelBuilder.Entity<UsuarioLogin>().ToTable("Usuarios");
 
             //Id Chave Primaria
-            modelBuilder.Entity<Usuario>().Property(x => x.Id);
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Id);
 
             //Nome
-            modelBuilder.Entity<Usuario>().Property(x => x.Nome).HasColumnType("VARCHAR(200)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Nome).HasMaxLength(200);
-            modelBuilder.Entity<Usuario>().Property(x => x.Nome).IsRequired();
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Nome).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Nome).HasMaxLength(200);
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Nome).IsRequired();
 
             //Sobrenome
-            modelBuilder.Entity<Usuario>().Property(x => x.Sobrenome).HasColumnType("VARCHAR(200)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Sobrenome).HasMaxLength(200);
-            modelBuilder.Entity<Usuario>().Property(x => x.Sobrenome).IsRequired();
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Sobrenome).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Sobrenome).HasMaxLength(200);
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Sobrenome).IsRequired();
 
             //Email
-            modelBuilder.Entity<Usuario>().Property(x => x.Email).HasColumnType("VARCHAR(200)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Email).HasMaxLength(200);
-            modelBuilder.Entity<Usuario>().Property(x => x.Email).IsRequired();
-            modelBuilder.Entity<Usuario>().HasIndex(x => x.Email).IsUnique();
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Email).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Email).HasMaxLength(200);
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Email).IsRequired();
+            modelBuilder.Entity<UsuarioLogin>().HasIndex(x => x.Email).IsUnique();
 
             //Senha
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasColumnType("VARCHAR(200)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).HasMaxLength(200);
-            modelBuilder.Entity<Usuario>().Property(x => x.Senha).IsRequired();
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Senha).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Senha).HasMaxLength(200);
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.Senha).IsRequired();
 
-            //RG
-            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasMaxLength(13);
-            modelBuilder.Entity<Usuario>().Property(x => x.RG).HasColumnType("VARCHAR(13)");
-            modelBuilder.Entity<Usuario>().Property(x => x.RG).IsRequired();
-            //CPF
-            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasMaxLength(16);
-            modelBuilder.Entity<Usuario>().Property(x => x.CPF).HasColumnType("VARCHAR(16)");
-            modelBuilder.Entity<Usuario>().Property(x => x.CPF).IsRequired();
-            //Telefone
-            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasMaxLength(16);
-            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).HasColumnType("VARCHAR(16)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Telefone).IsRequired();
-            //Descrição
-            modelBuilder.Entity<Usuario>().Property(x => x.Descricao).HasMaxLength(80);
-            modelBuilder.Entity<Usuario>().Property(x => x.Descricao).HasColumnType("varchar(80)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Descricao).IsRequired();
-            //Cursando
-            modelBuilder.Entity<Usuario>().Property(x => x.Cursando).HasMaxLength(50);
-            modelBuilder.Entity<Usuario>().Property(x => x.Cursando).HasColumnType("varchar(50)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Cursando).IsRequired();
-            //Instituição
-            modelBuilder.Entity<Usuario>().Property(x => x.Instituicao).HasMaxLength(50);
-            modelBuilder.Entity<Usuario>().Property(x => x.Instituicao).HasColumnType("varchar(50)");
-            modelBuilder.Entity<Usuario>().Property(x => x.Instituicao).IsRequired();
             //TipoUsuario
-            modelBuilder.Entity<Usuario>().Property(x => x.TipoUsuario).IsRequired();
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.TipoUsuario).IsRequired();
 
             //DataCurso
-            modelBuilder.Entity<Usuario>().Property(x => x.DataCriacao).HasDefaultValueSql("GETDATE()");
-
-            //Trabalho
-            modelBuilder.Entity<Usuario>().Property(x => x.Trabalho).HasMaxLength(50);
-            modelBuilder.Entity<Usuario>().Property(x => x.Trabalho).HasColumnType("varchar(50)");
-            //Onde Trabalho 
-            modelBuilder.Entity<Usuario>().Property(x => x.DataCriacao).HasDefaultValueSql("GETDATE()");
-
-            //Data Trabalho
-            modelBuilder.Entity<Usuario>().Property(x => x.DataCriacao).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<UsuarioLogin>().Property(x => x.DataCriacao).HasDefaultValueSql("GETDATE()");
             #endregion
 
             #region Tabela Candidatos
@@ -115,19 +82,53 @@ namespace InteliTrader.Infra.Data.Contexts
             modelBuilder.Entity<Candidato>().Property(x => x.Sobrenome).HasColumnType("VARCHAR(200)");
             modelBuilder.Entity<Candidato>().Property(x => x.Sobrenome).HasMaxLength(200);
             modelBuilder.Entity<Candidato>().Property(x => x.Sobrenome).IsRequired();
-            //Personalidade
-            modelBuilder.Entity<Candidato>().Property(x => x.Personalidade).HasColumnType("VARCHAR(200)");
-            modelBuilder.Entity<Candidato>().Property(x => x.Personalidade).HasMaxLength(200);
-            modelBuilder.Entity<Candidato>().Property(x => x.Personalidade);
-            //Função
-            modelBuilder.Entity<Candidato>().Property(x => x.Funcao).HasColumnType("VARCHAR(200)");
-            modelBuilder.Entity<Candidato>().Property(x => x.Funcao).HasMaxLength(200);
-            modelBuilder.Entity<Candidato>().Property(x => x.Funcao).IsRequired();
+            //CPF
+            modelBuilder.Entity<Candidato>().Property(x => x.CPF).HasMaxLength(200);
+            modelBuilder.Entity<Candidato>().Property(x => x.CPF).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<Candidato>().Property(x => x.CPF).IsRequired();
+            modelBuilder.Entity<Candidato>().HasIndex(x => x.CPF).IsUnique();
+            //Email
+            modelBuilder.Entity<Candidato>().Property(x => x.Email).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<Candidato>().Property(x => x.Email).HasMaxLength(200);
+            modelBuilder.Entity<Candidato>().Property(x => x.Email).IsRequired();
+            modelBuilder.Entity<Candidato>().HasIndex(x => x.Email).IsUnique();
+            //Senha
+            modelBuilder.Entity<Candidato>().Property(x => x.Senha).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<Candidato>().Property(x => x.Senha).HasMaxLength(200);
+            modelBuilder.Entity<Candidato>().Property(x => x.Senha).IsRequired();
+            //Curso
+            modelBuilder.Entity<Candidato>().Property(x => x.Curso).HasMaxLength(50);
+            modelBuilder.Entity<Candidato>().Property(x => x.Curso).HasColumnType("VARCHAR(50)");
+            modelBuilder.Entity<Candidato>().Property(x => x.Curso).IsRequired();
+            //Insitituição
+            modelBuilder.Entity<Candidato>().Property(x => x.Instituicao).HasMaxLength(50);
+            modelBuilder.Entity<Candidato>().Property(x => x.Instituicao).HasColumnType("VARCHAR(50)");
+            modelBuilder.Entity<Candidato>().Property(x => x.Instituicao).IsRequired();
+            //Periodo
+            modelBuilder.Entity<Candidato>().Property(x => x.Periodo).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<Candidato>().Property(x => x.Periodo).HasMaxLength(200);
+            modelBuilder.Entity<Candidato>().Property(x => x.Periodo).IsRequired();
+            //InformaçõesComplementares
+            modelBuilder.Entity<Candidato>().Property(x => x.InformacoesComplementares).HasMaxLength(80);
+            modelBuilder.Entity<Candidato>().Property(x => x.InformacoesComplementares).HasColumnType("VARCHAR(80)");
+            modelBuilder.Entity<Candidato>().Property(x => x.InformacoesComplementares).IsRequired();
+            //Cargo
+            modelBuilder.Entity<Candidato>().Property(x => x.Cargo).HasColumnType("VARCHAR(200)");
+            modelBuilder.Entity<Candidato>().Property(x => x.Cargo).HasMaxLength(200);
+            modelBuilder.Entity<Candidato>().Property(x => x.Cargo).IsRequired();
+            //DataInicio
+            modelBuilder.Entity<Candidato>().Property(x => x.AnoInicio).HasMaxLength(16);
+            modelBuilder.Entity<Candidato>().Property(x => x.AnoInicio).HasColumnType("VARCHAR(16)");
+            //DataFim
+            modelBuilder.Entity<Candidato>().Property(x => x.AnoFim).HasMaxLength(16);
+            modelBuilder.Entity<Candidato>().Property(x => x.AnoFim).HasColumnType("VARCHAR(16)");
+            //TipoUsuario
+            modelBuilder.Entity<Candidato>().Property(x => x.TipoUsuario).IsRequired();
             #endregion
 
             #region Tabela Vagas
             //Nome Tabela
-            modelBuilder.Entity<Vaga>().ToTable("Vagas");
+            modelBuilder.Entity<Vaga>().ToTable("Vaga");
 
             //ID Chave Primária
             modelBuilder.Entity<Vaga>().Property(x => x.Id);

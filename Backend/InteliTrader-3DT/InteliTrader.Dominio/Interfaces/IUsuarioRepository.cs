@@ -10,13 +10,13 @@ namespace InteliTrader.Dominio.Interfaces
     public interface IUsuarioRepository
     {
         //commands
-        void Adicionar(Usuario usuario);
+        void Adicionar(UsuarioLogin usuario);
         void Deletar(Guid id);
-        void Alterar(Usuario usuario);
+        void Alterar(UsuarioLogin usuario);
         //Queries
-        IEnumerable<Usuario> Listar(bool? ativo = null);
+        IEnumerable<UsuarioLogin> Listar(bool? ativo = null);
 
-        Usuario BuscarPorId(Guid id);
-        Usuario BuscarPorEmail(string email);
+        UsuarioLogin BuscarPorId(Guid id);
+        UsuarioLogin BuscarPorEmail(string email);
     }
 }

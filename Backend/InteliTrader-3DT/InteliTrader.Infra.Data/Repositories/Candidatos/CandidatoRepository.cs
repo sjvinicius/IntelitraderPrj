@@ -24,9 +24,14 @@ namespace InteliTrader.Infra.Data.Repositories.Candidatos
             _InteliContext.SaveChanges();
         }
 
+        public Candidato BuscarPorEmail(string email)
+        {
+            return _InteliContext.Candidatos.FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
+        }
+
         public Candidato BuscarPorId(Guid id)
         {
-            return _InteliContext.Candidatos.FirstOrDefault(x => x.Id == id);
+            return null;
         }
 
         public Candidato BuscarPorRg(int rg)
@@ -40,7 +45,7 @@ namespace InteliTrader.Infra.Data.Repositories.Candidatos
             _InteliContext.SaveChanges();
         }
 
-        public IEnumerable<Candidato> Listar()
+        public IEnumerable<Candidato> Listar(bool? ativo = null)
         {
             return _InteliContext.Candidatos
                 .AsNoTracking()

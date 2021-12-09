@@ -320,3 +320,4 @@ C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrad
 C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\obj\Debug\net5.0\InteliTrader.Testes.pdb
 C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\obj\Debug\net5.0\InteliTrader.Testes.genruntimeconfig.cache
 C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\obj\Debug\net5.0\InteliTrader.Testes.csproj.CopyComplete
+C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Testes\obj\Debug\net5.0\InteliTrader.Testes.csproj.CopyComplete

@@ -18,8 +18,8 @@ namespace InteliTrader.Testes.Handler.Vaga
         {
             var command = new CriarVagaCommand();
 
-            command.NomeVaga = "Desenvolvedor Back End";
-            command.Descricao = "";
+            command.NomeVaga = "Desenvolvedor Front End";
+            command.Descricao = "Conhecimento em HTML,CSS,JAVASCRIPT";
 
             var handle = new CriarVagasHandler(new FakeVagaRepository());
             

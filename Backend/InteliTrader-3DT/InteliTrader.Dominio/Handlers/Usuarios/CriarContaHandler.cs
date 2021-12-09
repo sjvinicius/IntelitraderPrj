@@ -20,7 +20,7 @@ namespace InteliTrader.Dominio.Handlers.Usuarios
         {
             _usuarioRepository = usuarioRepository;
         }
-        public ICommandResult Handler(CriarContaCommand command)
+        public ICommandResult Handler(CriarFuncionarioCommand command)
         {
             //verificando se o command é valido
             command.Validar();
@@ -41,7 +41,7 @@ namespace InteliTrader.Dominio.Handlers.Usuarios
             command.Senha = Senha.Criptografar(command.Senha);
 
             // Salvar no banco - repositorio.Adicionar(usuario)
-            Usuario novoUsuario = new Usuario(command.Nome, command.Sobrenome, command.Email, command.Senha, command.RG, command.CPF, command.Telefone, command.Descricao, command.Cursando, command.Instituicao, command.Trabalho, command.OndeTrabalha, command.TiposUsuario);
+            UsuarioLogin novoUsuario = new UsuarioLogin(command.Nome, command.Sobrenome, command.Email, command.Senha, command.TiposUsuario);
             if (!novoUsuario.IsValid)
                 return new GenericCommandResult(false, "Dados de usuário inválidos", novoUsuario.Notifications);
 

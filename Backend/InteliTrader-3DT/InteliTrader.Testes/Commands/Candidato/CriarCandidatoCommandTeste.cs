@@ -14,11 +14,22 @@ namespace InteliTrader.Testes.Commands.Candidato
 
         public void DeveRetornarSeDadosDoCandidatoForemValidos()
         {
-            var command = new CriarCandidatoCommand(
+            var command = new CadastroCandidatoCommand(
                "Ruan Gustavo",
                "Cavalcante Ferreira",
-               "Gato, Aguia",
-               "Desenvolvedor BackEnd"
+               "",
+               "",
+               "",
+               "",
+               "",
+               "",
+               "",
+               "",
+               "",
+               "",
+               "",
+               Comum.Enum.EnTipoUsuario.Candidato,
+               Guid.Empty
                );
             Assert.True(command.IsValid, "O Candidato foi criado");
         }

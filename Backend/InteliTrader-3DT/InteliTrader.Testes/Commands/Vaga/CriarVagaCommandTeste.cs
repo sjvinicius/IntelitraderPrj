@@ -17,7 +17,7 @@ namespace InteliTrader.Testes.Commands.Vaga
             var command = new CriarVagaCommand();
 
             command.NomeVaga = "Desenvolvedor Back End";
-            command.Descricao = "";
+            command.Descricao = "Vaga com conhecimento em C#";
 
             command.Validar();
 

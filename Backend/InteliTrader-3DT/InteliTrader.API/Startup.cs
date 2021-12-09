@@ -1,8 +1,10 @@
 using InteliTrader.Dominio.Handlers.Autenticação;
+using InteliTrader.Dominio.Handlers.Candidatos;
 using InteliTrader.Dominio.Handlers.Usuarios;
 using InteliTrader.Dominio.Handlers.Vagas;
 using InteliTrader.Dominio.Interfaces;
 using InteliTrader.Infra.Data.Contexts;
+using InteliTrader.Infra.Data.Repositories.Candidatos;
 using InteliTrader.Infra.Data.Repositories.Vagas;
 using InteliTrader.Infra.Data.Repositorio;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -82,8 +84,14 @@ namespace InteliTrader.API
             #region Injeção de Dependencia Vagas
             services.AddTransient<IVagasRepository, VagasRepository>();
             services.AddTransient<CriarVagasHandler, CriarVagasHandler>();
+            services.AddTransient<ListarVagaHandler, ListarVagaHandler>();
             #endregion
-
+            #region
+            services.AddTransient<ICandidatoRepository, CandidatoRepository>();
+            services.AddTransient<CriarContaCandidatoHandler, CriarContaCandidatoHandler>();
+            services.AddTransient<LogarCandidatoHandler, LogarCandidatoHandler>();
+            services.AddTransient<ListarCandidatoHandler, ListarCandidatoHandler>();
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,15 +100,15 @@ namespace InteliTrader.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "InteliTrader.API v1");
-                    
-
-                    });
+               
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "InteliTrader.API v1");
+                c.RoutePrefix = string.Empty;
 
-            
+            });
+
             app.UseRouting();
 
             app.UseAuthentication();

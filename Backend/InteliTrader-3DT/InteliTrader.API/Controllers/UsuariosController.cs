@@ -28,14 +28,14 @@ namespace InteliTrader.API.Controllers
         {
             Configuration = configuration;
         }
-        [Route("Cadastro")]
+        [Route("CadastroFuncionario")]
         [HttpPost]
-        public GenericCommandResult SignUp([FromBody] CriarContaCommand command, [FromServices] CriarContaHandler handle)
+        public GenericCommandResult SignUp([FromBody] CriarFuncionarioCommand command, [FromServices] CriarContaHandler handle)
         {
             return (GenericCommandResult)handle.Handler(command);
         }
         
-        [Route("Login")]
+        [Route("LoginFuncionario")]
         [HttpPost]
         public GenericCommandResult Signin(LogarCommand command, [FromServices] LogarHandle handler)
         {
@@ -43,15 +43,15 @@ namespace InteliTrader.API.Controllers
 
             if (resultado.Sucesso)
             {
-                var token = GenerateJSONWebToken((Usuario)resultado.Data);
+                var token = GenerateJSONWebToken((UsuarioLogin)resultado.Data);
                 return new GenericCommandResult(resultado.Sucesso, resultado.Mensagem, new { Token = token });
             }
             return new GenericCommandResult(false, resultado.Mensagem, resultado.Data);
         }
 
-        private string GenerateJSONWebToken(Usuario userInfo)
+        private string GenerateJSONWebToken(UsuarioLogin userInfo)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Intelitrader-chave-autenticacao"));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Intelitrader-chave-autenticacao-Funcionarios"));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             // Definimos nossas Claims (dados da sessão) para poderem ser capturadas
@@ -65,7 +65,7 @@ namespace InteliTrader.API.Controllers
             };
 
             // Configuramos nosso Token e seu tempo de vida
-            var token = new JwtSecurityToken
+            var tokenUsuario = new JwtSecurityToken
                 (
                     "InteliTrader",
                     "InteliTrader",
@@ -74,7 +74,7 @@ namespace InteliTrader.API.Controllers
                     signingCredentials: credentials
                 );
 
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            return new JwtSecurityTokenHandler().WriteToken(tokenUsuario);
         }
 
     }

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\46732305824\Documents\GitHub\DeployPrjBack2021</_PublishTargetUrl>
+    <History>True|2021-12-09T19:53:02.3353404Z;True|2021-12-09T16:41:38.2131377-03:00;True|2021-12-09T16:39:18.1385740-03:00;True|2021-12-09T16:23:59.0281596-03:00;True|2021-12-08T16:44:35.1504450-03:00;</History>
+  </PropertyGroup>
+</Project>

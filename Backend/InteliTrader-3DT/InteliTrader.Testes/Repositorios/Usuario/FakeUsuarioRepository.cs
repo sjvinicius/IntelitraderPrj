@@ -9,24 +9,24 @@ namespace InteliTrader.Testes.Repositorios.Usuario
 {
     public class FakeUsuarioRepository : IUsuarioRepository
     {
-        public void Adicionar(Dominio.Entidades.Usuario usuario)
+        public void Adicionar(Dominio.Entidades.UsuarioLogin usuario)
         {
             
         }
 
-        public void Alterar(Dominio.Entidades.Usuario usuario)
+        public void Alterar(Dominio.Entidades.UsuarioLogin usuario)
         {
             
         }
 
-        public Dominio.Entidades.Usuario BuscarPorEmail(string email)
+        public Dominio.Entidades.UsuarioLogin BuscarPorEmail(string email)
         {
             return null;
         }
 
-        public Dominio.Entidades.Usuario BuscarPorId(Guid id)
+        public Dominio.Entidades.UsuarioLogin BuscarPorId(Guid id)
         {
-            return new Dominio.Entidades.Usuario("Paulo","Grandão", "paulobrandaoofficial@gmail.com", "pastel2345","534625861","38475948356","11947586934","Procurando meu Primeiro emprego","Dev Sistemas","Senai Diadema","N/A","N/A",InteliTrader.Comum.Enum.EnTipoUsuario.Candidato);
+            return new Dominio.Entidades.UsuarioLogin("Paulo","Grandão", "paulobrandaoofficial@gmail.com","pastel231",InteliTrader.Comum.Enum.EnTipoUsuario.Candidato);
         }
 
         public void Deletar(Guid id)
@@ -34,7 +34,7 @@ namespace InteliTrader.Testes.Repositorios.Usuario
             
         }
 
-        public IEnumerable<Dominio.Entidades.Usuario> Listar(bool? ativo = null)
+        public IEnumerable<Dominio.Entidades.UsuarioLogin> Listar(bool? ativo = null)
         {
             return null;
         }

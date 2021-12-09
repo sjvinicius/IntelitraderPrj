@@ -37,4 +37,3 @@ C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrad
 C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Infra.Data\obj\Debug\net5.0\InteliTrader.Infra.Data.pdb
 C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Infra.Data\obj\Debug\net5.0\InteliTrader.Infra.Data.genruntimeconfig.cache
 C:\Users\48784309822\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Infra.Data\obj\Debug\net5.0\InteliTrader.Infra.Data.csproj.CopyComplete
-C:\Users\46732305824\Desktop\IntelitraderPrj\Backend\InteliTrader-3DT\InteliTrader.Infra.Data\obj\Debug\net5.0\InteliTrader.Infra.Data.csproj.CopyComplete

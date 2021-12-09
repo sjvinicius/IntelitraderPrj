@@ -13,8 +13,8 @@ namespace InteliTrader.Dominio.Interfaces
         void Adicionar(Candidato candidato);
         void Deletar(Candidato candidato);
         //Queries
-        IEnumerable<Candidato> Listar();
+        IEnumerable<Candidato> Listar(bool? ativo = null);
         Candidato BuscarPorId(Guid id);
-        Candidato BuscarPorRg(int rg);
+        Candidato BuscarPorEmail(string email);
     }
 }

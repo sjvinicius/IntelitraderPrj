@@ -21,24 +21,24 @@ namespace InteliTrader.Infra.Data.Repositorio
         }
 
         //Commands 
-        public void Adicionar(Usuario usuario)
+        public void Adicionar(UsuarioLogin usuario)
         {
             _context.Usuarios.Add(usuario);
             _context.SaveChanges();
         }
 
-        public void Alterar(Usuario usuario)
+        public void Alterar(UsuarioLogin usuario)
         {
             _context.Entry(usuario).State = EntityState.Modified;
             _context.SaveChanges();
         }
 
-        public Usuario BuscarPorEmail(string email)
+        public UsuarioLogin BuscarPorEmail(string email)
         {
             return _context.Usuarios.FirstOrDefault(x => x.Email.ToLower() == email.ToLower());
         }
 
-        public Usuario BuscarPorId(Guid id)
+        public UsuarioLogin BuscarPorId(Guid id)
         {
             return _context.Usuarios.FirstOrDefault(x => x.Id == id);
         }
@@ -49,7 +49,7 @@ namespace InteliTrader.Infra.Data.Repositorio
             _context.SaveChanges();
         }
 
-        public ICollection<Usuario> Listar(bool? ativo = null)
+        public ICollection<UsuarioLogin> Listar(bool? ativo = null)
         {
             return _context.Usuarios
                 .AsNoTracking() // Somente Leitura sem salvar cache do context
@@ -58,7 +58,7 @@ namespace InteliTrader.Infra.Data.Repositorio
                 .ToList();
         }
 
-        IEnumerable<Usuario> IUsuarioRepository.Listar(bool? ativo)
+        IEnumerable<UsuarioLogin> IUsuarioRepository.Listar(bool? ativo)
         {
             throw new NotImplementedException();
         }
