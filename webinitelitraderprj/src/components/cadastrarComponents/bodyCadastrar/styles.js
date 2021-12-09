@@ -23,10 +23,6 @@ export const ModalCad = styled.div`
   margin: 0 auto; 
 `;
 
-export const ACContent = styled.div`
-  margin: 0 auto; 
-`;
-
 export const Container = styled.div`
   background-image: url(${bgCadastro});
   /* background-color: #444; */
@@ -182,6 +178,7 @@ export const InputDataXp = styled.div`
 export const PreTittleInput = styled.p`
   margin: 1rem 0 0 0;
   color: #FFF;
+  /* text-align: center; */
 `;
 
 export const TittleInput = styled.p`
@@ -217,11 +214,24 @@ export const IconBack = styled(ArrowBack)`
   }
 `;
 
-// export const ACContent = styled.div`
+export const ACContent = styled.div`
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5rem;
 
+`;  
 
-// `;  
+export const WrapperPerfis = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 0;
+  /* background-color: red; */
+`;
 
-// export const WrapperPerfis = styled.div`
-
-// `;
+export const WrapperNav = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;

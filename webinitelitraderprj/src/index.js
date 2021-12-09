@@ -1,7 +1,7 @@
 //Libs
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Switch, Route, BrowserRouter, /*Redirect*/} from 'react-router-dom'
+import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom'
 
 //Services
 import reportWebVitals from './reportWebVitals';
@@ -78,7 +78,7 @@ const route =(
       <Switch>
         <Route exact path='/'             name='Raiz'                   component={Login} />
         <Route path='/Login'              name='Login'                  component={Login} />
-        <Route path='/Cadastrar'              name='Cadastrar'                  component={Cadastrar} />
+        <Route path='/Cadastrar'          name='Cadastrar'              component={Cadastrar} />
         
         <Route path='/Listar'             name='Candidato'              component={CandidatoListar} />
         <Route path='/ListarMinhas'       name='CandidatoMinhas'        component={CandidatoListarMinhas} />
@@ -89,6 +89,9 @@ const route =(
 
         <Route path='/ListarLider'        name='Lider'                  component={LiderListar} />
         <Route path='/SelecionadosLider'  name='SelecionadosL'          component={LiderSelecionados} />
+        
+        <Redirect path='*' to='/'/>
+      
       </Switch>
     </BrowserRouter>
   </>

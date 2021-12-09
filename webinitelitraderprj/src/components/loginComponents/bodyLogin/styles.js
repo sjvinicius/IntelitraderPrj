@@ -13,15 +13,17 @@ import { TransferAlt } from '@styled-icons/boxicons-regular/TransferAlt'
 //Imgs
 import bgLogin from '../../../img/bgLogin.png'
 
+
 export const Container = styled.div`
   background-image: url(${bgLogin});
-  /* background-color: #444; */
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
 
 `;
 
